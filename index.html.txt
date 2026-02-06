@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alina’s Party Arches & Balloons</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header class="hero">
+  <h1>Alina’s Party Arches & Balloons</h1>
+  <p>Custom balloon décor for unforgettable celebrations</p>
+  <a href="#contact" class="btn">Get a Quote</a>
+</header>
+
+<section class="about">
+  <h2>About</h2>
+  <p>
+    I create modern, elegant balloon installations for birthdays, baby showers,
+    bachelorette parties, and special events. Every setup is designed with love,
+    attention to detail, and your vision in mind.
+  </p>
+</section>
+
+<section class="services">
+  <h2>Services</h2>
+  <ul>
+    <li>Balloon arches & garlands</li>
+    <li>Birthday party décor</li>
+    <li>Baby showers & gender reveals</li>
+    <li>Bachelorette parties</li>
+    <li>Custom themes & color palettes</li>
+    <li>Delivery & setup (Montreal area)</li>
+  </ul>
+  <p class="note">
+    Custom designs, special requests, and last-minute bookings may affect pricing.
+  </p>
+</section>
+
+<section class="gallery">
+  <h2>Gallery</h2>
+  <p>Add your event photos here to showcase your work.</p>
+  <div class="gallery-box">📸 Your photos go here</div>
+</section>
+
+<section class="contact" id="contact">
+  <h2>Contact</h2>
+  <p>Let’s plan something beautiful together.</p>
+  <p><strong>Location:</strong> Montreal, QC</p>
+  <p><strong>Instagram:</strong> @yourinstagram</p>
+  <p><strong>Email:</strong> your@email.com</p>
+</section>
+
+<footer>
+  <p>© 2026 Alina’s Party Arches & Balloons</p>
+</footer>
+
+</body>
+</html>
