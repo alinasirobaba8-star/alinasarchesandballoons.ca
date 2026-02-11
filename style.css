@@ -17,17 +17,13 @@ body {
     height: 100vh;
     display: flex;
     justify-content: center;
-    align-items: flex-end;   /* pushes content down */
-    padding-bottom: 80px;    /* space from bottom */
+    align-items: center;
     position: relative;
 }
     
 
 .hero-overlay {
-    background: rgba(0, 0, 0, 0.2);
-    padding: 40px;
-    border-radius: 20px;
-    color: white;
+    background: transparent;
 }
 
 .hero h1 {
@@ -48,6 +44,7 @@ body {
     border-radius: 30px;
     font-weight: bold;
     font-size: 18px;
+    margin-top: 300px;   /* pushes button lower */
 }
 section {
   padding: 60px 20px;
