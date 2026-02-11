@@ -24,7 +24,7 @@ body {
     
 
 .hero-overlay {
-    background: rgba(0, 0, 0, 0.15);
+    background: rgba(0, 0, 0, 0.2);
     padding: 40px;
     border-radius: 20px;
     color: white;
