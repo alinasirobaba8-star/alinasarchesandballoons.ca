@@ -12,17 +12,19 @@ body {
 }
 
 .hero {
-    background: url("hero.png") center/cover no-repeat;
-    height: 90vh;
+    background: url("hero.png") no-repeat center top;
+    background-size: cover;
+    height: 100vh;
     display: flex;
     justify-content: center;
-    align-items: center;
-    text-align: center;
+    align-items: flex-end;   /* pushes content down */
+    padding-bottom: 80px;    /* space from bottom */
     position: relative;
 }
+    
 
 .hero-overlay {
-    background: rgba(0, 0, 0, 0.4);
+    background: rgba(0, 0, 0, 0.15);
     padding: 40px;
     border-radius: 20px;
     color: white;
@@ -41,10 +43,11 @@ body {
 .btn {
     background-color: #d4af37;
     color: white;
-    padding: 12px 25px;
+    padding: 14px 30px;
     text-decoration: none;
-    border-radius: 25px;
+    border-radius: 30px;
     font-weight: bold;
+    font-size: 18px;
 }
 section {
   padding: 60px 20px;
