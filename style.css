@@ -11,7 +11,20 @@ body {
   line-height: 1.6;
 }
 
+.hero {
+    background: url("hero.png") no-repeat center top;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+    
 
+.hero-overlay {
+    background: transparent;
+  
 .hero h1 {
     font-size: 48px;
     margin-bottom: 15px;
@@ -57,21 +70,6 @@ h2 {
 
 .services li {
   padding: 8px 0;
-}
-
-.hero {
-    background: url("hero.png") no-repeat center top;
-    background-size: cover;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-}
-    
-
-.hero-overlay {
-    background: transparent;
 }
 
 .note {
