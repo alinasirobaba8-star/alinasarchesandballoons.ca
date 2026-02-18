@@ -12,7 +12,7 @@ body {
 }
 
 .hero {
-    background: url("hero.png") no-repeat center top;
+    background: #f8f8f8;
     background-size: cover;
     height: 100vh;
     display: flex;
