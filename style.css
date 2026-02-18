@@ -183,3 +183,14 @@ p {
   font-size: 16px;
   max-width: 600px;
 }
+.hero {
+  height: 60vh; /* was probably 100vh */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero-overlay {
+  padding: 20px;
+}
