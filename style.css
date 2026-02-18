@@ -206,3 +206,14 @@ p {
 section {
   padding: 50px 20px;
 }
+h1 {
+  margin-bottom: 20px;
+}
+
+h2 {
+  margin-top: 30px;
+}
+
+section p {
+  max-width: 500px;
+}
