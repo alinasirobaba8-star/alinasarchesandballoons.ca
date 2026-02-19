@@ -227,3 +227,43 @@ h2 {
 section p {
   max-width: 500px;
 }
+
+body {
+  background-color: #f9f6ff;
+  color: #4b3f72;
+}
+
+.navbar {
+  background: white;
+  border-bottom: 1px solid #e6dcff;
+}
+
+.hero {
+  background: linear-gradient(to bottom, #f3ecff, #ffffff);
+}
+.balloons {
+  position: fixed;
+  bottom: -150px;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.balloon {
+  position: absolute;
+  width: 60px;
+  animation: floatUp 8s linear infinite;
+}
+
+@keyframes floatUp {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-120vh);
+    opacity: 0;
+  }
+}
+  
