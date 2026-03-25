@@ -6,90 +6,142 @@
 <title>Alina’s Party Arches & Balloons</title>
 
 <link rel="stylesheet" href="style.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome...">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/...">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display..." rel="stylesheet">
 
-</head><body>
+<style>
+  /* Simple styling for menu and buttons */
+  nav ul {
+    display:flex;
+    justify-content:center;
+    list-style:none;
+    gap:20px;
+    padding:15px;
+    background:#fff;
+    position:sticky;
+    top:0;
+    z-index:1000;
+  }
+
+  nav a {
+    text-decoration:none;
+    color:black;
+    font-weight:bold;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  section {
+    padding:60px 20px;
+  }
+
+  .service {
+    margin-bottom:30px;
+  }
+
+  .service img {
+    max-width:100%;
+    height:auto;
+    display:block;
+  }
+
+  .contact-button {
+    display:inline-block;
+    padding:10px 20px;
+    background-color:#ff6b6b;
+    color:white;
+    text-decoration:none;
+    border-radius:5px;
+    font-weight:bold;
+    margin-top:10px;
+  }
+
+  .contact-button:hover {
+    background-color:#ff4757;
+  }
+</style>
+
+</head>
+<body>
 
   <!-- MENU -->
   <nav>
-  <ul style="display:flex; justify-content:center; list-style:none; gap:20px; padding:15px; background:#fff; position:sticky; top:0; z-index:1000;">
-    <li><a href="#home">Home</a></li>
-    <li><a href="#services">Services</a></li>
-    <li><a href="#pricing">Pricing</a></li>
-    <li><a href="#gallery">Pictures</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
-</nav>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#pricing">Pricing</a></li>
+      <li><a href="#gallery">Pictures</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
 
   <!-- SECTIONS -->
-<section id="home">
-  <h1>Alina’s Arches & Balloons</h1>
-  <p>We create beautiful balloon decorations for birthdays, weddings, corporate events, and more. Custom arches, garlands, and installations to make your event unforgettable!</p>
-</section>
+
+  <section id="home">
+    <h1>Alina’s Arches & Balloons</h1>
+    <p>We create beautiful balloon decorations for birthdays, weddings, corporate events, and more. Custom arches, garlands, and installations to make your event unforgettable!</p>
+  </section>
 
   <section id="services">
     <h2>Services</h2>
-    <section id="services">
-  <h2>Services</h2>
 
-  <div class="service">
-    <h3>Balloon Arches</h3>
-    <img src="balloons-arches.jpg" alt="Balloon Arches">
-    <p>Custom arches for birthdays, weddings, and events of all sizes.</p>
-  </div>
+    <div class="service">
+      <h3>Balloon Arches</h3>
+      <img src="balloons-arches.jpg" alt="Balloon Arches">
+      <p>Custom arches for birthdays, weddings, and events of all sizes.</p>
+    </div>
 
-  <div class="service">
-    <h3>Balloon Columns</h3>
-    <img src="columns-arches.jpg" alt="Balloon Columns">
-    <p>Decorative columns perfect for entrances and photo spots.</p>
-  </div>
+    <div class="service">
+      <h3>Balloon Columns</h3>
+      <img src="columns-arches.jpg" alt="Balloon Columns">
+      <p>Decorative columns perfect for entrances and photo spots.</p>
+    </div>
 
-  <div class="service">
-    <h3>Custom Installations</h3>
-    <img src="custom-balloons-installation.jpg" alt="Custom Installations">
-    <p>Fully personalized balloon designs to match your event theme.</p>
-  </div>
+    <div class="service">
+      <h3>Custom Installations</h3>
+      <img src="custom-balloons-installation.jpg" alt="Custom Installations">
+      <p>Fully personalized balloon designs to match your event theme.</p>
+    </div>
 
-  <div class="service">
-    <h3>Grab & Go Balloons</h3>
-    <img src="grab-go-balloons.jpg" alt="Grab & Go Balloons">
-    <p>Quick ready-to-go balloon bouquets for last-minute celebrations.</p>
-  </div>
+    <div class="service">
+      <h3>Grab & Go Balloons</h3>
+      <img src="grab-go-balloons.jpg" alt="Grab & Go Balloons">
+      <p>Quick ready-to-go balloon bouquets for last-minute celebrations.</p>
+    </div>
 
-</section>
   </section>
 
   <section id="pricing">
     <h2>Pricing</h2>
-    <section id="pricing">
-  <h2>Pricing</h2>
-  <ul>
-    <li>Balloon Arch: $120+</li>
-    <li>Balloon Columns: $50+</li>
-    <li>Custom Installations: Starting at $200</li>
-    <li>Grab & Go Bouquets: $15-$30</li>
-  </ul>
-  <p>Prices vary depending on size, colors, and complexity. Contact for a quote!</p>
-</section>
+    <ul>
+      <li>Balloon Arch: $120+</li>
+      <li>Balloon Columns: $50+</li>
+      <li>Custom Installations: Starting at $200</li>
+      <li>Grab & Go Bouquets: $15-$30</li>
+    </ul>
+    <p>Prices vary depending on size, colors, and complexity. Contact for a quote!</p>
   </section>
 
-<section id="gallery">
-  <h2>Gallery</h2>
-  <img src="balloons-arches.jpg" alt="Balloon Arches">
-  <img src="columns-arches.jpg" alt="Balloon Columns">
-  <img src="custom-balloons-installation.jpg" alt="Custom Installation">
-  <img src="custom-ballons-walls.jpg" alt="Custom Balloon Walls">
-  <img src="deluxe-balloon-garland.jpg" alt="Deluxe Balloon Garland">
-  <img src="grab-go-balloons.jpg" alt="Grab & Go Balloons">
-  <img src="stuffed-balloons.jpg" alt="Stuffed Balloons">
-</section>
+  <section id="gallery">
+    <h2>Gallery</h2>
+    <img src="balloons-arches.jpg" alt="Balloon Arches">
+    <img src="columns-arches.jpg" alt="Balloon Columns">
+    <img src="custom-balloons-installation.jpg" alt="Custom Installation">
+    <img src="custom-ballons-walls.jpg" alt="Custom Balloon Walls">
+    <img src="deluxe-balloon-garland.jpg" alt="Deluxe Balloon Garland">
+    <img src="grab-go-balloons.jpg" alt="Grab & Go Balloons">
+    <img src="stuffed-balloons.jpg" alt="Stuffed Balloons">
+  </section>
 
   <section id="contact">
-  <h2>Contact</h2>
-  <p>Email: <a href="mailto:alinasirobaba8@gmail.com">Alinasirobaba8@gmail.com</a></p>
-  <p>Instagram: <a href="https://www.instagram.com/alinasarchesandballoons" target="_blank">@alinasarchesandballoons</a></p>
-</section>
+    <h2>Contact</h2>
+    <p>Phone: 438-928-2152</p>
+    <p>Email: <a href="mailto:Alinasirobaba8@gmail.com">Alinasirobaba8@gmail.com</a></p>
+    <p>Instagram: <a href="https://www.instagram.com/alinasarchesandballoons" target="_blank">@alinasarchesandballoons</a></p>
+    <a href="mailto:Alinasirobaba8@gmail.com" class="contact-button">Send Email Now</a>
+  </section>
 
 </body>
 </html>
