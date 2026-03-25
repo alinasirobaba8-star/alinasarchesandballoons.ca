@@ -9,8 +9,8 @@ html, body {
 body {
   margin: 0;
   font-family: 'Montserrat', sans-serif;
-  color: #2f2a2d;
-  background: #ffffff;
+  color: #4b3140;
+  background: linear-gradient(180deg, #fff8fc 0%, #f8ecf7 100%);
 }
 
 /* TOP BAR */
@@ -23,40 +23,41 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 24px 40px;
+  padding: 26px 42px;
 }
 
 .logo {
   font-family: 'Playfair Display', serif;
-  font-size: 28px;
+  font-size: 30px;
   font-weight: 700;
-  color: white;
-  letter-spacing: 0.5px;
+  color: #7d4f6c;
+  letter-spacing: 0.4px;
 }
 
 .nav {
   display: flex;
-  gap: 28px;
+  gap: 30px;
 }
 
 .nav a {
-  color: white;
+  color: #7d4f6c;
   text-decoration: none;
   font-size: 15px;
-  font-weight: 500;
-  letter-spacing: 0.5px;
-  transition: opacity 0.25s ease;
+  font-weight: 600;
+  letter-spacing: 0.4px;
+  transition: opacity 0.25s ease, transform 0.25s ease;
 }
 
 .nav a:hover {
   opacity: 0.8;
+  transform: translateY(-1px);
 }
 
 /* HERO */
 .hero {
   min-height: 100vh;
   background:
-    linear-gradient(rgba(0, 0, 0, 0.34), rgba(0, 0, 0, 0.34)),
+    linear-gradient(rgba(255, 244, 251, 0.82), rgba(248, 236, 247, 0.88)),
     url("images/deluxe-balloon-garland.jpg") center center / cover no-repeat;
   display: flex;
   align-items: center;
@@ -66,52 +67,34 @@ body {
 }
 
 .hero-content {
-  max-width: 860px;
-  color: white;
+  max-width: 900px;
+  color: #5a3950;
+  padding: 30px 20px;
 }
 
 .small-title {
-  margin: 0 0 14px;
+  margin: 0 0 16px;
   text-transform: uppercase;
-  letter-spacing: 3px;
+  letter-spacing: 4px;
   font-size: 13px;
   font-weight: 600;
+  color: #9b6f8c;
 }
 
 .hero h1 {
   font-family: 'Playfair Display', serif;
-  font-size: 72px;
+  font-size: 74px;
   line-height: 1.05;
-  margin: 0 0 18px;
-  font-weight: 700;
+  margin: 0 0 22px;
+  color: #6f4561;
 }
 
 .hero-description {
-  font-size: 21px;
-  line-height: 1.7;
-  margin: 0 auto 32px;
-  max-width: 720px;
-}
-
-.hero-links {
-  display: flex;
-  justify-content: center;
-  gap: 24px;
-  flex-wrap: wrap;
-}
-
-.hero-links a {
-  color: white;
-  text-decoration: none;
-  font-size: 16px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.75);
-  padding-bottom: 4px;
-  transition: opacity 0.25s ease, border-color 0.25s ease;
-}
-
-.hero-links a:hover {
-  opacity: 0.85;
-  border-color: white;
+  font-size: 23px;
+  line-height: 1.8;
+  margin: 0 auto;
+  max-width: 760px;
+  color: #6a4a5d;
 }
 
 /* MODALS */
@@ -119,7 +102,7 @@ body {
   display: none;
   position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(67, 39, 57, 0.35);
   justify-content: center;
   align-items: center;
   z-index: 9999;
@@ -127,63 +110,73 @@ body {
 }
 
 .modal-content {
-  background: white;
+  background: #ffffff;
   width: 90%;
   max-width: 900px;
   max-height: 85vh;
   overflow-y: auto;
-  border-radius: 18px;
-  padding: 32px;
+  border-radius: 22px;
+  padding: 34px;
   position: relative;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.18);
+  box-shadow: 0 24px 60px rgba(91, 55, 76, 0.18);
 }
 
 .close {
   position: absolute;
-  top: 10px;
+  top: 12px;
   right: 18px;
   font-size: 32px;
   cursor: pointer;
+  color: #7d4f6c;
   line-height: 1;
 }
 
 .modal-content h2 {
   font-family: 'Playfair Display', serif;
-  font-size: 38px;
+  font-size: 40px;
   margin-top: 0;
-  margin-bottom: 20px;
+  margin-bottom: 22px;
+  color: #6f4561;
 }
 
 .modal-content h3 {
+  margin-top: 24px;
   margin-bottom: 8px;
-  margin-top: 22px;
   font-size: 22px;
+  color: #9b5e83;
 }
 
 .modal-content p {
   font-size: 16px;
-  line-height: 1.7;
+  line-height: 1.75;
   margin-top: 0;
+  color: #4e3a45;
 }
 
 .modal-content a {
-  color: #2f2a2d;
+  color: #9b5e83;
+  text-decoration: none;
+}
+
+.modal-content a:hover {
+  text-decoration: underline;
 }
 
 /* GALLERY */
 .gallery-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 14px;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 16px;
   margin-top: 20px;
 }
 
 .gallery-grid img {
   width: 100%;
-  height: 220px;
+  height: 230px;
   object-fit: cover;
-  border-radius: 14px;
+  border-radius: 16px;
   display: block;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
 }
 
 /* MOBILE */
@@ -197,7 +190,7 @@ body {
   .nav {
     flex-wrap: wrap;
     justify-content: center;
-    gap: 14px;
+    gap: 16px;
   }
 
   .logo {
@@ -211,19 +204,12 @@ body {
   }
 
   .hero h1 {
-    font-size: 44px;
+    font-size: 46px;
   }
 
   .hero-description {
     font-size: 18px;
-  }
-
-  .hero-links {
-    gap: 16px;
-  }
-
-  .hero-links a {
-    font-size: 15px;
+    line-height: 1.7;
   }
 
   .modal-content {
