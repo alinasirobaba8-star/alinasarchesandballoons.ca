@@ -11,36 +11,27 @@
 </head>
 <body>
 
-  <!-- TOP NAV -->
   <header class="topbar">
     <div class="logo">Alina’s Arches & Balloons</div>
     <nav class="nav">
-      <a href="#" onclick="openModal('servicesModal')">Services</a>
-      <a href="#" onclick="openModal('pricingModal')">Pricing</a>
-      <a href="#" onclick="openModal('galleryModal')">Gallery</a>
-      <a href="#" onclick="openModal('contactModal')">Contact</a>
+      <a href="#" onclick="openModal('servicesModal'); return false;">Services</a>
+      <a href="#" onclick="openModal('pricingModal'); return false;">Pricing</a>
+      <a href="#" onclick="openModal('galleryModal'); return false;">Gallery</a>
+      <a href="#" onclick="openModal('contactModal'); return false;">Contact</a>
     </nav>
   </header>
 
-  <!-- HERO -->
   <section class="hero">
     <div class="hero-content">
       <p class="small-title">Montreal Balloon Decor</p>
-      <h1>More Than Balloons</h1>
+      <h1>Elegant Balloon Designs for Every Celebration</h1>
       <p class="hero-description">
-        Elegant balloon arches, garlands, columns, and custom installations
+        Luxury balloon arches, garlands, columns, and custom installations
         for birthdays, weddings, baby showers, and unforgettable events.
       </p>
-
-      <div class="hero-links">
-        <a href="#" onclick="openModal('servicesModal')">Our Services</a>
-        <a href="#" onclick="openModal('galleryModal')">Gallery</a>
-        <a href="#" onclick="openModal('pricingModal')">Prices</a>
-      </div>
     </div>
   </section>
 
-  <!-- SERVICES POPUP -->
   <div id="servicesModal" class="modal">
     <div class="modal-content">
       <span class="close" onclick="closeModal('servicesModal')">&times;</span>
@@ -60,7 +51,6 @@
     </div>
   </div>
 
-  <!-- PRICING POPUP -->
   <div id="pricingModal" class="modal">
     <div class="modal-content">
       <span class="close" onclick="closeModal('pricingModal')">&times;</span>
@@ -74,7 +64,6 @@
     </div>
   </div>
 
-  <!-- GALLERY POPUP -->
   <div id="galleryModal" class="modal">
     <div class="modal-content">
       <span class="close" onclick="closeModal('galleryModal')">&times;</span>
@@ -92,7 +81,6 @@
     </div>
   </div>
 
-  <!-- CONTACT POPUP -->
   <div id="contactModal" class="modal">
     <div class="modal-content">
       <span class="close" onclick="closeModal('contactModal')">&times;</span>
@@ -104,7 +92,6 @@
 
   <script>
     function openModal(id) {
-      event.preventDefault();
       document.getElementById(id).style.display = "flex";
     }
 
@@ -112,13 +99,14 @@
       document.getElementById(id).style.display = "none";
     }
 
-    window.onclick = function(event) {
-      document.querySelectorAll('.modal').forEach(modal => {
-        if (event.target === modal) {
+    window.onclick = function(e) {
+      document.querySelectorAll(".modal").forEach(function(modal) {
+        if (e.target === modal) {
           modal.style.display = "none";
         }
       });
     };
   </script>
+
 </body>
 </html>
