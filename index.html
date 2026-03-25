@@ -1,147 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Alina’s Party Arches & Balloons</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alina’s Party Arches & Balloons</title>
 
-<link rel="stylesheet" href="style.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/...">
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display..." rel="stylesheet">
-
-<style>
-  /* Simple styling for menu and buttons */
-  nav ul {
-    display:flex;
-    justify-content:center;
-    list-style:none;
-    gap:20px;
-    padding:15px;
-    background:#fff;
-    position:sticky;
-    top:0;
-    z-index:1000;
-  }
-
-  nav a {
-    text-decoration:none;
-    color:black;
-    font-weight:bold;
-  }
-
-  html {
-    scroll-behavior: smooth;
-  }
-
-  section {
-    padding:60px 20px;
-  }
-
-  .service {
-    margin-bottom:30px;
-  }
-
-  .service img {
-    max-width:100%;
-    height:auto;
-    display:block;
-  }
-
-  .contact-button {
-    display:inline-block;
-    padding:10px 20px;
-    background-color:#ff6b6b;
-    color:white;
-    text-decoration:none;
-    border-radius:5px;
-    font-weight:bold;
-    margin-top:10px;
-  }
-
-  .contact-button:hover {
-    background-color:#ff4757;
-  }
-</style>
-
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
 
-  <!-- MENU -->
+  <!-- TOP MENU -->
   <nav>
-    <ul>
+    <ul class="top-menu">
       <li><a href="#home">Home</a></li>
-      <li><a href="#services">Services</a></li>
-      <li><a href="#pricing">Pricing</a></li>
-      <li><a href="#gallery">Pictures</a></li>
-      <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
 
-  <!-- SECTIONS -->
-
-  <section id="home">
+  <!-- HOME -->
+  <section id="home" class="hero">
     <h1>Alina’s Arches & Balloons</h1>
-    <p>We create beautiful balloon decorations for birthdays, weddings, corporate events, and more. Custom arches, garlands, and installations to make your event unforgettable!</p>
+    <p>
+      We create beautiful balloon decorations for birthdays, weddings, corporate events, and more.
+      Custom arches, garlands, and installations to make your event unforgettable!
+    </p>
+
+    <!-- ICONS -->
+    <div class="icon-menu">
+      <div class="icon-box" onclick="openModal('servicesModal')">
+        <i class="fas fa-gift"></i>
+        <p>Services</p>
+      </div>
+
+      <div class="icon-box" onclick="openModal('pricingModal')">
+        <i class="fas fa-tags"></i>
+        <p>Pricing</p>
+      </div>
+
+      <div class="icon-box" onclick="openModal('galleryModal')">
+        <i class="fas fa-image"></i>
+        <p>Gallery</p>
+      </div>
+
+      <div class="icon-box" onclick="openModal('contactModal')">
+        <i class="fas fa-envelope"></i>
+        <p>Contact</p>
+      </div>
+    </div>
   </section>
 
-  <section id="services">
-    <h2>Services</h2>
+  <!-- SERVICES MODAL -->
+  <div id="servicesModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('servicesModal')">&times;</span>
+      <h2>Services</h2>
 
-    <div class="service">
       <h3>Balloon Arches</h3>
-      <img src="balloons-arches.jpg" alt="Balloon Arches">
       <p>Custom arches for birthdays, weddings, and events of all sizes.</p>
-    </div>
 
-    <div class="service">
       <h3>Balloon Columns</h3>
-      <img src="columns-arches.jpg" alt="Balloon Columns">
       <p>Decorative columns perfect for entrances and photo spots.</p>
-    </div>
 
-    <div class="service">
       <h3>Custom Installations</h3>
-      <img src="custom-balloons-installation.jpg" alt="Custom Installations">
       <p>Fully personalized balloon designs to match your event theme.</p>
-    </div>
 
-    <div class="service">
       <h3>Grab & Go Balloons</h3>
-      <img src="grab-go-balloons.jpg" alt="Grab & Go Balloons">
       <p>Quick ready-to-go balloon bouquets for last-minute celebrations.</p>
     </div>
+  </div>
 
-  </section>
+  <!-- PRICING MODAL -->
+  <div id="pricingModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('pricingModal')">&times;</span>
+      <h2>Pricing</h2>
 
-  <section id="pricing">
-    <h2>Pricing</h2>
-    <ul>
-      <li>Balloon Arch: $120+</li>
-      <li>Balloon Columns: $50+</li>
-      <li>Custom Installations: Starting at $200</li>
-      <li>Grab & Go Bouquets: $15-$30</li>
-    </ul>
-    <p>Prices vary depending on size, colors, and complexity. Contact for a quote!</p>
-  </section>
+      <p>Balloon Arch: $120+</p>
+      <p>Balloon Columns: $50+</p>
+      <p>Custom Installations: Starting at $200</p>
+      <p>Grab & Go Bouquets: $15-$30</p>
+      <p>Prices vary depending on size, colors, and complexity. Contact for a quote.</p>
+    </div>
+  </div>
 
-  <section id="gallery">
-    <h2>Gallery</h2>
-    <img src="balloons-arches.jpg" alt="Balloon Arches">
-    <img src="columns-arches.jpg" alt="Balloon Columns">
-    <img src="custom-balloons-installation.jpg" alt="Custom Installation">
-    <img src="custom-ballons-walls.jpg" alt="Custom Balloon Walls">
-    <img src="deluxe-balloon-garland.jpg" alt="Deluxe Balloon Garland">
-    <img src="grab-go-balloons.jpg" alt="Grab & Go Balloons">
-    <img src="stuffed-balloons.jpg" alt="Stuffed Balloons">
-  </section>
+  <!-- GALLERY MODAL -->
+  <div id="galleryModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('galleryModal')">&times;</span>
+      <h2>Gallery</h2>
 
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>Phone: 438-928-2152</p>
-    <p>Email: <a href="mailto:Alinasirobaba8@gmail.com">Alinasirobaba8@gmail.com</a></p>
-    <p>Instagram: <a href="https://www.instagram.com/alinasarchesandballoons" target="_blank">@alinasarchesandballoons</a></p>
-    <a href="mailto:Alinasirobaba8@gmail.com" class="contact-button">Send Email Now</a>
-  </section>
+      <div class="gallery-grid">
+        <img src="images/ballons-arches.jpg" alt="Balloon Arch">
+        <img src="images/columns-arches.jpg" alt="Balloon Columns">
+        <img src="images/custom-balloons-installation.jpg" alt="Custom Installation">
+        <img src="images/custom-ballons-walls.jpg" alt="Balloon Wall">
+        <img src="images/deluxe-balloon-garland.jpg" alt="Deluxe Balloon Garland">
+        <img src="images/grab-go-balloons.jpg" alt="Grab and Go Balloons">
+        <img src="images/stuffed-balloons.jpg" alt="Stuffed Balloons">
+      </div>
+    </div>
+  </div>
+
+  <!-- CONTACT MODAL -->
+  <div id="contactModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('contactModal')">&times;</span>
+      <h2>Contact</h2>
+
+      <p>Email: <a href="mailto:alinasirobaba8@gmail.com">alinasirobaba8@gmail.com</a></p>
+      <p>Instagram: <a href="https://instagram.com/alinasarchesandballoons" target="_blank">@alinasarchesandballoons</a></p>
+    </div>
+  </div>
+
+  <script>
+    function openModal(id) {
+      document.getElementById(id).style.display = "flex";
+    }
+
+    function closeModal(id) {
+      document.getElementById(id).style.display = "none";
+    }
+
+    window.onclick = function(event) {
+      document.querySelectorAll('.modal').forEach(modal => {
+        if (event.target === modal) {
+          modal.style.display = "none";
+        }
+      });
+    }
+  </script>
 
 </body>
 </html>
