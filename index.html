@@ -11,66 +11,32 @@
 </head>
 <body>
 
-  <!-- MAIN PAGE -->
+  <!-- TOP NAV -->
+  <header class="topbar">
+    <div class="logo">Alina’s Arches & Balloons</div>
+    <nav class="nav">
+      <a href="#" onclick="openModal('servicesModal')">Services</a>
+      <a href="#" onclick="openModal('pricingModal')">Pricing</a>
+      <a href="#" onclick="openModal('galleryModal')">Gallery</a>
+      <a href="#" onclick="openModal('contactModal')">Contact</a>
+    </nav>
+  </header>
+
+  <!-- HERO -->
   <section class="hero">
-    <div class="hero-overlay">
-      <div class="hero-text">
-        <p class="small-title">Luxury Balloon Decor in Montreal</p>
-        <h1>Elegant Balloon Designs for Unforgettable Events</h1>
-        <p class="hero-description">
-          Custom balloon arches, columns, grab & go bouquets, and installations for birthdays,
-          weddings, baby showers, corporate events, and special celebrations.
-        </p>
+    <div class="hero-content">
+      <p class="small-title">Montreal Balloon Decor</p>
+      <h1>More Than Balloons</h1>
+      <p class="hero-description">
+        Elegant balloon arches, garlands, columns, and custom installations
+        for birthdays, weddings, baby showers, and unforgettable events.
+      </p>
 
-        <div class="hero-buttons">
-          <button class="btn primary-btn" onclick="openModal('contactModal')">Book Your Event</button>
-          <button class="btn secondary-btn" onclick="openModal('galleryModal')">View Gallery</button>
-        </div>
+      <div class="hero-links">
+        <a href="#" onclick="openModal('servicesModal')">Our Services</a>
+        <a href="#" onclick="openModal('galleryModal')">Gallery</a>
+        <a href="#" onclick="openModal('pricingModal')">Prices</a>
       </div>
-
-      <!-- RIGHT SIDE ICON MENU -->
-      <div class="side-menu">
-        <div class="menu-item" onclick="openModal('servicesModal')">
-          <i class="fas fa-gift"></i>
-          <span>Services</span>
-        </div>
-
-        <div class="menu-item" onclick="openModal('pricingModal')">
-          <i class="fas fa-tags"></i>
-          <span>Pricing</span>
-        </div>
-
-        <div class="menu-item" onclick="openModal('galleryModal')">
-          <i class="fas fa-image"></i>
-          <span>Gallery</span>
-        </div>
-
-        <div class="menu-item" onclick="openModal('contactModal')">
-          <i class="fas fa-envelope"></i>
-          <span>Contact</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- SMALL SELLING SECTION -->
-  <section class="highlights">
-    <div class="highlight-box">
-      <i class="fas fa-star"></i>
-      <h3>Elegant Designs</h3>
-      <p>Beautiful setups that make every celebration look polished and special.</p>
-    </div>
-
-    <div class="highlight-box">
-      <i class="fas fa-palette"></i>
-      <h3>Custom Colors</h3>
-      <p>Balloon decor tailored to your event theme, colors, and personal style.</p>
-    </div>
-
-    <div class="highlight-box">
-      <i class="fas fa-heart"></i>
-      <h3>Made With Care</h3>
-      <p>Every setup is created with attention to detail for a picture-perfect result.</p>
     </div>
   </section>
 
@@ -81,16 +47,16 @@
       <h2>Services</h2>
 
       <h3>Balloon Arches</h3>
-      <p>Custom arches for birthdays, weddings, and events of all sizes.</p>
+      <p>Custom arches for birthdays, weddings, baby showers, and events of all sizes.</p>
 
       <h3>Balloon Columns</h3>
-      <p>Decorative columns perfect for entrances and photo spots.</p>
+      <p>Elegant columns perfect for entrances, photo areas, and event spaces.</p>
 
       <h3>Custom Installations</h3>
-      <p>Fully personalized balloon designs to match your event theme.</p>
+      <p>Luxury balloon decor tailored to your event theme, colors, and style.</p>
 
       <h3>Grab & Go Balloons</h3>
-      <p>Quick ready-to-go balloon bouquets for last-minute celebrations.</p>
+      <p>Ready-to-go balloon bouquets for quick celebrations and last-minute orders.</p>
     </div>
   </div>
 
@@ -103,8 +69,8 @@
       <p>Balloon Arch: $120+</p>
       <p>Balloon Columns: $50+</p>
       <p>Custom Installations: Starting at $200</p>
-      <p>Grab & Go Bouquets: $15-$30</p>
-      <p>Prices vary depending on size, colors, and complexity. Contact for a quote.</p>
+      <p>Grab & Go Bouquets: $15–$30</p>
+      <p>Final prices depend on size, colors, design, and installation details.</p>
     </div>
   </div>
 
@@ -115,13 +81,13 @@
       <h2>Gallery</h2>
 
       <div class="gallery-grid">
-        <img src="images/ballons-arches.jpg" alt="Balloon Arch">
-        <img src="images/columns-arches.jpg" alt="Balloon Columns">
-        <img src="images/custom-balloons-installation.jpg" alt="Custom Installation">
-        <img src="images/custom-ballons-walls.jpg" alt="Balloon Wall">
-        <img src="images/deluxe-balloon-garland.jpg" alt="Deluxe Balloon Garland">
-        <img src="images/grab-go-balloons.jpg" alt="Grab and Go Balloons">
-        <img src="images/stuffed-balloons.jpg" alt="Stuffed Balloons">
+        <img src="images/ballons-arches.jpg" alt="Balloon arches">
+        <img src="images/columns-arches.jpg" alt="Balloon columns">
+        <img src="images/custom-balloons-installation.jpg" alt="Custom balloon installation">
+        <img src="images/custom-ballons-walls.jpg" alt="Balloon wall">
+        <img src="images/deluxe-balloon-garland.jpg" alt="Deluxe balloon garland">
+        <img src="images/grab-go-balloons.jpg" alt="Grab and go balloons">
+        <img src="images/stuffed-balloons.jpg" alt="Stuffed balloons">
       </div>
     </div>
   </div>
@@ -131,7 +97,6 @@
     <div class="modal-content">
       <span class="close" onclick="closeModal('contactModal')">&times;</span>
       <h2>Contact</h2>
-
       <p>Email: <a href="mailto:alinasirobaba8@gmail.com">alinasirobaba8@gmail.com</a></p>
       <p>Instagram: <a href="https://instagram.com/alinasarchesandballoons" target="_blank">@alinasarchesandballoons</a></p>
     </div>
@@ -139,6 +104,7 @@
 
   <script>
     function openModal(id) {
+      event.preventDefault();
       document.getElementById(id).style.display = "flex";
     }
 
@@ -152,8 +118,7 @@
           modal.style.display = "none";
         }
       });
-    }
+    };
   </script>
-
 </body>
 </html>
