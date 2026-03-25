@@ -3,53 +3,48 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Alina’s Party Arches & Balloons</title>
+  <title>Alina’s Arches & Balloons</title>
 
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
 
-  <!-- TOP MENU -->
-  <nav>
-    <ul class="top-menu">
-      <li><a href="#home">Home</a></li>
-    </ul>
-  </nav>
+  <!-- MAIN PAGE -->
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Alina’s Arches & Balloons</h1>
+      <p>
+        We create beautiful balloon decorations for birthdays, weddings, corporate events,
+        and more. Custom arches, garlands, and installations to make your event unforgettable!
+      </p>
+    </div>
 
-  <!-- HOME -->
-  <section id="home" class="hero">
-    <h1>Alina’s Arches & Balloons</h1>
-    <p>
-      We create beautiful balloon decorations for birthdays, weddings, corporate events, and more.
-      Custom arches, garlands, and installations to make your event unforgettable!
-    </p>
-
-    <!-- ICONS -->
-    <div class="icon-menu">
-      <div class="icon-box" onclick="openModal('servicesModal')">
+    <!-- RIGHT SIDE ICON MENU -->
+    <div class="side-menu">
+      <div class="menu-item" onclick="openModal('servicesModal')">
         <i class="fas fa-gift"></i>
-        <p>Services</p>
+        <span>Services</span>
       </div>
 
-      <div class="icon-box" onclick="openModal('pricingModal')">
+      <div class="menu-item" onclick="openModal('pricingModal')">
         <i class="fas fa-tags"></i>
-        <p>Pricing</p>
+        <span>Pricing</span>
       </div>
 
-      <div class="icon-box" onclick="openModal('galleryModal')">
+      <div class="menu-item" onclick="openModal('galleryModal')">
         <i class="fas fa-image"></i>
-        <p>Gallery</p>
+        <span>Gallery</span>
       </div>
 
-      <div class="icon-box" onclick="openModal('contactModal')">
+      <div class="menu-item" onclick="openModal('contactModal')">
         <i class="fas fa-envelope"></i>
-        <p>Contact</p>
+        <span>Contact</span>
       </div>
     </div>
   </section>
 
-  <!-- SERVICES MODAL -->
+  <!-- SERVICES POPUP -->
   <div id="servicesModal" class="modal">
     <div class="modal-content">
       <span class="close" onclick="closeModal('servicesModal')">&times;</span>
@@ -69,7 +64,7 @@
     </div>
   </div>
 
-  <!-- PRICING MODAL -->
+  <!-- PRICING POPUP -->
   <div id="pricingModal" class="modal">
     <div class="modal-content">
       <span class="close" onclick="closeModal('pricingModal')">&times;</span>
@@ -83,7 +78,7 @@
     </div>
   </div>
 
-  <!-- GALLERY MODAL -->
+  <!-- GALLERY POPUP -->
   <div id="galleryModal" class="modal">
     <div class="modal-content">
       <span class="close" onclick="closeModal('galleryModal')">&times;</span>
@@ -101,7 +96,7 @@
     </div>
   </div>
 
-  <!-- CONTACT MODAL -->
+  <!-- CONTACT POPUP -->
   <div id="contactModal" class="modal">
     <div class="modal-content">
       <span class="close" onclick="closeModal('contactModal')">&times;</span>
