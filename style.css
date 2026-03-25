@@ -309,6 +309,20 @@ body {
   font-weight: bold;
   font-size: 16px;
 }
+  .contact-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #ff6b6b; /* bright and eye-catching */
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.contact-button:hover {
+  background-color: #ff4757;
+}
 
 .navbar a:hover {
   color: #ff69b4;
