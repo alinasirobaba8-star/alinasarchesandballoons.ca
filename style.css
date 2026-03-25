@@ -53,12 +53,13 @@ body {
   transform: translateY(-1px);
 }
 
-/* HERO */
+/* HERO — SHINY ANIMATED BACKGROUND */
 .hero {
   min-height: 100vh;
-  background:
-    linear-gradient(rgba(255, 244, 251, 0.82), rgba(248, 236, 247, 0.88)),
-    url("images/deluxe-balloon-garland.jpg") center center / cover no-repeat;
+  background: linear-gradient(120deg, #f6e9ff, #ffffff, #f3dcff);
+  background-size: 200% 200%;
+  animation: shimmer 10s ease infinite;
+
   display: flex;
   align-items: center;
   justify-content: center;
@@ -66,10 +67,22 @@ body {
   padding: 140px 20px 80px;
 }
 
+/* ANIMATION */
+@keyframes shimmer {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
 .hero-content {
   max-width: 900px;
   color: #5a3950;
   padding: 30px 20px;
+}
+
+/* subtle glow */
+.hero-content {
+  text-shadow: 0 10px 30px rgba(255,255,255,0.6);
 }
 
 .small-title {
