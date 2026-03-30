@@ -9,32 +9,139 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
-  <header class="topbar">
-    <div class="logo">Alina’s Arches & Balloons</div>
-    <nav class="nav">
-      <a href="#" onclick="openModal('servicesModal'); return false;">Services</a>
-      <a href="#" onclick="openModal('pricingModal'); return false;">Pricing</a>
-      <a href="#" onclick="openModal('galleryModal'); return false;">Gallery</a>
-      <a href="#" onclick="openModal('contactModal'); return false;">Contact</a>
-    </nav>
-  </header>
+<header class="topbar">
+  <div class="logo">Alina’s Arches & Balloons</div>
+  <nav class="nav">
+    <a href="#" onclick="openModal('servicesModal'); return false;">Services</a>
+    <a href="#" onclick="openModal('pricingModal'); return false;">Pricing</a>
+    <a href="#" onclick="openModal('galleryModal'); return false;">Gallery</a>
+    <a href="#" onclick="openModal('contactModal'); return false;">Contact</a>
+  </nav>
+</header>
 
-  <section class="hero">
-    <div class="hero-content">
-      <p class="small-title">Montreal Balloon Decor</p>
-      <h1>Elegant Balloon Designs for Every Celebration</h1>
-      <p class="hero-description">
-        Luxury balloon arches, garlands, columns, and custom installations
-        for birthdays, baby showers, weddings, corporate events, and unforgettable celebrations.
-      </p>
-      <a href="#" class="book-btn" onclick="openModal('contactModal'); return false;">Book Now</a>
+<section class="hero">
+  <div class="hero-content">
+    <p class="small-title">Montreal Balloon Decor</p>
+    <h1>Elegant Balloon Designs for Every Celebration</h1>
+    <p class="hero-description">
+      Luxury balloon arches, garlands, columns, and custom installations
+      for birthdays, baby showers, weddings, corporate events, and unforgettable celebrations.
+    </p>
+    <a href="#" class="book-btn" onclick="openModal('contactModal'); return false;">Book Your Balloon Decor</a>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<div id="servicesModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('servicesModal')">&times;</span>
+    <h2>Services</h2>
+
+    <h3>Balloon Arches</h3>
+    <p>Beautiful custom arches for birthdays, weddings, and events.</p>
+
+    <h3>Balloon Columns</h3>
+    <p>Perfect for entrances and photo areas.</p>
+
+    <h3>Deluxe Balloon Garlands</h3>
+    <p>Premium organic garlands with luxury finishes.</p>
+
+    <h3>Grab & Go Garlands</h3>
+    <p>Quick pickup option for small events.</p>
+
+    <h3>Custom Installations</h3>
+    <p>Fully personalized balloon decor.</p>
+
+    <h3>Stuffed Balloon Centerpieces</h3>
+    <p>Balloon gifts with teddy, flowers, or surprises.</p>
+  </div>
+</div>
+
+<!-- PRICING -->
+<div id="pricingModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('pricingModal')">&times;</span>
+    <h2>Pricing</h2>
+
+    <p><strong>Grab & Go Garland:</strong> $150 + tax</p>
+    <p><strong>Deluxe Garland:</strong> $40/ft</p>
+    <p><strong>Balloon Arches:</strong> from $125</p>
+    <p><strong>Columns:</strong> from $200</p>
+    <p><strong>Balloon Walls:</strong> from $400</p>
+    <p><strong>Centerpieces:</strong> $110</p>
+
+    <p>Custom installations — contact for quote</p>
+  </div>
+</div>
+
+<!-- GALLERY -->
+<div id="galleryModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('galleryModal')">&times;</span>
+    <h2>Gallery</h2>
+
+    <div class="gallery-grid">
+      <img src="images/balloons-arches.jpg">
+      <img src="images/columns-arches.jpg">
+      <img src="images/custom-balloons-installation.jpg">
+      <img src="images/custom-balloons-walls.jpg">
+      <img src="images/deluxe-balloon-garland.jpg">
+      <img src="images/grab-go-balloons.jpg">
+      <img src="images/stuffed-balloons.jpg">
     </div>
-  </section>
+  </div>
+</div>
 
-  <div id="servicesModal" class="modal">
-    <div class="modal-content">
+<!-- CONTACT -->
+<div id="contactModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('contactModal')">&times;</span>
+    <h2>Contact</h2>
+
+    <p>
+      📞 <a href="tel:14389282152">438-928-2152</a>
+    </p>
+
+    <p>
+      ✉️ <a href="mailto:alinasirobaba8@gmail.com">
+        alinasirobaba8@gmail.com
+      </a>
+    </p>
+
+    <p>
+      📸 <a href="https://www.instagram.com/alinas_party_arches_balloons_" target="_blank">
+        @alinas_party_arches_balloons_
+      </a>
+    </p>
+
+    <a href="tel:14389282152" class="contact-button">Call Now</a>
+    <a href="mailto:alinasirobaba8@gmail.com" class="contact-button">Send Email Now</a>
+  </div>
+</div>
+
+<script>
+function openModal(id) {
+  document.getElementById(id).style.display = "flex";
+}
+
+function closeModal(id) {
+  document.getElementById(id).style.display = "none";
+}
+
+window.onclick = function(e) {
+  document.querySelectorAll(".modal").forEach(function(modal) {
+    if (e.target === modal) {
+      modal.style.display = "none";
+    }
+  });
+};
+</script>
+
+</body>
+</html>    <div class="modal-content">
       <span class="close" onclick="closeModal('servicesModal')">&times;</span>
       <h2>Services</h2>
 
