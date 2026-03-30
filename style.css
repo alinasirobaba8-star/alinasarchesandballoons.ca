@@ -10,7 +10,7 @@
   background: #fff;
   border-radius: 18px;
   padding: 12px;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
 }
 
 .gallery-item img {
@@ -35,6 +35,26 @@
 .gallery-price {
   font-family: 'Montserrat', sans-serif;
   font-size: 14px;
+  color: #777;
+  margin: 0;
+}
+
+.book-btn {
+  display: inline-block;
+  margin-top: 20px;
+  background: #d88bb3;
+  color: white;
+  padding: 12px 28px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  font-family: 'Montserrat', sans-serif;
+  transition: 0.3s ease;
+}
+
+.book-btn:hover {
+  background: #c76d9c;
+}  font-size: 14px;
   color: #777;
   margin: 0;
 }
