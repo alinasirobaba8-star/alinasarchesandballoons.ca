@@ -237,6 +237,35 @@ body {
   margin: 0;
 }
 
+/* BOOKING FORM */
+.booking-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-top: 20px;
+}
+
+.booking-form input,
+.booking-form select,
+.booking-form textarea {
+  width: 100%;
+  padding: 14px 16px;
+  border: 1px solid #e5d6de;
+  border-radius: 14px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 15px;
+  background: #fff;
+  color: #4b3140;
+}
+
+.booking-form input:focus,
+.booking-form select:focus,
+.booking-form textarea:focus {
+  outline: none;
+  border-color: #c06c84;
+  box-shadow: 0 0 0 3px rgba(192, 108, 132, 0.12);
+}
+
 /* MOBILE */
 @media (max-width: 900px) {
   .topbar {
@@ -280,11 +309,6 @@ body {
   }
 
   .gallery-item img {
-    height: 180px;
-  }
-}  }
-
-  .gallery-grid img {
     height: 180px;
   }
 }
