@@ -27,7 +27,7 @@
       <h1>Elegant Balloon Designs for Every Celebration</h1>
       <p class="hero-description">
         Luxury balloon arches, garlands, columns, and custom installations
-        for birthdays, weddings, baby showers, and unforgettable events.
+        for birthdays, baby showers, weddings, corporate events, and unforgettable celebrations.
       </p>
       <a href="#" class="book-btn" onclick="openModal('contactModal'); return false;">Book Now</a>
     </div>
@@ -35,6 +35,159 @@
 
   <div id="servicesModal" class="modal">
     <div class="modal-content">
+      <span class="close" onclick="closeModal('servicesModal')">&times;</span>
+      <h2>Services</h2>
+
+      <h3>Balloon Arches</h3>
+      <p>Beautiful custom arches designed for birthdays, baby showers, weddings, and special events.</p>
+
+      <h3>Balloon Columns</h3>
+      <p>Elegant balloon columns that are perfect for entrances, stage decor, and photo areas.</p>
+
+      <h3>Deluxe Balloon Garlands</h3>
+      <p>Premium organic garlands with extra detail, layered balloon sizing, and luxury finishing touches.</p>
+
+      <h3>Grab & Go Garlands</h3>
+      <p>Stylish ready-to-pick-up garlands for smaller celebrations and last-minute orders.</p>
+
+      <h3>Custom Installations</h3>
+      <p>Luxury balloon decor fully customized to match your event theme, colors, and vision.</p>
+
+      <h3>Stuffed Balloon Centerpieces</h3>
+      <p>Personalized balloons filled with gifts such as a teddy bear, roses, or mini balloons.</p>
+    </div>
+  </div>
+
+  <div id="pricingModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('pricingModal')">&times;</span>
+      <h2>Pricing</h2>
+
+      <h3>Grab & Go Garland</h3>
+      <p>$150 + tax</p>
+      <p>Minimum length: 5 ft • Pickup only</p>
+
+      <h3>Deluxe Balloon Garland</h3>
+      <p>$40 per foot</p>
+      <p>Premium balloons • Extra detail • Deluxe add-ons available</p>
+
+      <h3>Balloon Arches</h3>
+      <p>Starting at $125 + tax</p>
+      <p>Custom designs for birthdays, showers, and events</p>
+
+      <h3>Balloon Columns</h3>
+      <p>Starting at $200 + tax each</p>
+      <p>Perfect for entrances, photo areas, and themed setups</p>
+
+      <h3>Custom Balloon Walls</h3>
+      <p>Starting at $400</p>
+      <p>Luxury statement decor for events and photo backdrops</p>
+
+      <h3>Stuffed Balloon Centerpieces</h3>
+      <p>$110 + tax</p>
+      <p>Includes personalized sticker and ribbon</p>
+
+      <h3>Custom Balloon Installations</h3>
+      <p>Contact for pricing</p>
+      <p>Final price depends on design, size, customization, and setup</p>
+    </div>
+  </div>
+
+  <div id="galleryModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('galleryModal')">&times;</span>
+      <h2>Gallery</h2>
+
+      <div class="gallery-grid">
+        <div class="gallery-item">
+          <a href="images/balloons-arches.jpg" target="_blank">
+            <img src="images/balloons-arches.jpg" alt="Balloon arches">
+          </a>
+          <p class="gallery-title">Balloon Arches</p>
+          <p class="gallery-price">Starting at $125 + tax</p>
+        </div>
+
+        <div class="gallery-item">
+          <a href="images/columns-arches.jpg" target="_blank">
+            <img src="images/columns-arches.jpg" alt="Balloon columns">
+          </a>
+          <p class="gallery-title">Balloon Columns</p>
+          <p class="gallery-price">Starting at $200 + tax each</p>
+        </div>
+
+        <div class="gallery-item">
+          <a href="images/custom-balloons-installation.jpg" target="_blank">
+            <img src="images/custom-balloons-installation.jpg" alt="Custom balloon installation">
+          </a>
+          <p class="gallery-title">Custom Installations</p>
+          <p class="gallery-price">Contact for pricing</p>
+        </div>
+
+        <div class="gallery-item">
+          <a href="images/custom-balloons-walls.jpg" target="_blank">
+            <img src="images/custom-balloons-walls.jpg" alt="Balloon wall">
+          </a>
+          <p class="gallery-title">Balloon Walls</p>
+          <p class="gallery-price">Starting at $400</p>
+        </div>
+
+        <div class="gallery-item">
+          <a href="images/deluxe-balloon-garland.jpg" target="_blank">
+            <img src="images/deluxe-balloon-garland.jpg" alt="Deluxe balloon garland">
+          </a>
+          <p class="gallery-title">Deluxe Balloon Garland</p>
+          <p class="gallery-price">$40 per foot</p>
+        </div>
+
+        <div class="gallery-item">
+          <a href="images/grab-go-balloons.jpg" target="_blank">
+            <img src="images/grab-go-balloons.jpg" alt="Grab and go balloons">
+          </a>
+          <p class="gallery-title">Grab & Go Garland</p>
+          <p class="gallery-price">$150 + tax</p>
+        </div>
+
+        <div class="gallery-item">
+          <a href="images/stuffed-balloons.jpg" target="_blank">
+            <img src="images/stuffed-balloons.jpg" alt="Stuffed balloons">
+          </a>
+          <p class="gallery-title">Stuffed Balloon Centerpieces</p>
+          <p class="gallery-price">$110 + tax</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="contactModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('contactModal')">&times;</span>
+      <h2>Contact</h2>
+      <p>Email: <a href="mailto:alinasirobaba8@gmail.com">alinasirobaba8@gmail.com</a></p>
+      <p>Instagram: <a href="https://instagram.com/alinasarchesandballoons" target="_blank">@alinasarchesandballoons</a></p>
+      <p><strong>Message now to book your custom balloon decor for your next event.</strong></p>
+    </div>
+  </div>
+
+  <script>
+    function openModal(id) {
+      document.getElementById(id).style.display = "flex";
+    }
+
+    function closeModal(id) {
+      document.getElementById(id).style.display = "none";
+    }
+
+    window.onclick = function(e) {
+      document.querySelectorAll(".modal").forEach(function(modal) {
+        if (e.target === modal) {
+          modal.style.display = "none";
+        }
+      });
+    };
+  </script>
+
+</body>
+</html>    <div class="modal-content">
       <span class="close" onclick="closeModal('servicesModal')">&times;</span>
       <h2>Services</h2>
 
