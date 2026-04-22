@@ -278,6 +278,7 @@
   <header class="topbar">
     <div class="logo">Alina’s Arches & Balloons</div>
     <nav class="nav">
+      <a href="#" onclick="openModal('aboutModal'); return false;">About</a>
       <a href="#" onclick="openModal('servicesModal'); return false;">Services</a>
       <a href="#" onclick="openModal('pricingModal'); return false;">Pricing</a>
       <a href="#" onclick="openModal('galleryModal'); return false;">Gallery</a>
@@ -286,17 +287,39 @@
     </nav>
   </header>
 
-  <section class="hero">
+  <section class="hero" id="home">
     <div class="hero-content">
-      <p class="small-title">Montreal Balloon Decor</p>
-      <h1>Elegant Balloon Designs for Every Celebration</h1>
+      <p class="small-title">Montreal Balloon & Floral Decor</p>
+      <h1>Elegant Balloon Designs & Floral Arches for Every Celebration</h1>
       <p class="hero-description">
-        Luxury balloon arches, garlands, columns, and custom installations
+        Luxury balloon arches, garlands, columns, floral arches, and custom installations
         for birthdays, baby showers, weddings, corporate events, and unforgettable celebrations.
       </p>
-      <a href="#" class="book-btn" onclick="openModal('bookingModal'); return false;">Book Your Balloon Decor</a>
+      <a href="#" class="book-btn" onclick="openModal('bookingModal'); return false;">Book Your Decor</a>
     </div>
   </section>
+
+  <div id="aboutModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('aboutModal')">&times;</span>
+      <h2>About Me</h2>
+      <p>
+        Hi, I’m Alina — the creator behind <strong>Alina’s Arches & Balloons</strong>, a luxury décor service based in <strong>Montreal</strong>.
+      </p>
+      <p>
+        What started as a creative passion quickly turned into something much bigger. I’ve always been inspired by beautiful details,
+        soft color palettes, and the way décor can completely transform a space and make a moment feel even more special.
+      </p>
+      <p>
+        I specialize in <strong>custom balloon installations</strong> and <strong>elegant floral arches</strong> for weddings and other occasions,
+        including birthdays, baby showers, bridal showers, gender reveals, and special events.
+      </p>
+      <p>
+        For me, this is more than just décor — it’s about creating an atmosphere, a feeling, and memories that people will remember long after
+        the event is over. Every setup is designed with care, creativity, and attention to detail to bring each client’s vision to life in a refined and unforgettable way.
+      </p>
+    </div>
+  </div>
 
   <div id="servicesModal" class="modal">
     <div class="modal-content">
@@ -314,6 +337,9 @@
 
       <h3>Grab & Go Garlands</h3>
       <p>Quick pickup option for small events.</p>
+
+      <h3>Floral Arches</h3>
+      <p>Elegant floral arches for weddings, ceremonies, bridal events, and other special occasions.</p>
 
       <h3>Custom Installations</h3>
       <p>Fully personalized balloon decor.</p>
@@ -334,6 +360,7 @@
       <p><strong>Columns:</strong> from $200</p>
       <p><strong>Balloon Walls:</strong> from $400</p>
       <p><strong>Centerpieces:</strong> $110</p>
+      <p><strong>Floral Arches:</strong> contact for quote</p>
       <p>Custom installations — contact for quote</p>
     </div>
   </div>
@@ -468,4 +495,4 @@
   </script>
 
 </body>
-</html></html></html>
+</html>
