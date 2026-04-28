@@ -236,11 +236,47 @@ body {
   display: block;
   background: #f8ecf7;
   box-shadow: none;
-  transition: none;
+  cursor: zoom-in;
+  transition: transform 0.25s ease;
 }
 
 .all-gallery img:hover {
-  transform: none;
+  transform: scale(1.02);
+}
+
+/* IMAGE ZOOM LIGHTBOX */
+.lightbox {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.88);
+  justify-content: center;
+  align-items: center;
+  z-index: 99999;
+  padding: 20px;
+  cursor: zoom-out;
+}
+
+.lightbox.active {
+  display: flex;
+}
+
+.lightbox img {
+  max-width: 92%;
+  max-height: 88vh;
+  object-fit: contain;
+  border-radius: 14px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.45);
+}
+
+.lightbox-close {
+  position: fixed;
+  top: 24px;
+  right: 32px;
+  color: white;
+  font-size: 38px;
+  cursor: pointer;
+  z-index: 100000;
 }
 
 /* BOOKING FORM */
@@ -375,5 +411,16 @@ body {
 
   .all-gallery img {
     height: 150px;
+  }
+
+  .lightbox img {
+    max-width: 96%;
+    max-height: 82vh;
+  }
+
+  .lightbox-close {
+    top: 18px;
+    right: 22px;
+    font-size: 34px;
   }
 }
