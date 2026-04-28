@@ -155,7 +155,8 @@ body {
 }
 
 .gallery-modal-content {
-  max-width: 1250px;
+  max-width: 1350px;
+  padding: 28px;
 }
 
 .close {
@@ -166,6 +167,7 @@ body {
   cursor: pointer;
   color: #7d4f6c;
   line-height: 1;
+  z-index: 5;
 }
 
 .close:hover {
@@ -211,60 +213,34 @@ body {
   color: #6f4561;
 }
 
-/* CLEAN GALLERY */
-.gallery-main-title {
-  text-align: center;
-  margin-bottom: 6px;
-}
-
-.gallery-intro {
-  text-align: center;
-  color: #5a3b4e;
-  margin-bottom: 28px;
-}
-
-.gallery-section {
-  margin: 36px 0;
-}
-
+/* GALLERY — ALL PHOTOS TOGETHER */
+.gallery-main-title,
+.gallery-intro,
+.gallery-section,
 .gallery-section h3 {
-  font-family: 'Playfair Display', serif;
-  font-size: 28px;
-  color: #4b2e39;
-  text-align: center;
-  margin: 0 0 18px;
-  display: flex;
-  align-items: center;
-  gap: 18px;
+  display: none;
 }
 
-.gallery-section h3::before,
-.gallery-section h3::after {
-  content: "";
-  flex: 1;
-  height: 1px;
-  background: #e8bfd3;
-}
-
-.clean-gallery-grid {
+.all-gallery {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 18px;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 14px;
+  margin-top: 32px;
 }
 
-.clean-gallery-grid img {
+.all-gallery img {
   width: 100%;
-  height: 230px;
+  height: 165px;
   object-fit: cover;
-  border-radius: 14px;
+  border-radius: 10px;
   display: block;
-  box-shadow: 0 8px 22px rgba(91, 55, 76, 0.10);
   background: #f8ecf7;
-  transition: transform 0.3s ease;
+  box-shadow: none;
+  transition: none;
 }
 
-.clean-gallery-grid img:hover {
-  transform: scale(1.03);
+.all-gallery img:hover {
+  transform: none;
 }
 
 /* BOOKING FORM */
@@ -351,17 +327,13 @@ body {
     font-size: 30px;
   }
 
-  .gallery-section h3 {
-    font-size: 24px;
-  }
-
-  .clean-gallery-grid {
-    grid-template-columns: repeat(2, 1fr);
+  .all-gallery {
+    grid-template-columns: repeat(3, 1fr);
     gap: 14px;
   }
 
-  .clean-gallery-grid img {
-    height: 190px;
+  .all-gallery img {
+    height: 160px;
   }
 }
 
@@ -397,16 +369,11 @@ body {
     text-align: center;
   }
 
-  .gallery-section h3 {
-    font-size: 22px;
-    gap: 12px;
+  .all-gallery {
+    grid-template-columns: repeat(2, 1fr);
   }
 
-  .clean-gallery-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .clean-gallery-grid img {
-    height: 260px;
+  .all-gallery img {
+    height: 150px;
   }
 }
