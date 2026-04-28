@@ -469,6 +469,35 @@ body {
   z-index: 100000;
 }
 
+/* LIGHTBOX ARROWS */
+.lightbox-arrow {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.18);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  font-size: 42px;
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 100000;
+  backdrop-filter: blur(10px);
+}
+
+.lightbox-prev {
+  left: 28px;
+}
+
+.lightbox-next {
+  right: 28px;
+}
+
+.lightbox-arrow:hover {
+  background: rgba(255, 255, 255, 0.32);
+}
+
 /* BOOKING FORM */
 .booking-form {
   display: flex;
@@ -656,6 +685,20 @@ body {
     top: 18px;
     right: 22px;
     font-size: 34px;
+  }
+
+  .lightbox-arrow {
+    font-size: 30px;
+    width: 44px;
+    height: 44px;
+  }
+
+  .lightbox-prev {
+    left: 12px;
+  }
+
+  .lightbox-next {
+    right: 12px;
   }
 
   .sticky-contact-bar {
