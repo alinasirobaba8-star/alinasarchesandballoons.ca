@@ -117,6 +117,42 @@
       background: #a95770;
     }
 
+    /* FIRST ORDER DISCOUNT */
+    .first-order-banner {
+      margin: 28px auto 0;
+      padding: 20px 24px;
+      max-width: 620px;
+      background: linear-gradient(135deg, #ffe3e3, #fff1f1);
+      border: 1.5px solid #d94b4b;
+      border-radius: 18px;
+      text-align: center;
+      box-shadow: 0 14px 35px rgba(180, 40, 40, 0.14);
+    }
+
+    .first-order-text {
+      margin: 0 0 12px;
+      font-weight: 600;
+      color: #9f1f1f;
+      font-size: 15px;
+      line-height: 1.5;
+    }
+
+    .first-order-btn {
+      background: #c62828;
+      color: white;
+      border: none;
+      border-radius: 999px;
+      padding: 11px 24px;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      cursor: pointer;
+      font-size: 14px;
+    }
+
+    .first-order-btn:hover {
+      background: #9f1f1f;
+    }
+
     /* PACKAGES */
     .packages {
       padding: 90px 20px;
@@ -480,7 +516,17 @@
         Luxury balloon arches, garlands, floral decor, customized cups, t-shirts, stickers, name details,
         and custom installations for birthdays, baby showers, weddings, corporate events, and special celebrations.
       </p>
+
       <a href="#" class="book-btn" onclick="openModal('bookingModal'); return false;">Book Your Decor</a>
+
+      <div class="first-order-banner">
+        <p class="first-order-text">
+          ✨ First Order Discount — Enjoy 10% OFF your first booking from $450+
+        </p>
+        <button onclick="openModal('bookingModal')" class="first-order-btn">
+          Claim Your Discount
+        </button>
+      </div>
     </div>
   </section>
 
@@ -640,6 +686,7 @@
           <option>Starter Package</option>
           <option>Signature Package</option>
           <option>Luxury Package</option>
+          <option>First Order Discount</option>
           <option>Customized Cups</option>
           <option>Customized T-Shirts</option>
           <option>Stickers / Personalized Details</option>
