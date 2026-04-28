@@ -67,15 +67,11 @@
       justify-content: center;
       text-align: center;
       padding: 60px 20px;
-      position: relative;
-      overflow: hidden;
       background: linear-gradient(120deg, #fff8fc, #f7e8f3, #ffffff);
     }
 
     .hero-content {
       max-width: 850px;
-      position: relative;
-      z-index: 2;
     }
 
     .small-title {
@@ -110,10 +106,8 @@
       padding: 14px 28px;
       border-radius: 999px;
       font-weight: 600;
-      transition: 0.3s;
       border: none;
       cursor: pointer;
-      margin: 8px 8px 0 0;
       font-family: 'Montserrat', sans-serif;
       font-size: 15px;
     }
@@ -127,10 +121,7 @@
       display: none;
       position: fixed;
       z-index: 2000;
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
+      inset: 0;
       background: rgba(0,0,0,0.45);
       justify-content: center;
       align-items: center;
@@ -149,6 +140,10 @@
       box-shadow: 0 20px 50px rgba(0,0,0,0.18);
     }
 
+    .gallery-modal-content {
+      max-width: 1250px;
+    }
+
     .modal-content h2 {
       font-family: 'Playfair Display', serif;
       font-size: 34px;
@@ -157,8 +152,6 @@
     }
 
     .modal-content h3 {
-      margin-bottom: 14px;
-      margin-top: 30px;
       color: #4b2e39;
       font-family: 'Playfair Display', serif;
       font-size: 26px;
@@ -178,45 +171,50 @@
       color: #666;
     }
 
-    .gallery-section {
-      margin-bottom: 34px;
-    }
-
-    .gallery-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
-      gap: 20px;
-      margin-top: 16px;
-    }
-
-    .gallery-item {
+    .gallery-main-title,
+    .gallery-intro {
       text-align: center;
-      background: #fff;
-      border-radius: 18px;
-      padding: 12px;
-      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
     }
 
-    .gallery-item img {
+    .gallery-intro {
+      color: #5a3b4e;
+      margin-bottom: 28px;
+    }
+
+    .gallery-section {
+      margin: 36px 0;
+    }
+
+    .gallery-section h3 {
+      text-align: center;
+      margin-bottom: 18px;
+      display: flex;
+      align-items: center;
+      gap: 18px;
+    }
+
+    .gallery-section h3::before,
+    .gallery-section h3::after {
+      content: "";
+      flex: 1;
+      height: 1px;
+      background: #e8bfd3;
+    }
+
+    .clean-gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .clean-gallery-grid img {
       width: 100%;
       height: 230px;
       object-fit: cover;
-      border-radius: 15px;
+      border-radius: 14px;
       display: block;
-    }
-
-    .gallery-title {
-      font-family: 'Playfair Display', serif;
-      font-size: 18px;
-      margin-top: 12px;
-      margin-bottom: 5px;
-      color: #333;
-    }
-
-    .gallery-price {
-      font-size: 14px;
-      color: #777;
-      margin: 0;
+      box-shadow: 0 8px 22px rgba(91, 55, 76, 0.10);
+      background: #f8ecf7;
     }
 
     .contact-link {
@@ -287,8 +285,22 @@
         padding: 24px;
       }
 
-      .gallery-item img {
+      .clean-gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .clean-gallery-grid img {
         height: 190px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .clean-gallery-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .clean-gallery-grid img {
+        height: 260px;
       }
     }
   </style>
@@ -370,58 +382,58 @@
   </div>
 
   <div id="galleryModal" class="modal">
-    <div class="modal-content">
+    <div class="modal-content gallery-modal-content">
       <span class="close" onclick="closeModal('galleryModal')">&times;</span>
-      <h2>Gallery</h2>
+      <h2 class="gallery-main-title">Gallery</h2>
+      <p class="gallery-intro">Recent designs and customized details.</p>
 
       <div class="gallery-section">
-        <h3>Balloon & Event Decor</h3>
-        <div class="gallery-grid">
-          <div class="gallery-item"><img src="images/picture1.jpg" alt="Balloon decor"><p class="gallery-title">Balloon Decor</p></div>
-          <div class="gallery-item"><img src="images/picture2.jpg" alt="Balloon decor"><p class="gallery-title">Balloon Decor</p></div>
-          <div class="gallery-item"><img src="images/picture3.jpg" alt="Balloon decor"><p class="gallery-title">Balloon Decor</p></div>
-          <div class="gallery-item"><img src="images/picture4.jpg" alt="Balloon decor"><p class="gallery-title">Balloon Decor</p></div>
-          <div class="gallery-item"><img src="images/picture5.jpg" alt="Event decor"><p class="gallery-title">Event Decor</p></div>
-          <div class="gallery-item"><img src="images/picture6.jpg" alt="Event decor"><p class="gallery-title">Event Decor</p></div>
+        <h3>T-Shirts</h3>
+        <div class="clean-gallery-grid">
+          <img src="images/picture1.jpg" alt="Custom t-shirt">
+          <img src="images/picture2.jpg" alt="Custom t-shirt">
+          <img src="images/picture3.jpg" alt="Custom t-shirt">
+          <img src="images/picture4.jpg" alt="Custom t-shirt">
+          <img src="images/picture5.jpg" alt="Custom t-shirt">
+          <img src="images/picture6.jpg" alt="Custom t-shirt">
         </div>
       </div>
 
       <div class="gallery-section">
         <h3>Customized Cups</h3>
-        <div class="gallery-grid">
-          <div class="gallery-item"><img src="images/picture7.jpg" alt="Customized cup"><p class="gallery-title">Custom Cup</p></div>
-          <div class="gallery-item"><img src="images/picture8.jpg" alt="Customized cup"><p class="gallery-title">Custom Cup</p></div>
-          <div class="gallery-item"><img src="images/picture9.jpg" alt="Customized cup"><p class="gallery-title">Custom Cup</p></div>
-          <div class="gallery-item"><img src="images/picture10.jpg" alt="Customized cup"><p class="gallery-title">Custom Cup</p></div>
-          <div class="gallery-item"><img src="images/picture11.jpg" alt="Customized cup"><p class="gallery-title">Custom Cup</p></div>
-          <div class="gallery-item"><img src="images/picture12.jpg" alt="Customized cup"><p class="gallery-title">Custom Cup</p></div>
+        <div class="clean-gallery-grid">
+          <img src="images/picture7.jpg" alt="Custom cup">
+          <img src="images/picture8.jpg" alt="Custom cup">
+          <img src="images/picture9.jpg" alt="Custom cup">
+          <img src="images/picture10.jpg" alt="Custom cup">
+          <img src="images/picture11.jpg" alt="Custom cup">
+          <img src="images/picture12.jpg" alt="Custom cup">
         </div>
       </div>
 
       <div class="gallery-section">
-        <h3>Customized T-Shirts</h3>
-        <div class="gallery-grid">
-          <div class="gallery-item"><img src="images/picture13.jpg" alt="Customized t-shirt"><p class="gallery-title">Custom T-Shirt</p></div>
-          <div class="gallery-item"><img src="images/picture14.jpg" alt="Customized t-shirt"><p class="gallery-title">Custom T-Shirt</p></div>
-          <div class="gallery-item"><img src="images/picture15.jpg" alt="Customized t-shirt"><p class="gallery-title">Custom T-Shirt</p></div>
-          <div class="gallery-item"><img src="images/picture16.jpg" alt="Customized t-shirt"><p class="gallery-title">Custom T-Shirt</p></div>
-          <div class="gallery-item"><img src="images/picture17.jpg" alt="Customized t-shirt"><p class="gallery-title">Custom T-Shirt</p></div>
-          <div class="gallery-item"><img src="images/picture18.jpg" alt="Customized t-shirt"><p class="gallery-title">Custom T-Shirt</p></div>
+        <h3>Balloon Columns</h3>
+        <div class="clean-gallery-grid">
+          <img src="images/picture13.jpg" alt="Balloon column">
+          <img src="images/picture14.jpg" alt="Balloon column">
+          <img src="images/picture15.jpg" alt="Balloon column">
+          <img src="images/picture16.jpg" alt="Balloon column">
+          <img src="images/picture17.jpg" alt="Balloon column">
+          <img src="images/picture18.jpg" alt="Balloon column">
         </div>
       </div>
 
       <div class="gallery-section">
-        <h3>Stickers & Personalized Details</h3>
-        <div class="gallery-grid">
-          <div class="gallery-item"><img src="images/picture19.jpg" alt="Customized sticker"><p class="gallery-title">Custom Sticker</p></div>
-          <div class="gallery-item"><img src="images/picture20.jpg" alt="Customized sticker"><p class="gallery-title">Custom Sticker</p></div>
-          <div class="gallery-item"><img src="images/picture21.jpg" alt="Personalized detail"><p class="gallery-title">Personalized Detail</p></div>
-          <div class="gallery-item"><img src="images/picture22.jpg" alt="Personalized detail"><p class="gallery-title">Personalized Detail</p></div>
-          <div class="gallery-item"><img src="images/picture23.jpg" alt="Personalized detail"><p class="gallery-title">Personalized Detail</p></div>
-          <div class="gallery-item"><img src="images/picture24.jpg" alt="Personalized detail"><p class="gallery-title">Personalized Detail</p></div>
+        <h3>Balloon Arches</h3>
+        <div class="clean-gallery-grid">
+          <img src="images/picture19.jpg" alt="Balloon arch">
+          <img src="images/picture20.jpg" alt="Balloon arch">
+          <img src="images/picture21.jpg" alt="Balloon arch">
+          <img src="images/picture22.jpg" alt="Balloon arch">
+          <img src="images/picture23.jpg" alt="Balloon arch">
+          <img src="images/picture24.jpg" alt="Balloon arch">
         </div>
       </div>
-
     </div>
   </div>
 
@@ -482,16 +494,12 @@
   <script>
     function openModal(id) {
       const modal = document.getElementById(id);
-      if (modal) {
-        modal.style.display = "flex";
-      }
+      if (modal) modal.style.display = "flex";
     }
 
     function closeModal(id) {
       const modal = document.getElementById(id);
-      if (modal) {
-        modal.style.display = "none";
-      }
+      if (modal) modal.style.display = "none";
     }
 
     window.addEventListener("click", function(event) {
