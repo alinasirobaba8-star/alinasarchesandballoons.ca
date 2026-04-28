@@ -141,7 +141,8 @@
     }
 
     .gallery-modal-content {
-      max-width: 1250px;
+      max-width: 1350px;
+      padding: 28px;
     }
 
     .modal-content h2 {
@@ -169,51 +170,22 @@
       font-size: 30px;
       cursor: pointer;
       color: #666;
+      z-index: 5;
     }
 
-    .gallery-main-title,
-    .gallery-intro {
-      text-align: center;
-    }
-
-    .gallery-intro {
-      color: #5a3b4e;
-      margin-bottom: 28px;
-    }
-
-    .gallery-section {
-      margin: 36px 0;
-    }
-
-    .gallery-section h3 {
-      text-align: center;
-      margin-bottom: 18px;
-      display: flex;
-      align-items: center;
-      gap: 18px;
-    }
-
-    .gallery-section h3::before,
-    .gallery-section h3::after {
-      content: "";
-      flex: 1;
-      height: 1px;
-      background: #e8bfd3;
-    }
-
-    .clean-gallery-grid {
+    .all-gallery {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 18px;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 14px;
+      margin-top: 32px;
     }
 
-    .clean-gallery-grid img {
+    .all-gallery img {
       width: 100%;
-      height: 230px;
+      height: 165px;
       object-fit: cover;
-      border-radius: 14px;
+      border-radius: 10px;
       display: block;
-      box-shadow: 0 8px 22px rgba(91, 55, 76, 0.10);
       background: #f8ecf7;
     }
 
@@ -253,7 +225,7 @@
       box-shadow: 0 0 0 3px rgba(192, 108, 132, 0.12);
     }
 
-    @media (max-width: 768px) {
+    @media (max-width: 900px) {
       .topbar {
         flex-direction: column;
         gap: 12px;
@@ -285,22 +257,22 @@
         padding: 24px;
       }
 
-      .clean-gallery-grid {
-        grid-template-columns: repeat(2, 1fr);
+      .all-gallery {
+        grid-template-columns: repeat(3, 1fr);
       }
 
-      .clean-gallery-grid img {
-        height: 190px;
+      .all-gallery img {
+        height: 160px;
       }
     }
 
     @media (max-width: 480px) {
-      .clean-gallery-grid {
-        grid-template-columns: 1fr;
+      .all-gallery {
+        grid-template-columns: repeat(2, 1fr);
       }
 
-      .clean-gallery-grid img {
-        height: 260px;
+      .all-gallery img {
+        height: 150px;
       }
     }
   </style>
@@ -346,16 +318,12 @@
     <div class="modal-content">
       <span class="close" onclick="closeModal('servicesModal')">&times;</span>
       <h2>Services</h2>
-
       <h3>Balloon Decor</h3>
       <p>Balloon arches, garlands, columns, walls, centerpieces, grab & go garlands, and custom installations.</p>
-
       <h3>Floral Decor</h3>
       <p>Elegant floral arches, entrance stands, ceremony decor, and photo-area styling.</p>
-
       <h3>Customized Details</h3>
       <p>Custom cups, t-shirts, stickers, name tags, personalized gifts, party details, and event accessories.</p>
-
       <h3>Custom Installations</h3>
       <p>Personalized decor created to match your theme, colors, and event style.</p>
     </div>
@@ -365,7 +333,6 @@
     <div class="modal-content">
       <span class="close" onclick="closeModal('pricingModal')">&times;</span>
       <h2>Pricing</h2>
-
       <p><strong>Grab & Go Garland:</strong> starting at $150 CAD + tax</p>
       <p><strong>Deluxe Garland:</strong> $40 CAD/ft</p>
       <p><strong>Balloon Arches:</strong> starting at $200 CAD</p>
@@ -376,7 +343,6 @@
       <p><strong>Entrance Stand Decor:</strong> starting at $150 CAD</p>
       <p><strong>Customized Cups / T-Shirts / Stickers:</strong> contact for pricing</p>
       <p><strong>Custom Installations:</strong> contact for quote</p>
-
       <p>Final pricing may vary depending on size, design, location, delivery, setup time, customization, and last-minute requests.</p>
     </div>
   </div>
@@ -384,56 +350,39 @@
   <div id="galleryModal" class="modal">
     <div class="modal-content gallery-modal-content">
       <span class="close" onclick="closeModal('galleryModal')">&times;</span>
-      <h2 class="gallery-main-title">Gallery</h2>
-      <p class="gallery-intro">Recent designs and customized details.</p>
 
-      <div class="gallery-section">
-        <h3>T-Shirts</h3>
-        <div class="clean-gallery-grid">
-          <img src="images/picture1.jpg" alt="Custom t-shirt">
-          <img src="images/picture2.jpg" alt="Custom t-shirt">
-          <img src="images/picture3.jpg" alt="Custom t-shirt">
-          <img src="images/picture4.jpg" alt="Custom t-shirt">
-          <img src="images/picture5.jpg" alt="Custom t-shirt">
-          <img src="images/picture6.jpg" alt="Custom t-shirt">
-        </div>
+      <div class="all-gallery">
+        <img src="images/picture8.jpg" alt="">
+        <img src="images/picture23.jpg" alt="">
+        <img src="images/picture2.jpg" alt="">
+        <img src="images/picture3.jpg" alt="">
+        <img src="images/picture4.jpg" alt="">
+        <img src="images/picture5.jpg" alt="">
+        <img src="images/picture6.jpg" alt="">
+        <img src="images/picture7.jpg" alt="">
+        <img src="images/picture9.jpg" alt="">
+        <img src="images/picture10.jpg" alt="">
+        <img src="images/picture24.jpg" alt="">
+        <img src="images/picture11.jpg" alt="">
+        <img src="images/picture12.jpg" alt="">
+        <img src="images/picture13.jpg" alt="">
+        <img src="images/picture14.jpg" alt="">
+        <img src="images/picture15.jpg" alt="">
+        <img src="images/picture19.jpg" alt="">
+        <img src="images/picture21.jpg" alt="">
+        <img src="images/picture17.jpg" alt="">
+        <img src="images/picture18.jpg" alt="">
+        <img src="images/picture20.jpg" alt="">
+        <img src="images/picture22.jpg" alt="">
+        <img src="images/arch3.jpg" alt="">
+        <img src="images/arch4.jpg" alt="">
+        <img src="images/arch5.jpg" alt="">
+        <img src="images/arch6.jpg" alt="">
+        <img src="images/arch7.jpg" alt="">
+        <img src="images/arch8.jpg" alt="">
+        <img src="images/arch9.jpg" alt="">
       </div>
 
-      <div class="gallery-section">
-        <h3>Customized Cups</h3>
-        <div class="clean-gallery-grid">
-          <img src="images/picture7.jpg" alt="Custom cup">
-          <img src="images/picture8.jpg" alt="Custom cup">
-          <img src="images/picture9.jpg" alt="Custom cup">
-          <img src="images/picture10.jpg" alt="Custom cup">
-          <img src="images/picture11.jpg" alt="Custom cup">
-          <img src="images/picture12.jpg" alt="Custom cup">
-        </div>
-      </div>
-
-      <div class="gallery-section">
-        <h3>Balloon Columns</h3>
-        <div class="clean-gallery-grid">
-          <img src="images/picture13.jpg" alt="Balloon column">
-          <img src="images/picture14.jpg" alt="Balloon column">
-          <img src="images/picture15.jpg" alt="Balloon column">
-          <img src="images/picture16.jpg" alt="Balloon column">
-          <img src="images/picture17.jpg" alt="Balloon column">
-          <img src="images/picture18.jpg" alt="Balloon column">
-        </div>
-      </div>
-
-      <div class="gallery-section">
-        <h3>Balloon Arches</h3>
-        <div class="clean-gallery-grid">
-          <img src="images/picture19.jpg" alt="Balloon arch">
-          <img src="images/picture20.jpg" alt="Balloon arch">
-          <img src="images/picture21.jpg" alt="Balloon arch">
-          <img src="images/picture22.jpg" alt="Balloon arch">
-          <img src="images/picture23.jpg" alt="Balloon arch">
-          <img src="images/picture24.jpg" alt="Balloon arch">
-        </div>
-      </div>
     </div>
   </div>
 
