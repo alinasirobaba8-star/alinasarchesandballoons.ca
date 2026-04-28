@@ -69,6 +69,7 @@
       padding: 60px 20px;
       position: relative;
       overflow: hidden;
+      background: linear-gradient(120deg, #fff8fc, #f7e8f3, #ffffff);
     }
 
     .hero-content {
@@ -139,7 +140,7 @@
     .modal-content {
       background: #fff;
       width: 100%;
-      max-width: 900px;
+      max-width: 1000px;
       max-height: 90vh;
       overflow-y: auto;
       border-radius: 22px;
@@ -156,9 +157,11 @@
     }
 
     .modal-content h3 {
-      margin-bottom: 8px;
-      margin-top: 24px;
+      margin-bottom: 14px;
+      margin-top: 30px;
       color: #4b2e39;
+      font-family: 'Playfair Display', serif;
+      font-size: 26px;
     }
 
     .modal-content p {
@@ -175,11 +178,15 @@
       color: #666;
     }
 
+    .gallery-section {
+      margin-bottom: 34px;
+    }
+
     .gallery-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
       gap: 20px;
-      margin-top: 20px;
+      margin-top: 16px;
     }
 
     .gallery-item {
@@ -192,7 +199,7 @@
 
     .gallery-item img {
       width: 100%;
-      height: 220px;
+      height: 230px;
       object-fit: cover;
       border-radius: 15px;
       display: block;
@@ -279,6 +286,10 @@
       .modal-content {
         padding: 24px;
       }
+
+      .gallery-item img {
+        height: 190px;
+      }
     }
   </style>
 </head>
@@ -299,11 +310,11 @@
 
   <section class="hero" id="home">
     <div class="hero-content">
-      <p class="small-title">Montreal Balloon & Floral Decor</p>
-      <h1>Elegant Balloon Designs & Floral Arches for Every Celebration</h1>
+      <p class="small-title">Montreal Balloon & Custom Event Decor</p>
+      <h1>Elegant Balloon Designs & Customized Details for Every Celebration</h1>
       <p class="hero-description">
-        Luxury balloon arches, garlands, columns, floral arches, customized details, entrance stands, and custom installations
-        for birthdays, baby showers, weddings, corporate events, and unforgettable celebrations.
+        Luxury balloon arches, garlands, floral decor, customized cups, t-shirts, stickers, name details,
+        and custom installations for birthdays, baby showers, weddings, corporate events, and special celebrations.
       </p>
       <a href="#" class="book-btn" onclick="openModal('bookingModal'); return false;">Book Your Decor</a>
     </div>
@@ -314,9 +325,8 @@
       <span class="close" onclick="closeModal('aboutModal')">&times;</span>
       <h2>About Me</h2>
       <p>Hi, I’m Alina — the creator behind <strong>Alina’s Arches & Balloons</strong>, a luxury décor service based in <strong>Montreal</strong>.</p>
-      <p>What started as a creative passion quickly turned into something much bigger. I’ve always been inspired by beautiful details, soft color palettes, and the way décor can completely transform a space.</p>
-      <p>I specialize in <strong>custom balloon installations</strong>, <strong>small customized event details</strong>, and <strong>elegant floral arches</strong> for weddings, birthdays, baby showers, bridal showers, gender reveals, and special events.</p>
-      <p>Every setup is designed with care, creativity, and attention to detail to bring each client’s vision to life in a refined and unforgettable way.</p>
+      <p>I create balloon decor, floral event pieces, and customized details that make celebrations feel more personal, elegant, and memorable.</p>
+      <p>Every setup is designed with care, creativity, and attention to detail to bring each client’s vision to life.</p>
     </div>
   </div>
 
@@ -325,32 +335,17 @@
       <span class="close" onclick="closeModal('servicesModal')">&times;</span>
       <h2>Services</h2>
 
-      <h3>Balloon Arches</h3>
-      <p>Beautiful custom arches for birthdays, weddings, baby showers, corporate events, and special celebrations.</p>
+      <h3>Balloon Decor</h3>
+      <p>Balloon arches, garlands, columns, walls, centerpieces, grab & go garlands, and custom installations.</p>
 
-      <h3>Balloon Columns</h3>
-      <p>Perfect for entrances, photo areas, welcome setups, and event displays.</p>
+      <h3>Floral Decor</h3>
+      <p>Elegant floral arches, entrance stands, ceremony decor, and photo-area styling.</p>
 
-      <h3>Deluxe Balloon Garlands</h3>
-      <p>Premium organic garlands with elegant colors, luxury finishes, and custom styling.</p>
-
-      <h3>Grab & Go Garlands</h3>
-      <p>Quick pickup option for small events, home celebrations, and simple party setups.</p>
-
-      <h3>Floral Arches</h3>
-      <p>Elegant floral arches for weddings, ceremonies, bridal events, birthdays, and other special occasions.</p>
-
-      <h3>Entrance Stands</h3>
-      <p>Elegant entrance stands for weddings, birthdays, welcome signs, seating charts, and photo areas.</p>
-
-      <h3>Small Customized Details</h3>
-      <p>Customized small details such as name tags, stickers, customized cups, glasses, plates, tumblers, and more.</p>
+      <h3>Customized Details</h3>
+      <p>Custom cups, t-shirts, stickers, name tags, personalized gifts, party details, and event accessories.</p>
 
       <h3>Custom Installations</h3>
-      <p>Fully personalized balloon and floral decor created to match your theme, colors, and event style.</p>
-
-      <h3>Stuffed Balloon Centerpieces</h3>
-      <p>Balloon gifts and centerpieces with teddy bears, flowers, mini balloons, or personalized surprises.</p>
+      <p>Personalized decor created to match your theme, colors, and event style.</p>
     </div>
   </div>
 
@@ -367,7 +362,7 @@
       <p><strong>Centerpieces:</strong> starting at $75 CAD per piece</p>
       <p><strong>Floral Arches:</strong> starting at $400 CAD</p>
       <p><strong>Entrance Stand Decor:</strong> starting at $150 CAD</p>
-      <p><strong>Small Customized Details:</strong> contact for pricing</p>
+      <p><strong>Customized Cups / T-Shirts / Stickers:</strong> contact for pricing</p>
       <p><strong>Custom Installations:</strong> contact for quote</p>
 
       <p>Final pricing may vary depending on size, design, location, delivery, setup time, customization, and last-minute requests.</p>
@@ -379,49 +374,54 @@
       <span class="close" onclick="closeModal('galleryModal')">&times;</span>
       <h2>Gallery</h2>
 
-      <div class="gallery-grid">
-        <div class="gallery-item">
-          <img src="images/balloons-arches.jpg" alt="Balloon arches">
-          <p class="gallery-title">Balloon Arches</p>
-          <p class="gallery-price">Starting at $200 CAD</p>
-        </div>
-
-        <div class="gallery-item">
-          <img src="images/columns-arches.jpg" alt="Balloon columns">
-          <p class="gallery-title">Balloon Columns</p>
-          <p class="gallery-price">Starting at $150 CAD</p>
-        </div>
-
-        <div class="gallery-item">
-          <img src="images/custom-balloons-installation.jpg" alt="Custom balloon installation">
-          <p class="gallery-title">Custom Installations</p>
-          <p class="gallery-price">Contact for pricing</p>
-        </div>
-
-        <div class="gallery-item">
-          <img src="images/custom-balloons-walls.jpg" alt="Balloon wall">
-          <p class="gallery-title">Balloon Walls</p>
-          <p class="gallery-price">Starting at $400 CAD</p>
-        </div>
-
-        <div class="gallery-item">
-          <img src="images/deluxe-balloon-garland.jpg" alt="Deluxe balloon garland">
-          <p class="gallery-title">Deluxe Balloon Garland</p>
-          <p class="gallery-price">$40 CAD per foot</p>
-        </div>
-
-        <div class="gallery-item">
-          <img src="images/grab-go-balloons.jpg" alt="Grab and go balloons">
-          <p class="gallery-title">Grab & Go Garland</p>
-          <p class="gallery-price">Starting at $150 CAD + tax</p>
-        </div>
-
-        <div class="gallery-item">
-          <img src="images/stuffed-balloons.jpg" alt="Stuffed balloons">
-          <p class="gallery-title">Stuffed Balloon Centerpieces</p>
-          <p class="gallery-price">Starting at $75 CAD per piece</p>
+      <div class="gallery-section">
+        <h3>Balloon & Event Decor</h3>
+        <div class="gallery-grid">
+          <div class="gallery-item"><img src="images/picture1.jpg" alt="Balloon decor"><p class="gallery-title">Balloon Decor</p></div>
+          <div class="gallery-item"><img src="images/picture2.jpg" alt="Balloon decor"><p class="gallery-title">Balloon Decor</p></div>
+          <div class="gallery-item"><img src="images/picture3.jpg" alt="Balloon decor"><p class="gallery-title">Balloon Decor</p></div>
+          <div class="gallery-item"><img src="images/picture4.jpg" alt="Balloon decor"><p class="gallery-title">Balloon Decor</p></div>
+          <div class="gallery-item"><img src="images/picture5.jpg" alt="Event decor"><p class="gallery-title">Event Decor</p></div>
+          <div class="gallery-item"><img src="images/picture6.jpg" alt="Event decor"><p class="gallery-title">Event Decor</p></div>
         </div>
       </div>
+
+      <div class="gallery-section">
+        <h3>Customized Cups</h3>
+        <div class="gallery-grid">
+          <div class="gallery-item"><img src="images/picture7.jpg" alt="Customized cup"><p class="gallery-title">Custom Cup</p></div>
+          <div class="gallery-item"><img src="images/picture8.jpg" alt="Customized cup"><p class="gallery-title">Custom Cup</p></div>
+          <div class="gallery-item"><img src="images/picture9.jpg" alt="Customized cup"><p class="gallery-title">Custom Cup</p></div>
+          <div class="gallery-item"><img src="images/picture10.jpg" alt="Customized cup"><p class="gallery-title">Custom Cup</p></div>
+          <div class="gallery-item"><img src="images/picture11.jpg" alt="Customized cup"><p class="gallery-title">Custom Cup</p></div>
+          <div class="gallery-item"><img src="images/picture12.jpg" alt="Customized cup"><p class="gallery-title">Custom Cup</p></div>
+        </div>
+      </div>
+
+      <div class="gallery-section">
+        <h3>Customized T-Shirts</h3>
+        <div class="gallery-grid">
+          <div class="gallery-item"><img src="images/picture13.jpg" alt="Customized t-shirt"><p class="gallery-title">Custom T-Shirt</p></div>
+          <div class="gallery-item"><img src="images/picture14.jpg" alt="Customized t-shirt"><p class="gallery-title">Custom T-Shirt</p></div>
+          <div class="gallery-item"><img src="images/picture15.jpg" alt="Customized t-shirt"><p class="gallery-title">Custom T-Shirt</p></div>
+          <div class="gallery-item"><img src="images/picture16.jpg" alt="Customized t-shirt"><p class="gallery-title">Custom T-Shirt</p></div>
+          <div class="gallery-item"><img src="images/picture17.jpg" alt="Customized t-shirt"><p class="gallery-title">Custom T-Shirt</p></div>
+          <div class="gallery-item"><img src="images/picture18.jpg" alt="Customized t-shirt"><p class="gallery-title">Custom T-Shirt</p></div>
+        </div>
+      </div>
+
+      <div class="gallery-section">
+        <h3>Stickers & Personalized Details</h3>
+        <div class="gallery-grid">
+          <div class="gallery-item"><img src="images/picture19.jpg" alt="Customized sticker"><p class="gallery-title">Custom Sticker</p></div>
+          <div class="gallery-item"><img src="images/picture20.jpg" alt="Customized sticker"><p class="gallery-title">Custom Sticker</p></div>
+          <div class="gallery-item"><img src="images/picture21.jpg" alt="Personalized detail"><p class="gallery-title">Personalized Detail</p></div>
+          <div class="gallery-item"><img src="images/picture22.jpg" alt="Personalized detail"><p class="gallery-title">Personalized Detail</p></div>
+          <div class="gallery-item"><img src="images/picture23.jpg" alt="Personalized detail"><p class="gallery-title">Personalized Detail</p></div>
+          <div class="gallery-item"><img src="images/picture24.jpg" alt="Personalized detail"><p class="gallery-title">Personalized Detail</p></div>
+        </div>
+      </div>
+
     </div>
   </div>
 
@@ -442,6 +442,9 @@
           <option>Wedding</option>
           <option>Gender Reveal</option>
           <option>Corporate Event</option>
+          <option>Customized Cups</option>
+          <option>Customized T-Shirts</option>
+          <option>Stickers / Personalized Details</option>
           <option>Other</option>
         </select>
 
@@ -472,7 +475,7 @@
         </a>
       </p>
 
-      <p>Based in Montreal, available for birthdays, baby showers, weddings, corporate events, and custom celebrations.</p>
+      <p>Based in Montreal, available for birthdays, baby showers, weddings, corporate events, custom cups, t-shirts, stickers, and personalized event details.</p>
     </div>
   </div>
 
