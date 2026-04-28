@@ -626,3 +626,73 @@ body {
     padding: 10px 12px;
   }
 }
+/* LUXURY UPGRADES */
+html {
+  scroll-behavior: smooth;
+}
+
+.hero h1 {
+  text-shadow: 0 10px 30px rgba(192, 108, 132, 0.22);
+}
+
+.package-card {
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.package-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 30px 70px rgba(91, 55, 76, 0.25);
+}
+
+.featured-package:hover {
+  transform: translateY(-10px) scale(1.04);
+}
+
+.book-btn,
+.package-btn,
+.contact-button,
+.first-order-btn {
+  position: relative;
+  overflow: hidden;
+}
+
+.book-btn::after,
+.package-btn::after,
+.contact-button::after,
+.first-order-btn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -120%;
+  width: 120%;
+  height: 100%;
+  background: linear-gradient(120deg, transparent, rgba(255,255,255,0.5), transparent);
+  transition: 0.55s ease;
+}
+
+.book-btn:hover::after,
+.package-btn:hover::after,
+.contact-button:hover::after,
+.first-order-btn:hover::after {
+  left: 100%;
+}
+
+.all-gallery img {
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.all-gallery img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+}
+
+.sticky-contact-bar {
+  background: rgba(255, 255, 255, 0.82);
+  backdrop-filter: blur(18px);
+  box-shadow: 0 25px 60px rgba(91, 55, 76, 0.25);
+}
+
+.sticky-contact-bar a:hover {
+  background: linear-gradient(135deg, #c06c84, #e8a0c0);
+  color: white;
+}
