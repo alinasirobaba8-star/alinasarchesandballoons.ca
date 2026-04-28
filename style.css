@@ -9,6 +9,10 @@ body {
   overflow-x: hidden;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: 'Montserrat', sans-serif;
   color: #4b3140;
@@ -97,6 +101,7 @@ body {
   line-height: 1.05;
   margin: 0 0 22px;
   color: #6f4561;
+  text-shadow: 0 10px 30px rgba(192, 108, 132, 0.22);
 }
 
 .hero-description {
@@ -108,6 +113,14 @@ body {
 }
 
 /* BUTTONS */
+.book-btn,
+.contact-button,
+.package-btn,
+.first-order-btn {
+  position: relative;
+  overflow: hidden;
+}
+
 .book-btn,
 .contact-button {
   display: inline-block;
@@ -128,6 +141,63 @@ body {
 .contact-button:hover {
   background: #c76d9c;
   transform: translateY(-2px);
+}
+
+.book-btn::after,
+.package-btn::after,
+.contact-button::after,
+.first-order-btn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -120%;
+  width: 120%;
+  height: 100%;
+  background: linear-gradient(120deg, transparent, rgba(255,255,255,0.5), transparent);
+  transition: 0.55s ease;
+}
+
+.book-btn:hover::after,
+.package-btn:hover::after,
+.contact-button:hover::after,
+.first-order-btn:hover::after {
+  left: 100%;
+}
+
+/* FIRST ORDER DISCOUNT */
+.first-order-banner {
+  margin: 28px auto 0;
+  padding: 20px 24px;
+  max-width: 620px;
+  background: linear-gradient(135deg, #ffe3e3, #fff1f1);
+  border: 1.5px solid #d94b4b;
+  border-radius: 18px;
+  text-align: center;
+  box-shadow: 0 14px 35px rgba(180, 40, 40, 0.14);
+}
+
+.first-order-text {
+  margin: 0 0 12px;
+  font-weight: 600;
+  color: #9f1f1f;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.first-order-btn {
+  background: #c62828;
+  color: white;
+  border: none;
+  border-radius: 999px;
+  padding: 11px 24px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.first-order-btn:hover {
+  background: #9f1f1f;
 }
 
 /* PACKAGES */
@@ -164,12 +234,22 @@ body {
   padding: 18px 18px 30px;
   box-shadow: 0 18px 45px rgba(91, 55, 76, 0.13);
   text-align: left;
-  transition: 0.3s ease;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
   border: 1px solid #f0dce8;
 }
 
 .package-card:hover {
-  transform: translateY(-6px);
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 30px 70px rgba(91, 55, 76, 0.25);
+}
+
+.featured-package {
+  border: 2px solid #c06c84;
+  transform: scale(1.03);
+}
+
+.featured-package:hover {
+  transform: translateY(-10px) scale(1.04);
 }
 
 .package-card img {
@@ -233,11 +313,6 @@ body {
 
 .package-btn:hover {
   background: #a95770;
-}
-
-.featured-package {
-  border: 2px solid #c06c84;
-  transform: scale(1.03);
 }
 
 .featured-label {
@@ -351,11 +426,12 @@ body {
   background: #f8ecf7;
   box-shadow: none;
   cursor: zoom-in;
-  transition: transform 0.25s ease;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
 .all-gallery img:hover {
-  transform: scale(1.02);
+  transform: scale(1.05);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.15);
 }
 
 /* IMAGE ZOOM LIGHTBOX */
@@ -426,6 +502,38 @@ body {
   resize: vertical;
 }
 
+/* STICKY CONTACT BAR */
+.sticky-contact-bar {
+  position: fixed;
+  left: 50%;
+  bottom: 18px;
+  transform: translateX(-50%);
+  z-index: 9998;
+  background: rgba(255, 255, 255, 0.82);
+  backdrop-filter: blur(18px);
+  border: 1px solid #ead7e4;
+  border-radius: 999px;
+  padding: 10px 14px;
+  display: flex;
+  gap: 8px;
+  box-shadow: 0 25px 60px rgba(91, 55, 76, 0.25);
+}
+
+.sticky-contact-bar a {
+  text-decoration: none;
+  color: #6f4561;
+  font-weight: 600;
+  font-size: 14px;
+  padding: 10px 16px;
+  border-radius: 999px;
+  transition: 0.3s ease;
+}
+
+.sticky-contact-bar a:hover {
+  background: linear-gradient(135deg, #c06c84, #e8a0c0);
+  color: white;
+}
+
 /* MOBILE */
 @media (max-width: 900px) {
   .topbar {
@@ -468,6 +576,10 @@ body {
 
   .featured-package {
     transform: none;
+  }
+
+  .featured-package:hover {
+    transform: translateY(-6px);
   }
 
   .modal {
@@ -545,75 +657,7 @@ body {
     right: 22px;
     font-size: 34px;
   }
-}
-/* FIRST ORDER DISCOUNT */
-.first-order-banner {
-  margin: 28px auto 0;
-  padding: 20px 24px;
-  max-width: 620px;
-  background: linear-gradient(135deg, #ffe3e3, #fff1f1);
-  border: 1.5px solid #d94b4b;
-  border-radius: 18px;
-  text-align: center;
-  box-shadow: 0 14px 35px rgba(180, 40, 40, 0.14);
-}
 
-.first-order-text {
-  margin: 0 0 12px;
-  font-weight: 600;
-  color: #9f1f1f;
-  font-size: 15px;
-  line-height: 1.5;
-}
-
-.first-order-btn {
-  background: #c62828;
-  color: white;
-  border: none;
-  border-radius: 999px;
-  padding: 11px 24px;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 600;
-  cursor: pointer;
-  font-size: 14px;
-}
-
-.first-order-btn:hover {
-  background: #9f1f1f;
-}
-/* STICKY LUXURY CONTACT BAR */
-.sticky-contact-bar {
-  position: fixed;
-  left: 50%;
-  bottom: 18px;
-  transform: translateX(-50%);
-  z-index: 9998;
-  background: rgba(255, 255, 255, 0.92);
-  backdrop-filter: blur(12px);
-  border: 1px solid #ead7e4;
-  border-radius: 999px;
-  padding: 10px 14px;
-  display: flex;
-  gap: 8px;
-  box-shadow: 0 18px 45px rgba(91, 55, 76, 0.18);
-}
-
-.sticky-contact-bar a {
-  text-decoration: none;
-  color: #6f4561;
-  font-weight: 600;
-  font-size: 14px;
-  padding: 10px 16px;
-  border-radius: 999px;
-  transition: 0.3s ease;
-}
-
-.sticky-contact-bar a:hover {
-  background: #c06c84;
-  color: white;
-}
-
-@media (max-width: 480px) {
   .sticky-contact-bar {
     width: calc(100% - 24px);
     justify-content: space-between;
@@ -625,74 +669,4 @@ body {
     font-size: 13px;
     padding: 10px 12px;
   }
-}
-/* LUXURY UPGRADES */
-html {
-  scroll-behavior: smooth;
-}
-
-.hero h1 {
-  text-shadow: 0 10px 30px rgba(192, 108, 132, 0.22);
-}
-
-.package-card {
-  transition: transform 0.35s ease, box-shadow 0.35s ease;
-}
-
-.package-card:hover {
-  transform: translateY(-10px) scale(1.02);
-  box-shadow: 0 30px 70px rgba(91, 55, 76, 0.25);
-}
-
-.featured-package:hover {
-  transform: translateY(-10px) scale(1.04);
-}
-
-.book-btn,
-.package-btn,
-.contact-button,
-.first-order-btn {
-  position: relative;
-  overflow: hidden;
-}
-
-.book-btn::after,
-.package-btn::after,
-.contact-button::after,
-.first-order-btn::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: -120%;
-  width: 120%;
-  height: 100%;
-  background: linear-gradient(120deg, transparent, rgba(255,255,255,0.5), transparent);
-  transition: 0.55s ease;
-}
-
-.book-btn:hover::after,
-.package-btn:hover::after,
-.contact-button:hover::after,
-.first-order-btn:hover::after {
-  left: 100%;
-}
-
-.all-gallery img {
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
-}
-
-.all-gallery img:hover {
-  transform: scale(1.05);
-  box-shadow: 0 12px 30px rgba(0,0,0,0.15);
-}
-
-.sticky-contact-bar {
-  background: rgba(255, 255, 255, 0.82);
-  backdrop-filter: blur(18px);
-  box-shadow: 0 25px 60px rgba(91, 55, 76, 0.25);
-}
-
-.sticky-contact-bar a:hover {
-  background: linear-gradient(135deg, #c06c84, #e8a0c0);
-  color: white;
 }
