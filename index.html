@@ -9,12 +9,15 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
 
   <style>
-    * {
-      box-sizing: border-box;
+    * { box-sizing: border-box; }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
     }
 
     body {
-      margin: 0;
       font-family: 'Montserrat', sans-serif;
       background: linear-gradient(180deg, #fff8fc 0%, #f8ecf7 100%);
       color: #333;
@@ -55,9 +58,7 @@
       transition: 0.3s;
     }
 
-    .nav a:hover {
-      color: #c06c84;
-    }
+    .nav a:hover { color: #c06c84; }
 
     .hero {
       min-height: 82vh;
@@ -112,6 +113,8 @@
       border: none;
       cursor: pointer;
       margin: 8px 8px 0 0;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 15px;
     }
 
     .book-btn:hover,
@@ -215,9 +218,7 @@
       font-weight: 600;
     }
 
-    .contact-link:hover {
-      text-decoration: underline;
-    }
+    .contact-link:hover { text-decoration: underline; }
 
     .booking-form {
       display: flex;
@@ -259,6 +260,14 @@
         text-align: center;
       }
 
+      .nav {
+        gap: 14px;
+      }
+
+      .nav a {
+        font-size: 14px;
+      }
+
       .hero h1 {
         font-size: 38px;
       }
@@ -273,6 +282,7 @@
     }
   </style>
 </head>
+
 <body>
 
   <header class="topbar">
@@ -303,21 +313,10 @@
     <div class="modal-content">
       <span class="close" onclick="closeModal('aboutModal')">&times;</span>
       <h2>About Me</h2>
-      <p>
-        Hi, I’m Alina — the creator behind <strong>Alina’s Arches & Balloons</strong>, a luxury décor service based in <strong>Montreal</strong>.
-      </p>
-      <p>
-        What started as a creative passion quickly turned into something much bigger. I’ve always been inspired by beautiful details,
-        soft color palettes, and the way décor can completely transform a space and make a moment feel even more special.
-      </p>
-      <p>
-        I specialize in <strong>custom balloon installations</strong>, <strong>small customized event details</strong>, and <strong>elegant floral arches</strong>
-        for weddings and other occasions, including birthdays, baby showers, bridal showers, gender reveals, and special events.
-      </p>
-      <p>
-        For me, this is more than just décor — it’s about creating an atmosphere, a feeling, and memories that people will remember long after
-        the event is over. Every setup is designed with care, creativity, and attention to detail to bring each client’s vision to life in a refined and unforgettable way.
-      </p>
+      <p>Hi, I’m Alina — the creator behind <strong>Alina’s Arches & Balloons</strong>, a luxury décor service based in <strong>Montreal</strong>.</p>
+      <p>What started as a creative passion quickly turned into something much bigger. I’ve always been inspired by beautiful details, soft color palettes, and the way décor can completely transform a space.</p>
+      <p>I specialize in <strong>custom balloon installations</strong>, <strong>small customized event details</strong>, and <strong>elegant floral arches</strong> for weddings, birthdays, baby showers, bridal showers, gender reveals, and special events.</p>
+      <p>Every setup is designed with care, creativity, and attention to detail to bring each client’s vision to life in a refined and unforgettable way.</p>
     </div>
   </div>
 
@@ -371,9 +370,7 @@
       <p><strong>Small Customized Details:</strong> contact for pricing</p>
       <p><strong>Custom Installations:</strong> contact for quote</p>
 
-      <p>
-        Final pricing may vary depending on size, design, location, delivery, setup time, customization, and last-minute requests.
-      </p>
+      <p>Final pricing may vary depending on size, design, location, delivery, setup time, customization, and last-minute requests.</p>
     </div>
   </div>
 
@@ -451,7 +448,63 @@
         <input type="date" name="event_date" required>
         <input type="text" name="location" placeholder="Event Location">
         <input type="text" name="colors_theme" placeholder="Colors / Theme">
+
         <textarea name="details" rows="5" placeholder="Tell me about your event, decor style, colors, and any customized details you would like." required></textarea>
 
         <input type="hidden" name="_subject" value="New Booking Request from Website">
-        <input type="hidden"
+        <input type="hidden" name="_captcha" value="false">
+
+        <button type="submit" class="contact-button">Send Booking Request</button>
+      </form>
+    </div>
+  </div>
+
+  <div id="contactModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('contactModal')">&times;</span>
+      <h2>Contact</h2>
+
+      <p><strong>Email:</strong> <a class="contact-link" href="mailto:alinasirobaba8@gmail.com">alinasirobaba8@gmail.com</a></p>
+
+      <p><strong>Instagram:</strong>
+        <a class="contact-link" href="https://www.instagram.com/alinas_party_arches_balloons_/" target="_blank">
+          @alinas_party_arches_balloons_
+        </a>
+      </p>
+
+      <p>Based in Montreal, available for birthdays, baby showers, weddings, corporate events, and custom celebrations.</p>
+    </div>
+  </div>
+
+  <script>
+    function openModal(id) {
+      const modal = document.getElementById(id);
+      if (modal) {
+        modal.style.display = "flex";
+      }
+    }
+
+    function closeModal(id) {
+      const modal = document.getElementById(id);
+      if (modal) {
+        modal.style.display = "none";
+      }
+    }
+
+    window.addEventListener("click", function(event) {
+      if (event.target.classList.contains("modal")) {
+        event.target.style.display = "none";
+      }
+    });
+
+    document.addEventListener("keydown", function(event) {
+      if (event.key === "Escape") {
+        document.querySelectorAll(".modal").forEach(function(modal) {
+          modal.style.display = "none";
+        });
+      }
+    });
+  </script>
+
+</body>
+</html>
