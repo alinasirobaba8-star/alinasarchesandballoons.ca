@@ -117,6 +117,127 @@
       background: #a95770;
     }
 
+    /* PACKAGES */
+    .packages {
+      padding: 90px 20px;
+      background: linear-gradient(180deg, #fff8fc 0%, #ffffff 100%);
+      text-align: center;
+    }
+
+    .packages h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 46px;
+      color: #6f4561;
+      margin: 0 0 10px;
+    }
+
+    .packages-subtitle {
+      color: #6a4a5d;
+      font-size: 17px;
+      margin-bottom: 45px;
+    }
+
+    .packages-grid {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+    }
+
+    .package-card {
+      background: rgba(255,255,255,0.95);
+      border-radius: 26px;
+      padding: 18px 18px 30px;
+      box-shadow: 0 18px 45px rgba(91, 55, 76, 0.13);
+      text-align: left;
+      transition: 0.3s ease;
+      border: 1px solid #f0dce8;
+    }
+
+    .package-card:hover {
+      transform: translateY(-6px);
+    }
+
+    .package-card img {
+      width: 100%;
+      height: 230px;
+      object-fit: cover;
+      border-radius: 20px;
+      margin-bottom: 22px;
+    }
+
+    .package-card h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 28px;
+      color: #4b2e39;
+      margin: 0 0 8px;
+    }
+
+    .package-price {
+      font-size: 24px;
+      font-weight: 700;
+      color: #c06c84;
+      margin: 0 0 8px;
+    }
+
+    .package-note {
+      color: #6a4a5d;
+      font-size: 14px;
+      margin-bottom: 16px;
+    }
+
+    .package-card ul {
+      padding-left: 20px;
+      margin-bottom: 18px;
+      color: #4e3a45;
+      line-height: 1.7;
+      font-size: 15px;
+    }
+
+    .package-warning {
+      font-size: 12px;
+      color: #a95770;
+      background: #fff1f6;
+      padding: 10px 12px;
+      border-radius: 12px;
+      line-height: 1.5;
+    }
+
+    .package-btn {
+      width: 100%;
+      background: #c06c84;
+      color: white;
+      border: none;
+      border-radius: 999px;
+      padding: 13px 22px;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      cursor: pointer;
+      margin-top: 14px;
+      font-size: 15px;
+    }
+
+    .package-btn:hover {
+      background: #a95770;
+    }
+
+    .featured-package {
+      border: 2px solid #c06c84;
+      transform: scale(1.03);
+    }
+
+    .featured-label {
+      display: inline-block;
+      background: #c06c84;
+      color: white;
+      font-size: 12px;
+      padding: 6px 12px;
+      border-radius: 999px;
+      margin-bottom: 12px;
+      font-weight: 600;
+    }
+
     .modal {
       display: none;
       position: fixed;
@@ -293,6 +414,14 @@
         font-size: 16px;
       }
 
+      .packages-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .featured-package {
+        transform: none;
+      }
+
       .modal-content {
         padding: 24px;
       }
@@ -352,6 +481,61 @@
         and custom installations for birthdays, baby showers, weddings, corporate events, and special celebrations.
       </p>
       <a href="#" class="book-btn" onclick="openModal('bookingModal'); return false;">Book Your Decor</a>
+    </div>
+  </section>
+
+  <section class="packages">
+    <h2>Packages</h2>
+    <p class="packages-subtitle">Choose a package based on your event style and budget.</p>
+
+    <div class="packages-grid">
+
+      <div class="package-card">
+        <img src="images/picture17.jpg" alt="Starter balloon package">
+        <h3>Starter Package</h3>
+        <p class="package-price">From $250</p>
+        <p class="package-note">Budget-friendly option for smaller celebrations.</p>
+        <ul>
+          <li>Small balloon garland or simple column setup</li>
+          <li>2–3 balloon colors</li>
+          <li>Basic design</li>
+          <li>Best for home birthdays or small parties</li>
+        </ul>
+        <p class="package-warning">Budget-friendly balloons may be used for this package, so the finish and durability may be less premium.</p>
+        <button onclick="openModal('bookingModal')" class="package-btn">Book this package</button>
+      </div>
+
+      <div class="package-card featured-package">
+        <span class="featured-label">Most Popular</span>
+        <img src="images/picture20.jpg" alt="Signature balloon package">
+        <h3>Signature Package</h3>
+        <p class="package-price">From $450</p>
+        <p class="package-note">Perfect for birthdays, baby showers, and photo areas.</p>
+        <ul>
+          <li>Deluxe balloon garland or half arch</li>
+          <li>Premium balloon colors</li>
+          <li>Custom color palette</li>
+          <li>Setup included</li>
+          <li>Optional name sign or small custom detail</li>
+        </ul>
+        <button onclick="openModal('bookingModal')" class="package-btn">Book this package</button>
+      </div>
+
+      <div class="package-card">
+        <img src="images/arch6.jpg" alt="Luxury balloon package">
+        <h3>Luxury Package</h3>
+        <p class="package-price">From $750</p>
+        <p class="package-note">Full custom setup for a premium event look.</p>
+        <ul>
+          <li>Large balloon arch or full installation</li>
+          <li>High-quality professional balloons</li>
+          <li>Floral or greenery details</li>
+          <li>Backdrop or focal-point setup</li>
+          <li>Delivery and full setup included</li>
+        </ul>
+        <button onclick="openModal('bookingModal')" class="package-btn">Book this package</button>
+      </div>
+
     </div>
   </section>
 
@@ -453,6 +637,9 @@
           <option>Wedding</option>
           <option>Gender Reveal</option>
           <option>Corporate Event</option>
+          <option>Starter Package</option>
+          <option>Signature Package</option>
+          <option>Luxury Package</option>
           <option>Customized Cups</option>
           <option>Customized T-Shirts</option>
           <option>Stickers / Personalized Details</option>
