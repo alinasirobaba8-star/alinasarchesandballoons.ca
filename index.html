@@ -15,6 +15,7 @@
       margin: 0;
       padding: 0;
       overflow-x: hidden;
+      scroll-behavior: smooth;
     }
 
     body {
@@ -41,6 +42,7 @@
       font-size: 28px;
       font-weight: 700;
       color: #4b2e39;
+      white-space: nowrap;
     }
 
     .nav {
@@ -88,6 +90,7 @@
       line-height: 1.1;
       margin: 0 0 20px;
       color: #3a2430;
+      text-shadow: 0 10px 30px rgba(192, 108, 132, 0.22);
     }
 
     .hero-description {
@@ -95,6 +98,14 @@
       line-height: 1.7;
       max-width: 700px;
       margin: 0 auto 30px;
+    }
+
+    .book-btn,
+    .contact-button,
+    .package-btn,
+    .first-order-btn {
+      position: relative;
+      overflow: hidden;
     }
 
     .book-btn,
@@ -110,11 +121,34 @@
       cursor: pointer;
       font-family: 'Montserrat', sans-serif;
       font-size: 15px;
+      transition: 0.3s ease;
     }
 
     .book-btn:hover,
     .contact-button:hover {
       background: #a95770;
+      transform: translateY(-2px);
+    }
+
+    .book-btn::after,
+    .package-btn::after,
+    .contact-button::after,
+    .first-order-btn::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -120%;
+      width: 120%;
+      height: 100%;
+      background: linear-gradient(120deg, transparent, rgba(255,255,255,0.5), transparent);
+      transition: 0.55s ease;
+    }
+
+    .book-btn:hover::after,
+    .package-btn:hover::after,
+    .contact-button:hover::after,
+    .first-order-btn:hover::after {
+      left: 100%;
     }
 
     .first-order-banner {
@@ -148,9 +182,7 @@
       font-size: 14px;
     }
 
-    .first-order-btn:hover {
-      background: #9f1f1f;
-    }
+    .first-order-btn:hover { background: #9f1f1f; }
 
     .packages {
       padding: 90px 20px;
@@ -185,12 +217,22 @@
       padding: 18px 18px 30px;
       box-shadow: 0 18px 45px rgba(91, 55, 76, 0.13);
       text-align: left;
-      transition: 0.3s ease;
+      transition: transform 0.35s ease, box-shadow 0.35s ease;
       border: 1px solid #f0dce8;
     }
 
     .package-card:hover {
-      transform: translateY(-6px);
+      transform: translateY(-10px) scale(1.02);
+      box-shadow: 0 30px 70px rgba(91, 55, 76, 0.25);
+    }
+
+    .featured-package {
+      border: 2px solid #c06c84;
+      transform: scale(1.03);
+    }
+
+    .featured-package:hover {
+      transform: translateY(-10px) scale(1.04);
     }
 
     .package-card img {
@@ -252,14 +294,7 @@
       font-size: 15px;
     }
 
-    .package-btn:hover {
-      background: #a95770;
-    }
-
-    .featured-package {
-      border: 2px solid #c06c84;
-      transform: scale(1.03);
-    }
+    .package-btn:hover { background: #a95770; }
 
     .featured-label {
       display: inline-block;
@@ -343,11 +378,12 @@
       display: block;
       background: #f8ecf7;
       cursor: zoom-in;
-      transition: transform 0.25s ease;
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
     }
 
     .all-gallery img:hover {
-      transform: scale(1.02);
+      transform: scale(1.05);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.15);
     }
 
     .lightbox {
@@ -362,9 +398,7 @@
       cursor: zoom-out;
     }
 
-    .lightbox.active {
-      display: flex;
-    }
+    .lightbox.active { display: flex; }
 
     .lightbox img {
       max-width: 92%;
@@ -382,6 +416,29 @@
       font-size: 38px;
       cursor: pointer;
       z-index: 100000;
+    }
+
+    .lightbox-arrow {
+      position: fixed;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(255,255,255,0.18);
+      color: white;
+      border: 1px solid rgba(255,255,255,0.35);
+      font-size: 42px;
+      width: 58px;
+      height: 58px;
+      border-radius: 50%;
+      cursor: pointer;
+      z-index: 100000;
+      backdrop-filter: blur(10px);
+    }
+
+    .lightbox-prev { left: 28px; }
+    .lightbox-next { right: 28px; }
+
+    .lightbox-arrow:hover {
+      background: rgba(255,255,255,0.32);
     }
 
     .contact-link {
@@ -417,8 +474,10 @@
     .booking-form textarea:focus {
       outline: none;
       border-color: #c06c84;
-      box-shadow: 0 0 0 3px rgba(192, 108, 132, 0.12);
+      box-shadow: 0 0 0 3px rgba(192,108,132,0.12);
     }
+
+    .booking-form textarea { resize: vertical; }
 
     .sticky-contact-bar {
       position: fixed;
@@ -426,14 +485,14 @@
       bottom: 18px;
       transform: translateX(-50%);
       z-index: 9998;
-      background: rgba(255, 255, 255, 0.92);
-      backdrop-filter: blur(12px);
+      background: rgba(255,255,255,0.82);
+      backdrop-filter: blur(18px);
       border: 1px solid #ead7e4;
       border-radius: 999px;
       padding: 10px 14px;
       display: flex;
       gap: 8px;
-      box-shadow: 0 18px 45px rgba(91, 55, 76, 0.18);
+      box-shadow: 0 25px 60px rgba(91,55,76,0.25);
     }
 
     .sticky-contact-bar a {
@@ -447,7 +506,7 @@
     }
 
     .sticky-contact-bar a:hover {
-      background: #c06c84;
+      background: linear-gradient(135deg, #c06c84, #e8a0c0);
       color: white;
     }
 
@@ -461,43 +520,29 @@
       .logo {
         font-size: 24px;
         text-align: center;
+        white-space: normal;
       }
 
-      .nav {
-        gap: 14px;
-      }
+      .nav { gap: 14px; }
+      .nav a { font-size: 14px; }
 
-      .nav a {
-        font-size: 14px;
-      }
+      .hero h1 { font-size: 38px; }
+      .hero-description { font-size: 16px; }
 
-      .hero h1 {
-        font-size: 38px;
-      }
+      .packages-grid { grid-template-columns: 1fr; }
 
-      .hero-description {
-        font-size: 16px;
-      }
-
-      .packages-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .featured-package {
+      .featured-package,
+      .featured-package:hover {
         transform: none;
       }
 
-      .modal-content {
-        padding: 24px;
-      }
+      .modal-content { padding: 24px; }
 
       .all-gallery {
         grid-template-columns: repeat(3, 1fr);
       }
 
-      .all-gallery img {
-        height: 160px;
-      }
+      .all-gallery img { height: 160px; }
     }
 
     @media (max-width: 480px) {
@@ -505,9 +550,7 @@
         grid-template-columns: repeat(2, 1fr);
       }
 
-      .all-gallery img {
-        height: 150px;
-      }
+      .all-gallery img { height: 150px; }
 
       .lightbox img {
         max-width: 96%;
@@ -519,6 +562,15 @@
         right: 22px;
         font-size: 34px;
       }
+
+      .lightbox-arrow {
+        font-size: 30px;
+        width: 44px;
+        height: 44px;
+      }
+
+      .lightbox-prev { left: 12px; }
+      .lightbox-next { right: 12px; }
 
       .sticky-contact-bar {
         width: calc(100% - 24px);
@@ -576,7 +628,6 @@
     <p class="packages-subtitle">Choose a package based on your event style and budget.</p>
 
     <div class="packages-grid">
-
       <div class="package-card">
         <img src="images/picture17.jpg" alt="Starter balloon package">
         <h3>Starter Package</h3>
@@ -622,7 +673,6 @@
         </ul>
         <button onclick="openModal('bookingModal')" class="package-btn">Book this package</button>
       </div>
-
     </div>
   </section>
 
@@ -703,7 +753,6 @@
         <img src="images/arch7.jpg" alt="">
         <img src="images/arch9.jpg" alt="">
       </div>
-
     </div>
   </div>
 
@@ -767,20 +816,28 @@
         </a>
       </p>
 
+      <p><strong>Location:</strong>
+        <a class="contact-link" href="https://maps.app.goo.gl/CghPowcKYj4NRH8b8" target="_blank">
+          View on Google Maps
+        </a>
+      </p>
+
       <p>Based in Montreal, available for birthdays, baby showers, weddings, corporate events, custom cups, t-shirts, stickers, and personalized event details.</p>
     </div>
   </div>
 
   <div id="lightbox" class="lightbox">
     <span class="lightbox-close">&times;</span>
+    <button class="lightbox-arrow lightbox-prev">&#10094;</button>
     <img id="lightbox-img" src="" alt="">
+    <button class="lightbox-arrow lightbox-next">&#10095;</button>
   </div>
 
   <div class="sticky-contact-bar">
     <a href="tel:+14389282152">Call</a>
     <a href="sms:+14389282152">Text</a>
     <a href="mailto:alinasirobaba8@gmail.com">Email</a>
-    <a href="#" onclick="openModal('bookingModal'); return false;">Book</a>
+    <a href="https://maps.app.goo.gl/CghPowcKYj4NRH8b8" target="_blank">Map</a>
   </div>
 
   <script>
@@ -800,37 +857,76 @@
       }
     });
 
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImg = document.getElementById("lightbox-img");
+    const lightboxClose = document.querySelector(".lightbox-close");
+    const prevBtn = document.querySelector(".lightbox-prev");
+    const nextBtn = document.querySelector(".lightbox-next");
+    const galleryImages = Array.from(document.querySelectorAll(".all-gallery img"));
+
+    let currentIndex = 0;
+
+    function showImage(index) {
+      currentIndex = index;
+      lightboxImg.src = galleryImages[currentIndex].src;
+      lightbox.classList.add("active");
+    }
+
+    function closeLightbox() {
+      lightbox.classList.remove("active");
+      lightboxImg.src = "";
+    }
+
+    function showNextImage(event) {
+      event.stopPropagation();
+      currentIndex = (currentIndex + 1) % galleryImages.length;
+      lightboxImg.src = galleryImages[currentIndex].src;
+    }
+
+    function showPrevImage(event) {
+      event.stopPropagation();
+      currentIndex = (currentIndex - 1 + galleryImages.length) % galleryImages.length;
+      lightboxImg.src = galleryImages[currentIndex].src;
+    }
+
+    galleryImages.forEach(function(img, index) {
+      img.addEventListener("click", function(event) {
+        event.stopPropagation();
+        showImage(index);
+      });
+    });
+
+    nextBtn.addEventListener("click", showNextImage);
+    prevBtn.addEventListener("click", showPrevImage);
+
+    lightboxClose.addEventListener("click", function(event) {
+      event.stopPropagation();
+      closeLightbox();
+    });
+
+    lightboxImg.addEventListener("click", function(event) {
+      event.stopPropagation();
+    });
+
+    lightbox.addEventListener("click", closeLightbox);
+
     document.addEventListener("keydown", function(event) {
       if (event.key === "Escape") {
         document.querySelectorAll(".modal").forEach(function(modal) {
           modal.style.display = "none";
         });
-
-        document.getElementById("lightbox").classList.remove("active");
+        closeLightbox();
       }
-    });
 
-    const lightbox = document.getElementById("lightbox");
-    const lightboxImg = document.getElementById("lightbox-img");
-    const lightboxClose = document.querySelector(".lightbox-close");
+      if (lightbox.classList.contains("active") && event.key === "ArrowRight") {
+        currentIndex = (currentIndex + 1) % galleryImages.length;
+        lightboxImg.src = galleryImages[currentIndex].src;
+      }
 
-    document.querySelectorAll(".all-gallery img").forEach(function(img) {
-      img.addEventListener("click", function(event) {
-        event.stopPropagation();
-        lightbox.classList.add("active");
-        lightboxImg.src = img.src;
-      });
-    });
-
-    lightbox.addEventListener("click", function() {
-      lightbox.classList.remove("active");
-      lightboxImg.src = "";
-    });
-
-    lightboxClose.addEventListener("click", function(event) {
-      event.stopPropagation();
-      lightbox.classList.remove("active");
-      lightboxImg.src = "";
+      if (lightbox.classList.contains("active") && event.key === "ArrowLeft") {
+        currentIndex = (currentIndex - 1 + galleryImages.length) % galleryImages.length;
+        lightboxImg.src = galleryImages[currentIndex].src;
+      }
     });
   </script>
 
