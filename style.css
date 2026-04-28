@@ -154,6 +154,10 @@ body {
   box-shadow: 0 24px 60px rgba(91, 55, 76, 0.2);
 }
 
+.gallery-modal-content {
+  max-width: 1250px;
+}
+
 .close {
   position: absolute;
   top: 12px;
@@ -207,58 +211,60 @@ body {
   color: #6f4561;
 }
 
-/* GALLERY */
+/* CLEAN GALLERY */
+.gallery-main-title {
+  text-align: center;
+  margin-bottom: 6px;
+}
+
+.gallery-intro {
+  text-align: center;
+  color: #5a3b4e;
+  margin-bottom: 28px;
+}
+
 .gallery-section {
-  margin-bottom: 36px;
+  margin: 36px 0;
 }
 
 .gallery-section h3 {
-  padding-bottom: 8px;
-  border-bottom: 1px solid #ead7e4;
-}
-
-.gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
-  gap: 22px;
-  margin-top: 18px;
-}
-
-.gallery-item {
+  font-family: 'Playfair Display', serif;
+  font-size: 28px;
+  color: #4b2e39;
   text-align: center;
-  background: #fff;
-  border-radius: 18px;
-  padding: 12px;
-  box-shadow: 0 8px 22px rgba(91, 55, 76, 0.1);
-  overflow: hidden;
+  margin: 0 0 18px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
 }
 
-.gallery-item img {
+.gallery-section h3::before,
+.gallery-section h3::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: #e8bfd3;
+}
+
+.clean-gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.clean-gallery-grid img {
   width: 100%;
   height: 230px;
   object-fit: cover;
-  border-radius: 15px;
-  transition: transform 0.3s ease;
+  border-radius: 14px;
   display: block;
+  box-shadow: 0 8px 22px rgba(91, 55, 76, 0.10);
   background: #f8ecf7;
+  transition: transform 0.3s ease;
 }
 
-.gallery-item img:hover {
-  transform: scale(1.04);
-}
-
-.gallery-title {
-  font-family: 'Playfair Display', serif;
-  font-size: 18px;
-  margin: 12px 0 5px;
-  color: #4b2e39;
-}
-
-.gallery-price {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 14px;
-  color: #777;
-  margin: 0 0 4px;
+.clean-gallery-grid img:hover {
+  transform: scale(1.03);
 }
 
 /* BOOKING FORM */
@@ -345,16 +351,16 @@ body {
     font-size: 30px;
   }
 
-  .modal-content h3 {
-    font-size: 23px;
+  .gallery-section h3 {
+    font-size: 24px;
   }
 
-  .gallery-grid {
-    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-    gap: 16px;
+  .clean-gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
   }
 
-  .gallery-item img {
+  .clean-gallery-grid img {
     height: 190px;
   }
 }
@@ -391,11 +397,16 @@ body {
     text-align: center;
   }
 
-  .gallery-grid {
+  .gallery-section h3 {
+    font-size: 22px;
+    gap: 12px;
+  }
+
+  .clean-gallery-grid {
     grid-template-columns: 1fr;
   }
 
-  .gallery-item img {
+  .clean-gallery-grid img {
     height: 260px;
   }
 }
