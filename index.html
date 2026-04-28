@@ -117,7 +117,6 @@
       background: #a95770;
     }
 
-    /* FIRST ORDER DISCOUNT */
     .first-order-banner {
       margin: 28px auto 0;
       padding: 20px 24px;
@@ -153,7 +152,6 @@
       background: #9f1f1f;
     }
 
-    /* PACKAGES */
     .packages {
       padding: 90px 20px;
       background: linear-gradient(180deg, #fff8fc 0%, #ffffff 100%);
@@ -422,6 +420,37 @@
       box-shadow: 0 0 0 3px rgba(192, 108, 132, 0.12);
     }
 
+    .sticky-contact-bar {
+      position: fixed;
+      left: 50%;
+      bottom: 18px;
+      transform: translateX(-50%);
+      z-index: 9998;
+      background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(12px);
+      border: 1px solid #ead7e4;
+      border-radius: 999px;
+      padding: 10px 14px;
+      display: flex;
+      gap: 8px;
+      box-shadow: 0 18px 45px rgba(91, 55, 76, 0.18);
+    }
+
+    .sticky-contact-bar a {
+      text-decoration: none;
+      color: #6f4561;
+      font-weight: 600;
+      font-size: 14px;
+      padding: 10px 16px;
+      border-radius: 999px;
+      transition: 0.3s ease;
+    }
+
+    .sticky-contact-bar a:hover {
+      background: #c06c84;
+      color: white;
+    }
+
     @media (max-width: 900px) {
       .topbar {
         flex-direction: column;
@@ -489,6 +518,18 @@
         top: 18px;
         right: 22px;
         font-size: 34px;
+      }
+
+      .sticky-contact-bar {
+        width: calc(100% - 24px);
+        justify-content: space-between;
+        bottom: 12px;
+        padding: 8px;
+      }
+
+      .sticky-contact-bar a {
+        font-size: 13px;
+        padding: 10px 12px;
       }
     }
   </style>
@@ -712,7 +753,13 @@
       <span class="close" onclick="closeModal('contactModal')">&times;</span>
       <h2>Contact</h2>
 
-      <p><strong>Email:</strong> <a class="contact-link" href="mailto:alinasirobaba8@gmail.com">alinasirobaba8@gmail.com</a></p>
+      <p><strong>Email:</strong>
+        <a class="contact-link" href="mailto:alinasirobaba8@gmail.com">alinasirobaba8@gmail.com</a>
+      </p>
+
+      <p><strong>Phone / Text:</strong>
+        <a class="contact-link" href="tel:+14389282152">+1 (438) 928-2152</a>
+      </p>
 
       <p><strong>Instagram:</strong>
         <a class="contact-link" href="https://www.instagram.com/alinas_party_arches_balloons_/" target="_blank">
@@ -727,6 +774,13 @@
   <div id="lightbox" class="lightbox">
     <span class="lightbox-close">&times;</span>
     <img id="lightbox-img" src="" alt="">
+  </div>
+
+  <div class="sticky-contact-bar">
+    <a href="tel:+14389282152">Call</a>
+    <a href="sms:+14389282152">Text</a>
+    <a href="mailto:alinasirobaba8@gmail.com">Email</a>
+    <a href="#" onclick="openModal('bookingModal'); return false;">Book</a>
   </div>
 
   <script>
