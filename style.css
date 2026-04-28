@@ -581,3 +581,48 @@ body {
 .first-order-btn:hover {
   background: #9f1f1f;
 }
+/* STICKY LUXURY CONTACT BAR */
+.sticky-contact-bar {
+  position: fixed;
+  left: 50%;
+  bottom: 18px;
+  transform: translateX(-50%);
+  z-index: 9998;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(12px);
+  border: 1px solid #ead7e4;
+  border-radius: 999px;
+  padding: 10px 14px;
+  display: flex;
+  gap: 8px;
+  box-shadow: 0 18px 45px rgba(91, 55, 76, 0.18);
+}
+
+.sticky-contact-bar a {
+  text-decoration: none;
+  color: #6f4561;
+  font-weight: 600;
+  font-size: 14px;
+  padding: 10px 16px;
+  border-radius: 999px;
+  transition: 0.3s ease;
+}
+
+.sticky-contact-bar a:hover {
+  background: #c06c84;
+  color: white;
+}
+
+@media (max-width: 480px) {
+  .sticky-contact-bar {
+    width: calc(100% - 24px);
+    justify-content: space-between;
+    bottom: 12px;
+    padding: 8px;
+  }
+
+  .sticky-contact-bar a {
+    font-size: 13px;
+    padding: 10px 12px;
+  }
+}
