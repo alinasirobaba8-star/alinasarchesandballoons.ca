@@ -1,838 +1,206 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Alina’s Arches & Balloons</title>
-
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
-
-  <style>
-    * { box-sizing: border-box; }
-
-    html, body {
-      margin: 0;
-      padding: 0;
-      overflow-x: hidden;
-    }
-
-    body {
-      font-family: 'Montserrat', sans-serif;
-      background: linear-gradient(180deg, #fff8fc 0%, #f8ecf7 100%);
-      color: #333;
-    }
-
-    .topbar {
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      background: rgba(255,255,255,0.95);
-      backdrop-filter: blur(10px);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 18px 40px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.06);
-    }
-
-    .logo {
-      font-family: 'Playfair Display', serif;
-      font-size: 28px;
-      font-weight: 700;
-      color: #4b2e39;
-    }
-
-    .nav {
-      display: flex;
-      gap: 24px;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-
-    .nav a {
-      text-decoration: none;
-      color: #4b2e39;
-      font-weight: 600;
-      font-size: 16px;
-      transition: 0.3s;
-    }
-
-    .nav a:hover { color: #c06c84; }
-
-    .hero {
-      min-height: 82vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 60px 20px;
-      background: linear-gradient(120deg, #fff8fc, #f7e8f3, #ffffff);
-    }
-
-    .hero-content {
-      max-width: 850px;
-    }
-
-    .small-title {
-      font-size: 14px;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      color: #b47b8f;
-      margin-bottom: 10px;
-    }
-
-    .hero h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: 54px;
-      line-height: 1.1;
-      margin: 0 0 20px;
-      color: #3a2430;
-    }
-
-    .hero-description {
-      font-size: 18px;
-      line-height: 1.7;
-      max-width: 700px;
-      margin: 0 auto 30px;
-    }
-
-    .book-btn,
-    .contact-button {
-      display: inline-block;
-      background: #c06c84;
-      color: white;
-      text-decoration: none;
-      padding: 14px 28px;
-      border-radius: 999px;
-      font-weight: 600;
-      border: none;
-      cursor: pointer;
-      font-family: 'Montserrat', sans-serif;
-      font-size: 15px;
-    }
-
-    .book-btn:hover,
-    .contact-button:hover {
-      background: #a95770;
-    }
-
-    .first-order-banner {
-      margin: 28px auto 0;
-      padding: 20px 24px;
-      max-width: 620px;
-      background: linear-gradient(135deg, #ffe3e3, #fff1f1);
-      border: 1.5px solid #d94b4b;
-      border-radius: 18px;
-      text-align: center;
-      box-shadow: 0 14px 35px rgba(180, 40, 40, 0.14);
-    }
-
-    .first-order-text {
-      margin: 0 0 12px;
-      font-weight: 600;
-      color: #9f1f1f;
-      font-size: 15px;
-      line-height: 1.5;
-    }
-
-    .first-order-btn {
-      background: #c62828;
-      color: white;
-      border: none;
-      border-radius: 999px;
-      padding: 11px 24px;
-      font-family: 'Montserrat', sans-serif;
-      font-weight: 600;
-      cursor: pointer;
-      font-size: 14px;
-    }
-
-    .first-order-btn:hover {
-      background: #9f1f1f;
-    }
-
-    .packages {
-      padding: 90px 20px;
-      background: linear-gradient(180deg, #fff8fc 0%, #ffffff 100%);
-      text-align: center;
-    }
-
-    .packages h2 {
-      font-family: 'Playfair Display', serif;
-      font-size: 46px;
-      color: #6f4561;
-      margin: 0 0 10px;
-    }
-
-    .packages-subtitle {
-      color: #6a4a5d;
-      font-size: 17px;
-      margin-bottom: 45px;
-    }
-
-    .packages-grid {
-      max-width: 1200px;
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 28px;
-    }
-
-    .package-card {
-      background: rgba(255,255,255,0.95);
-      border-radius: 26px;
-      padding: 18px 18px 30px;
-      box-shadow: 0 18px 45px rgba(91, 55, 76, 0.13);
-      text-align: left;
-      transition: 0.3s ease;
-      border: 1px solid #f0dce8;
-    }
-
-    .package-card:hover {
-      transform: translateY(-6px);
-    }
-
-    .package-card img {
-      width: 100%;
-      height: 230px;
-      object-fit: cover;
-      border-radius: 20px;
-      margin-bottom: 22px;
-    }
-
-    .package-card h3 {
-      font-family: 'Playfair Display', serif;
-      font-size: 28px;
-      color: #4b2e39;
-      margin: 0 0 8px;
-    }
-
-    .package-price {
-      font-size: 24px;
-      font-weight: 700;
-      color: #c06c84;
-      margin: 0 0 8px;
-    }
-
-    .package-note {
-      color: #6a4a5d;
-      font-size: 14px;
-      margin-bottom: 16px;
-    }
-
-    .package-card ul {
-      padding-left: 20px;
-      margin-bottom: 18px;
-      color: #4e3a45;
-      line-height: 1.7;
-      font-size: 15px;
-    }
-
-    .package-warning {
-      font-size: 12px;
-      color: #a95770;
-      background: #fff1f6;
-      padding: 10px 12px;
-      border-radius: 12px;
-      line-height: 1.5;
-    }
-
-    .package-btn {
-      width: 100%;
-      background: #c06c84;
-      color: white;
-      border: none;
-      border-radius: 999px;
-      padding: 13px 22px;
-      font-family: 'Montserrat', sans-serif;
-      font-weight: 600;
-      cursor: pointer;
-      margin-top: 14px;
-      font-size: 15px;
-    }
-
-    .package-btn:hover {
-      background: #a95770;
-    }
-
-    .featured-package {
-      border: 2px solid #c06c84;
-      transform: scale(1.03);
-    }
-
-    .featured-label {
-      display: inline-block;
-      background: #c06c84;
-      color: white;
-      font-size: 12px;
-      padding: 6px 12px;
-      border-radius: 999px;
-      margin-bottom: 12px;
-      font-weight: 600;
-    }
-
-    .modal {
-      display: none;
-      position: fixed;
-      z-index: 2000;
-      inset: 0;
-      background: rgba(0,0,0,0.45);
-      justify-content: center;
-      align-items: center;
-      padding: 20px;
-    }
-
-    .modal-content {
-      background: #fff;
-      width: 100%;
-      max-width: 1000px;
-      max-height: 90vh;
-      overflow-y: auto;
-      border-radius: 22px;
-      padding: 30px;
-      position: relative;
-      box-shadow: 0 20px 50px rgba(0,0,0,0.18);
-    }
-
-    .gallery-modal-content {
-      max-width: 1350px;
-      padding: 28px;
-    }
-
-    .modal-content h2 {
-      font-family: 'Playfair Display', serif;
-      font-size: 34px;
-      margin-top: 0;
-      color: #3a2430;
-    }
-
-    .modal-content h3 {
-      color: #4b2e39;
-      font-family: 'Playfair Display', serif;
-      font-size: 26px;
-    }
-
-    .modal-content p {
-      line-height: 1.7;
-      margin-top: 0;
-    }
-
-    .close {
-      position: absolute;
-      right: 18px;
-      top: 14px;
-      font-size: 30px;
-      cursor: pointer;
-      color: #666;
-      z-index: 5;
-    }
-
-    .all-gallery {
-      display: grid;
-      grid-template-columns: repeat(5, 1fr);
-      gap: 14px;
-      margin-top: 32px;
-    }
-
-    .all-gallery img {
-      width: 100%;
-      height: 165px;
-      object-fit: cover;
-      border-radius: 10px;
-      display: block;
-      background: #f8ecf7;
-      cursor: zoom-in;
-      transition: transform 0.25s ease;
-    }
-
-    .all-gallery img:hover {
-      transform: scale(1.02);
-    }
-
-    .lightbox {
-      display: none;
-      position: fixed;
-      inset: 0;
-      background: rgba(0,0,0,0.88);
-      justify-content: center;
-      align-items: center;
-      z-index: 99999;
-      padding: 20px;
-      cursor: zoom-out;
-    }
-
-    .lightbox.active {
-      display: flex;
-    }
-
-    .lightbox img {
-      max-width: 92%;
-      max-height: 88vh;
-      object-fit: contain;
-      border-radius: 14px;
-      box-shadow: 0 20px 60px rgba(0,0,0,0.45);
-    }
-
-    .lightbox-close {
-      position: fixed;
-      top: 24px;
-      right: 32px;
-      color: white;
-      font-size: 38px;
-      cursor: pointer;
-      z-index: 100000;
-    }
-
-    .contact-link {
-      color: #a95770;
-      text-decoration: none;
-      font-weight: 600;
-    }
-
-    .contact-link:hover { text-decoration: underline; }
-
-    .booking-form {
-      display: flex;
-      flex-direction: column;
-      gap: 14px;
-      margin-top: 20px;
-    }
-
-    .booking-form input,
-    .booking-form select,
-    .booking-form textarea {
-      width: 100%;
-      padding: 14px 16px;
-      border: 1px solid #e5d6de;
-      border-radius: 14px;
-      font-family: 'Montserrat', sans-serif;
-      font-size: 15px;
-      background: #fff;
-      color: #4b3140;
-    }
-
-    .booking-form input:focus,
-    .booking-form select:focus,
-    .booking-form textarea:focus {
-      outline: none;
-      border-color: #c06c84;
-      box-shadow: 0 0 0 3px rgba(192, 108, 132, 0.12);
-    }
-
-    .sticky-contact-bar {
-      position: fixed;
-      left: 50%;
-      bottom: 18px;
-      transform: translateX(-50%);
-      z-index: 9998;
-      background: rgba(255, 255, 255, 0.92);
-      backdrop-filter: blur(12px);
-      border: 1px solid #ead7e4;
-      border-radius: 999px;
-      padding: 10px 14px;
-      display: flex;
-      gap: 8px;
-      box-shadow: 0 18px 45px rgba(91, 55, 76, 0.18);
-    }
-
-    .sticky-contact-bar a {
-      text-decoration: none;
-      color: #6f4561;
-      font-weight: 600;
-      font-size: 14px;
-      padding: 10px 16px;
-      border-radius: 999px;
-      transition: 0.3s ease;
-    }
-
-    .sticky-contact-bar a:hover {
-      background: #c06c84;
-      color: white;
-    }
-
-    @media (max-width: 900px) {
-      .topbar {
-        flex-direction: column;
-        gap: 12px;
-        padding: 16px 20px;
-      }
-
-      .logo {
-        font-size: 24px;
-        text-align: center;
-      }
-
-      .nav {
-        gap: 14px;
-      }
-
-      .nav a {
-        font-size: 14px;
-      }
-
-      .hero h1 {
-        font-size: 38px;
-      }
-
-      .hero-description {
-        font-size: 16px;
-      }
-
-      .packages-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .featured-package {
-        transform: none;
-      }
-
-      .modal-content {
-        padding: 24px;
-      }
-
-      .all-gallery {
-        grid-template-columns: repeat(3, 1fr);
-      }
-
-      .all-gallery img {
-        height: 160px;
-      }
-    }
-
-    @media (max-width: 480px) {
-      .all-gallery {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .all-gallery img {
-        height: 150px;
-      }
-
-      .lightbox img {
-        max-width: 96%;
-        max-height: 82vh;
-      }
-
-      .lightbox-close {
-        top: 18px;
-        right: 22px;
-        font-size: 34px;
-      }
-
-      .sticky-contact-bar {
-        width: calc(100% - 24px);
-        justify-content: space-between;
-        bottom: 12px;
-        padding: 8px;
-      }
-
-      .sticky-contact-bar a {
-        font-size: 13px;
-        padding: 10px 12px;
-      }
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Alina’s Arches & Balloons</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+*{box-sizing:border-box;}
+body{margin:0;font-family:'Montserrat',sans-serif;background:linear-gradient(180deg,#fff8fc,#f8ecf7);color:#333;}
+.topbar{position:sticky;top:0;z-index:1000;background:rgba(255,255,255,0.95);backdrop-filter:blur(10px);display:flex;justify-content:space-between;align-items:center;padding:18px 40px;box-shadow:0 2px 10px rgba(0,0,0,0.06);}
+.logo{font-family:'Playfair Display';font-size:28px;font-weight:700;color:#4b2e39;}
+.nav{display:flex;gap:24px;}
+.nav a{text-decoration:none;color:#4b2e39;font-weight:600;}
+.nav a:hover{color:#c06c84;}
+
+.hero{min-height:80vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:60px 20px;}
+.hero h1{font-family:'Playfair Display';font-size:54px;color:#3a2430;}
+.hero-description{max-width:700px;margin:auto;}
+
+.book-btn{background:#c06c84;color:white;padding:14px 28px;border-radius:999px;text-decoration:none;}
+
+.first-order-banner{margin-top:25px;padding:18px;border-radius:18px;background:#fff1f1;border:1px solid #d94b4b;}
+
+.packages{padding:80px 20px;text-align:center;}
+.packages-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:25px;max-width:1100px;margin:auto;}
+.package-card{background:white;border-radius:20px;padding:18px;box-shadow:0 15px 40px rgba(0,0,0,0.1);}
+.package-card img{width:100%;height:220px;object-fit:cover;border-radius:15px;}
+.package-btn{background:#c06c84;color:white;border:none;padding:12px;border-radius:999px;width:100%;}
+
+.modal{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.5);justify-content:center;align-items:center;}
+.modal-content{background:white;padding:30px;border-radius:20px;max-width:900px;width:90%;}
+
+.all-gallery{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;}
+.all-gallery img{width:100%;height:150px;object-fit:cover;border-radius:10px;cursor:pointer;}
+
+.lightbox{display:none;position:fixed;inset:0;background:black;justify-content:center;align-items:center;}
+.lightbox.active{display:flex;}
+.lightbox img{max-width:90%;max-height:90%;}
+
+.sticky-contact-bar{
+position:fixed;
+bottom:15px;
+left:50%;
+transform:translateX(-50%);
+background:white;
+padding:10px;
+border-radius:999px;
+box-shadow:0 10px 30px rgba(0,0,0,0.2);
+display:flex;
+gap:10px;
+}
+
+.sticky-contact-bar a{
+padding:10px 15px;
+text-decoration:none;
+color:#4b2e39;
+font-weight:600;
+border-radius:999px;
+}
+
+.sticky-contact-bar a:hover{
+background:#c06c84;
+color:white;
+}
+
+</style>
 </head>
 
 <body>
 
-  <header class="topbar">
-    <div class="logo">Alina’s Arches & Balloons</div>
-    <nav class="nav">
-      <a href="#" onclick="openModal('aboutModal'); return false;">About</a>
-      <a href="#" onclick="openModal('servicesModal'); return false;">Services</a>
-      <a href="#" onclick="openModal('pricingModal'); return false;">Pricing</a>
-      <a href="#" onclick="openModal('galleryModal'); return false;">Gallery</a>
-      <a href="#" onclick="openModal('bookingModal'); return false;">Booking</a>
-      <a href="#" onclick="openModal('contactModal'); return false;">Contact</a>
-    </nav>
-  </header>
+<header class="topbar">
+<div class="logo">Alina’s Arches & Balloons</div>
+<nav class="nav">
+<a href="#" onclick="openModal('servicesModal')">Services</a>
+<a href="#" onclick="openModal('galleryModal')">Gallery</a>
+<a href="#" onclick="openModal('contactModal')">Contact</a>
+</nav>
+</header>
 
-  <section class="hero" id="home">
-    <div class="hero-content">
-      <p class="small-title">Montreal Balloon & Custom Event Decor</p>
-      <h1>Elegant Balloon Designs & Customized Details for Every Celebration</h1>
-      <p class="hero-description">
-        Luxury balloon arches, garlands, floral decor, customized cups, t-shirts, stickers, name details,
-        and custom installations for birthdays, baby showers, weddings, corporate events, and special celebrations.
-      </p>
+<section class="hero">
+<div>
+<h1>Luxury Balloon Decor</h1>
+<p class="hero-description">Elegant balloon designs for unforgettable events.</p>
+<a href="#" class="book-btn" onclick="openModal('bookingModal')">Book Your Decor</a>
 
-      <a href="#" class="book-btn" onclick="openModal('bookingModal'); return false;">Book Your Decor</a>
+<div class="first-order-banner">
+✨ First Order Discount — 10% OFF from $450+
+</div>
+</div>
+</section>
 
-      <div class="first-order-banner">
-        <p class="first-order-text">
-          ✨ First Order Discount — Enjoy 10% OFF your first booking from $450+
-        </p>
-        <button onclick="openModal('bookingModal')" class="first-order-btn">
-          Claim Your Discount
-        </button>
-      </div>
-    </div>
-  </section>
+<section class="packages">
+<h2>Packages</h2>
 
-  <section class="packages">
-    <h2>Packages</h2>
-    <p class="packages-subtitle">Choose a package based on your event style and budget.</p>
+<div class="packages-grid">
 
-    <div class="packages-grid">
+<div class="package-card">
+<img src="images/picture17.jpg">
+<h3>Starter</h3>
+<p>$250+</p>
+<button class="package-btn" onclick="openModal('bookingModal')">Book</button>
+</div>
 
-      <div class="package-card">
-        <img src="images/picture17.jpg" alt="Starter balloon package">
-        <h3>Starter Package</h3>
-        <p class="package-price">From $250</p>
-        <p class="package-note">Budget-friendly option for smaller celebrations.</p>
-        <ul>
-          <li>Small balloon garland or simple column setup</li>
-          <li>2–3 balloon colors</li>
-          <li>Basic design</li>
-          <li>Best for home birthdays or small parties</li>
-        </ul>
-        <p class="package-warning">Budget-friendly balloons may be used for this package, so the finish and durability may be less premium.</p>
-        <button onclick="openModal('bookingModal')" class="package-btn">Book this package</button>
-      </div>
+<div class="package-card">
+<img src="images/picture20.jpg">
+<h3>Signature</h3>
+<p>$450+</p>
+<button class="package-btn" onclick="openModal('bookingModal')">Book</button>
+</div>
 
-      <div class="package-card featured-package">
-        <span class="featured-label">Most Popular</span>
-        <img src="images/picture20.jpg" alt="Signature balloon package">
-        <h3>Signature Package</h3>
-        <p class="package-price">From $450</p>
-        <p class="package-note">Perfect for birthdays, baby showers, and photo areas.</p>
-        <ul>
-          <li>Deluxe balloon garland or half arch</li>
-          <li>Premium balloon colors</li>
-          <li>Custom color palette</li>
-          <li>Setup included</li>
-          <li>Optional name sign or small custom detail</li>
-        </ul>
-        <button onclick="openModal('bookingModal')" class="package-btn">Book this package</button>
-      </div>
+<div class="package-card">
+<img src="images/arch6.jpg">
+<h3>Luxury</h3>
+<p>$750+</p>
+<button class="package-btn" onclick="openModal('bookingModal')">Book</button>
+</div>
 
-      <div class="package-card">
-        <img src="images/arch6.jpg" alt="Luxury balloon package">
-        <h3>Luxury Package</h3>
-        <p class="package-price">From $750</p>
-        <p class="package-note">Full custom setup for a premium event look.</p>
-        <ul>
-          <li>Large balloon arch or full installation</li>
-          <li>High-quality professional balloons</li>
-          <li>Floral or greenery details</li>
-          <li>Backdrop or focal-point setup</li>
-          <li>Delivery and full setup included</li>
-        </ul>
-        <button onclick="openModal('bookingModal')" class="package-btn">Book this package</button>
-      </div>
+</div>
+</section>
 
-    </div>
-  </section>
+<!-- CONTACT -->
+<div id="contactModal" class="modal">
+<div class="modal-content">
+<h2>Contact</h2>
 
-  <div id="aboutModal" class="modal">
-    <div class="modal-content">
-      <span class="close" onclick="closeModal('aboutModal')">&times;</span>
-      <h2>About Me</h2>
-      <p>Hi, I’m Alina — the creator behind <strong>Alina’s Arches & Balloons</strong>, a luxury décor service based in <strong>Montreal</strong>.</p>
-      <p>I create balloon decor, floral event pieces, and customized details that make celebrations feel more personal, elegant, and memorable.</p>
-      <p>Every setup is designed with care, creativity, and attention to detail to bring each client’s vision to life.</p>
-    </div>
-  </div>
+<p>Email: <a href="mailto:alinasirobaba8@gmail.com">alinasirobaba8@gmail.com</a></p>
+<p>Phone: <a href="tel:+14389282152">+1 (438) 928-2152</a></p>
 
-  <div id="servicesModal" class="modal">
-    <div class="modal-content">
-      <span class="close" onclick="closeModal('servicesModal')">&times;</span>
-      <h2>Services</h2>
-      <h3>Balloon Decor</h3>
-      <p>Balloon arches, garlands, columns, walls, centerpieces, grab & go garlands, and custom installations.</p>
-      <h3>Floral Decor</h3>
-      <p>Elegant floral arches, entrance stands, ceremony decor, and photo-area styling.</p>
-      <h3>Customized Details</h3>
-      <p>Custom cups, t-shirts, stickers, name tags, personalized gifts, party details, and event accessories.</p>
-      <h3>Custom Installations</h3>
-      <p>Personalized decor created to match your theme, colors, and event style.</p>
-    </div>
-  </div>
+<p>Instagram:
+<a href="https://www.instagram.com/alinas_party_arches_balloons_" target="_blank">
+@alinas_party_arches_balloons_
+</a>
+</p>
 
-  <div id="pricingModal" class="modal">
-    <div class="modal-content">
-      <span class="close" onclick="closeModal('pricingModal')">&times;</span>
-      <h2>Pricing</h2>
-      <p><strong>Grab & Go Garland:</strong> starting at $150 CAD + tax</p>
-      <p><strong>Deluxe Garland:</strong> $40 CAD/ft</p>
-      <p><strong>Balloon Arches:</strong> starting at $200 CAD</p>
-      <p><strong>Balloon Columns:</strong> starting at $150 CAD</p>
-      <p><strong>Balloon Walls:</strong> starting at $400 CAD</p>
-      <p><strong>Centerpieces:</strong> starting at $75 CAD per piece</p>
-      <p><strong>Floral Arches:</strong> starting at $400 CAD</p>
-      <p><strong>Entrance Stand Decor:</strong> starting at $150 CAD</p>
-      <p><strong>Customized Cups / T-Shirts / Stickers:</strong> contact for pricing</p>
-      <p><strong>Custom Installations:</strong> contact for quote</p>
-      <p>Final pricing may vary depending on size, design, location, delivery, setup time, customization, and last-minute requests.</p>
-    </div>
-  </div>
+<p>
+<a href="https://maps.app.goo.gl/CghPowcKYj4NRH8b8" target="_blank">
+View Location on Map
+</a>
+</p>
 
-  <div id="galleryModal" class="modal">
-    <div class="modal-content gallery-modal-content">
-      <span class="close" onclick="closeModal('galleryModal')">&times;</span>
+</div>
+</div>
 
-      <div class="all-gallery">
-        <img src="images/picture8.jpg" alt="">
-        <img src="images/picture23.jpg" alt="">
-        <img src="images/picture2.jpg" alt="">
-        <img src="images/picture3.jpg" alt="">
-        <img src="images/picture4.jpg" alt="">
-        <img src="images/picture5.jpg" alt="">
-        <img src="images/picture6.jpg" alt="">
-        <img src="images/picture7.jpg" alt="">
-        <img src="images/picture9.jpg" alt="">
-        <img src="images/picture10.jpg" alt="">
-        <img src="images/picture24.jpg" alt="">
-        <img src="images/picture11.jpg" alt="">
-        <img src="images/picture12.jpg" alt="">
-        <img src="images/picture13.jpg" alt="">
-        <img src="images/picture14.jpg" alt="">
-        <img src="images/picture15.jpg" alt="">
-        <img src="images/picture19.jpg" alt="">
-        <img src="images/picture21.jpg" alt="">
-        <img src="images/picture17.jpg" alt="">
-        <img src="images/picture18.jpg" alt="">
-        <img src="images/picture20.jpg" alt="">
-        <img src="images/picture22.jpg" alt="">
-        <img src="images/arch3.jpg" alt="">
-        <img src="images/arch4.jpg" alt="">
-        <img src="images/arch5.jpg" alt="">
-        <img src="images/arch6.jpg" alt="">
-        <img src="images/arch7.jpg" alt="">
-        <img src="images/arch9.jpg" alt="">
-      </div>
+<!-- GALLERY -->
+<div id="galleryModal" class="modal">
+<div class="modal-content">
 
-    </div>
-  </div>
+<div class="all-gallery">
+<img src="images/picture8.jpg">
+<img src="images/picture9.jpg">
+<img src="images/arch6.jpg">
+</div>
 
-  <div id="bookingModal" class="modal">
-    <div class="modal-content">
-      <span class="close" onclick="closeModal('bookingModal')">&times;</span>
-      <h2>Booking Form</h2>
+</div>
+</div>
 
-      <form class="booking-form" action="https://formsubmit.co/alinasirobaba8@gmail.com" method="POST">
-        <input type="text" name="name" placeholder="Your Name" required>
-        <input type="tel" name="phone" placeholder="Phone Number" required>
-        <input type="email" name="email" placeholder="Email Address" required>
+<!-- BOOKING -->
+<div id="bookingModal" class="modal">
+<div class="modal-content">
+<h2>Book</h2>
+<p>Send request via email or contact directly.</p>
+</div>
+</div>
 
-        <select name="event_type" required>
-          <option value="">Select Event Type</option>
-          <option>Birthday</option>
-          <option>Baby Shower</option>
-          <option>Wedding</option>
-          <option>Gender Reveal</option>
-          <option>Corporate Event</option>
-          <option>Starter Package</option>
-          <option>Signature Package</option>
-          <option>Luxury Package</option>
-          <option>First Order Discount</option>
-          <option>Customized Cups</option>
-          <option>Customized T-Shirts</option>
-          <option>Stickers / Personalized Details</option>
-          <option>Other</option>
-        </select>
+<!-- LIGHTBOX -->
+<div id="lightbox" class="lightbox">
+<img id="lightbox-img">
+</div>
 
-        <input type="date" name="event_date" required>
-        <input type="text" name="location" placeholder="Event Location">
-        <input type="text" name="colors_theme" placeholder="Colors / Theme">
+<!-- STICKY BAR -->
+<div class="sticky-contact-bar">
+<a href="tel:+14389282152">Call</a>
+<a href="sms:+14389282152">Text</a>
+<a href="mailto:alinasirobaba8@gmail.com">Email</a>
+<a href="https://maps.app.goo.gl/CghPowcKYj4NRH8b8" target="_blank">Map</a>
+</div>
 
-        <textarea name="details" rows="5" placeholder="Tell me about your event, decor style, colors, and any customized details you would like." required></textarea>
+<script>
+function openModal(id){
+document.getElementById(id).style.display="flex";
+}
 
-        <input type="hidden" name="_subject" value="New Booking Request from Website">
-        <input type="hidden" name="_captcha" value="false">
+window.onclick=function(e){
+if(e.target.classList.contains('modal')){
+e.target.style.display="none";
+}
+}
 
-        <button type="submit" class="contact-button">Send Booking Request</button>
-      </form>
-    </div>
-  </div>
+document.querySelectorAll(".all-gallery img").forEach(img=>{
+img.onclick=()=>{
+document.getElementById("lightbox").classList.add("active");
+document.getElementById("lightbox-img").src=img.src;
+};
+});
 
-  <div id="contactModal" class="modal">
-    <div class="modal-content">
-      <span class="close" onclick="closeModal('contactModal')">&times;</span>
-      <h2>Contact</h2>
-
-      <p><strong>Email:</strong>
-        <a class="contact-link" href="mailto:alinasirobaba8@gmail.com">alinasirobaba8@gmail.com</a>
-      </p>
-
-      <p><strong>Phone / Text:</strong>
-        <a class="contact-link" href="tel:+14389282152">+1 (438) 928-2152</a>
-      </p>
-
-      <p><strong>Instagram:</strong>
-        <a class="contact-link" href="https://www.instagram.com/alinas_party_arches_balloons_/" target="_blank">
-          @alinas_party_arches_balloons_
-        </a>
-      </p>
-
-      <p>Based in Montreal, available for birthdays, baby showers, weddings, corporate events, custom cups, t-shirts, stickers, and personalized event details.</p>
-    </div>
-  </div>
-
-  <div id="lightbox" class="lightbox">
-    <span class="lightbox-close">&times;</span>
-    <img id="lightbox-img" src="" alt="">
-  </div>
-
-  <div class="sticky-contact-bar">
-    <a href="tel:+14389282152">Call</a>
-    <a href="sms:+14389282152">Text</a>
-    <a href="mailto:alinasirobaba8@gmail.com">Email</a>
-    <a href="#" onclick="openModal('bookingModal'); return false;">Book</a>
-  </div>
-
-  <script>
-    function openModal(id) {
-      const modal = document.getElementById(id);
-      if (modal) modal.style.display = "flex";
-    }
-
-    function closeModal(id) {
-      const modal = document.getElementById(id);
-      if (modal) modal.style.display = "none";
-    }
-
-    window.addEventListener("click", function(event) {
-      if (event.target.classList.contains("modal")) {
-        event.target.style.display = "none";
-      }
-    });
-
-    document.addEventListener("keydown", function(event) {
-      if (event.key === "Escape") {
-        document.querySelectorAll(".modal").forEach(function(modal) {
-          modal.style.display = "none";
-        });
-
-        document.getElementById("lightbox").classList.remove("active");
-      }
-    });
-
-    const lightbox = document.getElementById("lightbox");
-    const lightboxImg = document.getElementById("lightbox-img");
-    const lightboxClose = document.querySelector(".lightbox-close");
-
-    document.querySelectorAll(".all-gallery img").forEach(function(img) {
-      img.addEventListener("click", function(event) {
-        event.stopPropagation();
-        lightbox.classList.add("active");
-        lightboxImg.src = img.src;
-      });
-    });
-
-    lightbox.addEventListener("click", function() {
-      lightbox.classList.remove("active");
-      lightboxImg.src = "";
-    });
-
-    lightboxClose.addEventListener("click", function(event) {
-      event.stopPropagation();
-      lightbox.classList.remove("active");
-      lightboxImg.src = "";
-    });
-  </script>
+document.getElementById("lightbox").onclick=function(){
+this.classList.remove("active");
+};
+</script>
 
 </body>
 </html>
