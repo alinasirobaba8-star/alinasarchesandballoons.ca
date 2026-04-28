@@ -1,206 +1,28 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Alina’s Arches & Balloons</title>
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
-
-<style>
-*{box-sizing:border-box;}
-body{margin:0;font-family:'Montserrat',sans-serif;background:linear-gradient(180deg,#fff8fc,#f8ecf7);color:#333;}
-.topbar{position:sticky;top:0;z-index:1000;background:rgba(255,255,255,0.95);backdrop-filter:blur(10px);display:flex;justify-content:space-between;align-items:center;padding:18px 40px;box-shadow:0 2px 10px rgba(0,0,0,0.06);}
-.logo{font-family:'Playfair Display';font-size:28px;font-weight:700;color:#4b2e39;}
-.nav{display:flex;gap:24px;}
-.nav a{text-decoration:none;color:#4b2e39;font-weight:600;}
-.nav a:hover{color:#c06c84;}
-
-.hero{min-height:80vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:60px 20px;}
-.hero h1{font-family:'Playfair Display';font-size:54px;color:#3a2430;}
-.hero-description{max-width:700px;margin:auto;}
-
-.book-btn{background:#c06c84;color:white;padding:14px 28px;border-radius:999px;text-decoration:none;}
-
-.first-order-banner{margin-top:25px;padding:18px;border-radius:18px;background:#fff1f1;border:1px solid #d94b4b;}
-
-.packages{padding:80px 20px;text-align:center;}
-.packages-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:25px;max-width:1100px;margin:auto;}
-.package-card{background:white;border-radius:20px;padding:18px;box-shadow:0 15px 40px rgba(0,0,0,0.1);}
-.package-card img{width:100%;height:220px;object-fit:cover;border-radius:15px;}
-.package-btn{background:#c06c84;color:white;border:none;padding:12px;border-radius:999px;width:100%;}
-
-.modal{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.5);justify-content:center;align-items:center;}
-.modal-content{background:white;padding:30px;border-radius:20px;max-width:900px;width:90%;}
-
-.all-gallery{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;}
-.all-gallery img{width:100%;height:150px;object-fit:cover;border-radius:10px;cursor:pointer;}
-
-.lightbox{display:none;position:fixed;inset:0;background:black;justify-content:center;align-items:center;}
-.lightbox.active{display:flex;}
-.lightbox img{max-width:90%;max-height:90%;}
-
-.sticky-contact-bar{
-position:fixed;
-bottom:15px;
-left:50%;
-transform:translateX(-50%);
-background:white;
-padding:10px;
-border-radius:999px;
-box-shadow:0 10px 30px rgba(0,0,0,0.2);
-display:flex;
-gap:10px;
-}
-
-.sticky-contact-bar a{
-padding:10px 15px;
-text-decoration:none;
-color:#4b2e39;
-font-weight:600;
-border-radius:999px;
-}
-
-.sticky-contact-bar a:hover{
-background:#c06c84;
-color:white;
-}
-
-</style>
-</head>
-
-<body>
-
-<header class="topbar">
-<div class="logo">Alina’s Arches & Balloons</div>
-<nav class="nav">
-<a href="#" onclick="openModal('servicesModal')">Services</a>
-<a href="#" onclick="openModal('galleryModal')">Gallery</a>
-<a href="#" onclick="openModal('contactModal')">Contact</a>
-</nav>
-</header>
-
-<section class="hero">
-<div>
-<h1>Luxury Balloon Decor</h1>
-<p class="hero-description">Elegant balloon designs for unforgettable events.</p>
-<a href="#" class="book-btn" onclick="openModal('bookingModal')">Book Your Decor</a>
-
-<div class="first-order-banner">
-✨ First Order Discount — 10% OFF from $450+
-</div>
-</div>
-</section>
-
-<section class="packages">
-<h2>Packages</h2>
-
-<div class="packages-grid">
-
-<div class="package-card">
-<img src="images/picture17.jpg">
-<h3>Starter</h3>
-<p>$250+</p>
-<button class="package-btn" onclick="openModal('bookingModal')">Book</button>
-</div>
-
-<div class="package-card">
-<img src="images/picture20.jpg">
-<h3>Signature</h3>
-<p>$450+</p>
-<button class="package-btn" onclick="openModal('bookingModal')">Book</button>
-</div>
-
-<div class="package-card">
-<img src="images/arch6.jpg">
-<h3>Luxury</h3>
-<p>$750+</p>
-<button class="package-btn" onclick="openModal('bookingModal')">Book</button>
-</div>
-
-</div>
-</section>
-
-<!-- CONTACT -->
 <div id="contactModal" class="modal">
-<div class="modal-content">
-<h2>Contact</h2>
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('contactModal')">&times;</span>
+    <h2>Contact</h2>
 
-<p>Email: <a href="mailto:alinasirobaba8@gmail.com">alinasirobaba8@gmail.com</a></p>
-<p>Phone: <a href="tel:+14389282152">+1 (438) 928-2152</a></p>
+    <p><strong>Email:</strong>
+      <a class="contact-link" href="mailto:alinasirobaba8@gmail.com">alinasirobaba8@gmail.com</a>
+    </p>
 
-<p>Instagram:
-<a href="https://www.instagram.com/alinas_party_arches_balloons_" target="_blank">
-@alinas_party_arches_balloons_
-</a>
-</p>
+    <p><strong>Phone / Text:</strong>
+      <a class="contact-link" href="tel:+14389282152">+1 (438) 928-2152</a>
+    </p>
 
-<p>
-<a href="https://maps.app.goo.gl/CghPowcKYj4NRH8b8" target="_blank">
-View Location on Map
-</a>
-</p>
+    <p><strong>Instagram:</strong>
+      <a class="contact-link" href="https://www.instagram.com/alinas_party_arches_balloons_/" target="_blank">
+        @alinas_party_arches_balloons_
+      </a>
+    </p>
 
+    <p><strong>Location:</strong>
+      <a class="contact-link" href="https://maps.app.goo.gl/CghPowcKYj4NRH8b8" target="_blank">
+        View on Google Maps
+      </a>
+    </p>
+
+    <p>Based in Montreal, available for birthdays, baby showers, weddings, corporate events, custom cups, t-shirts, stickers, and personalized event details.</p>
+  </div>
 </div>
-</div>
-
-<!-- GALLERY -->
-<div id="galleryModal" class="modal">
-<div class="modal-content">
-
-<div class="all-gallery">
-<img src="images/picture8.jpg">
-<img src="images/picture9.jpg">
-<img src="images/arch6.jpg">
-</div>
-
-</div>
-</div>
-
-<!-- BOOKING -->
-<div id="bookingModal" class="modal">
-<div class="modal-content">
-<h2>Book</h2>
-<p>Send request via email or contact directly.</p>
-</div>
-</div>
-
-<!-- LIGHTBOX -->
-<div id="lightbox" class="lightbox">
-<img id="lightbox-img">
-</div>
-
-<!-- STICKY BAR -->
-<div class="sticky-contact-bar">
-<a href="tel:+14389282152">Call</a>
-<a href="sms:+14389282152">Text</a>
-<a href="mailto:alinasirobaba8@gmail.com">Email</a>
-<a href="https://maps.app.goo.gl/CghPowcKYj4NRH8b8" target="_blank">Map</a>
-</div>
-
-<script>
-function openModal(id){
-document.getElementById(id).style.display="flex";
-}
-
-window.onclick=function(e){
-if(e.target.classList.contains('modal')){
-e.target.style.display="none";
-}
-}
-
-document.querySelectorAll(".all-gallery img").forEach(img=>{
-img.onclick=()=>{
-document.getElementById("lightbox").classList.add("active");
-document.getElementById("lightbox-img").src=img.src;
-};
-});
-
-document.getElementById("lightbox").onclick=function(){
-this.classList.remove("active");
-};
-</script>
-
-</body>
-</html>
