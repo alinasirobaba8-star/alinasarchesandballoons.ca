@@ -713,3 +713,42 @@ body {
     padding: 10px 12px;
   }
 }
+/* FULLSCREEN PRICING */
+.pricing-fullscreen {
+  align-items: flex-start;
+  padding: 0;
+}
+
+.pricing-content {
+  width: 100%;
+  max-width: none;
+  height: 100vh;
+  border-radius: 0;
+  padding: 40px 30px;
+  overflow-y: auto;
+}
+
+/* HEADER */
+.pricing-header {
+  position: sticky;
+  top: 0;
+  background: white;
+  padding-bottom: 15px;
+  margin-bottom: 10px;
+  z-index: 10;
+}
+
+/* BACK BUTTON */
+.back-btn {
+  background: none;
+  border: none;
+  font-size: 18px;
+  font-weight: 600;
+  color: #c06c84;
+  cursor: pointer;
+  padding: 10px 0;
+}
+
+.back-btn:hover {
+  color: #a95770;
+}
