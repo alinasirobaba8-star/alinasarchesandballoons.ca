@@ -808,11 +808,12 @@ body {
 }
 
 .pricing-item img {
-  width: 95px;
-  height: 95px;
+  width: 48px;
+  height: 48px;
   object-fit: cover;
-  border-radius: 16px;
+  border-radius: 10px;
   flex-shrink: 0;
+  opacity: 0.95;
 }
 
 .pricing-item p {
