@@ -701,9 +701,16 @@
     </div>
   </div>
 
-  <div id="pricingModal" class="modal">
-  <div class="modal-content">
-    <span class="close" onclick="closeModal('pricingModal')">&times;</span>
+ <div id="pricingModal" class="modal pricing-fullscreen">
+  <div class="modal-content pricing-content">
+
+    <!-- BACK BUTTON -->
+    <div class="pricing-header">
+      <button class="back-btn" onclick="closeModal('pricingModal')">
+        &#8592; Back
+      </button>
+    </div>
+
     <h2>Pricing</h2>
 
     <p><strong>Grab & Go Garland:</strong> starting at $150 CAD + tax</p>
@@ -715,15 +722,18 @@
     <p><strong>Floral Arches:</strong> starting at $400 CAD</p>
     <p><strong>Entrance Stand Decor:</strong> starting at $150 CAD</p>
 
-    <p><strong>Customized T-Shirts:</strong> starting at $30 CAD each</p>
-    <p><strong>Customized Cups:</strong> starting at $25 CAD each</p>
-    <p><strong>Customized Stickers:</strong> starting at $15 CAD per small set</p>
-    <p><strong>Customized Keychains:</strong> starting at $18 CAD each</p>
-    <p><strong>Personalized Party Details:</strong> contact for pricing</p>
+    <h3>Customized Items</h3>
+    <p><strong>Customized T-Shirts:</strong> starting at $30 CAD</p>
+    <p><strong>Customized Cups:</strong> starting at $25 CAD</p>
+    <p><strong>Customized Stickers:</strong> starting at $15 CAD</p>
+    <p><strong>Customized Keychains:</strong> starting at $18 CAD</p>
 
     <p><strong>Custom Installations:</strong> contact for quote</p>
 
-    <p>Final pricing may vary depending on size, design, quantity, materials, location, delivery, setup time, customization, and last-minute requests.</p>
+    <p style="margin-top:20px;">
+      Final pricing depends on size, design, customization, delivery, and setup.
+    </p>
+
   </div>
 </div>
   <div id="galleryModal" class="modal">
