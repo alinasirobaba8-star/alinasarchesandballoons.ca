@@ -1,29 +1,26 @@
+Replace your full index.html with this:
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Alina’s Arches & Balloons</title>
-
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
-
   <style>
     * { box-sizing: border-box; }
-
     html, body {
       margin: 0;
       padding: 0;
       overflow-x: hidden;
       scroll-behavior: smooth;
     }
-
     body {
       font-family: 'Montserrat', sans-serif;
       background: linear-gradient(180deg, #fff8fc 0%, #f8ecf7 100%);
       color: #333;
     }
-
     .topbar {
       position: sticky;
       top: 0;
@@ -36,7 +33,6 @@
       padding: 18px 40px;
       box-shadow: 0 2px 10px rgba(0,0,0,0.06);
     }
-
     .logo {
       font-family: 'Playfair Display', serif;
       font-size: 28px;
@@ -44,14 +40,12 @@
       color: #4b2e39;
       white-space: nowrap;
     }
-
     .nav {
       display: flex;
       gap: 24px;
       flex-wrap: wrap;
       justify-content: center;
     }
-
     .nav a {
       text-decoration: none;
       color: #4b2e39;
@@ -59,9 +53,7 @@
       font-size: 16px;
       transition: 0.3s;
     }
-
     .nav a:hover { color: #c06c84; }
-
     .hero {
       min-height: 82vh;
       display: flex;
@@ -71,11 +63,9 @@
       padding: 60px 20px;
       background: linear-gradient(120deg, #fff8fc, #f7e8f3, #ffffff);
     }
-
     .hero-content {
       max-width: 850px;
     }
-
     .small-title {
       font-size: 14px;
       letter-spacing: 2px;
@@ -83,7 +73,6 @@
       color: #b47b8f;
       margin-bottom: 10px;
     }
-
     .hero h1 {
       font-family: 'Playfair Display', serif;
       font-size: 54px;
@@ -92,14 +81,12 @@
       color: #3a2430;
       text-shadow: 0 10px 30px rgba(192, 108, 132, 0.22);
     }
-
     .hero-description {
       font-size: 18px;
       line-height: 1.7;
       max-width: 700px;
       margin: 0 auto 30px;
     }
-
     .book-btn,
     .contact-button,
     .package-btn,
@@ -107,7 +94,6 @@
       position: relative;
       overflow: hidden;
     }
-
     .book-btn,
     .contact-button {
       display: inline-block;
@@ -123,13 +109,11 @@
       font-size: 15px;
       transition: 0.3s ease;
     }
-
     .book-btn:hover,
     .contact-button:hover {
       background: #a95770;
       transform: translateY(-2px);
     }
-
     .book-btn::after,
     .package-btn::after,
     .contact-button::after,
@@ -143,14 +127,12 @@
       background: linear-gradient(120deg, transparent, rgba(255,255,255,0.5), transparent);
       transition: 0.55s ease;
     }
-
     .book-btn:hover::after,
     .package-btn:hover::after,
     .contact-button:hover::after,
     .first-order-btn:hover::after {
       left: 100%;
     }
-
     .first-order-banner {
       margin: 28px auto 0;
       padding: 20px 24px;
@@ -161,7 +143,6 @@
       text-align: center;
       box-shadow: 0 14px 35px rgba(180, 40, 40, 0.14);
     }
-
     .first-order-text {
       margin: 0 0 12px;
       font-weight: 600;
@@ -169,7 +150,6 @@
       font-size: 15px;
       line-height: 1.5;
     }
-
     .first-order-btn {
       background: #c62828;
       color: white;
@@ -181,28 +161,23 @@
       cursor: pointer;
       font-size: 14px;
     }
-
     .first-order-btn:hover { background: #9f1f1f; }
-
     .packages {
       padding: 90px 20px;
       background: linear-gradient(180deg, #fff8fc 0%, #ffffff 100%);
       text-align: center;
     }
-
     .packages h2 {
       font-family: 'Playfair Display', serif;
       font-size: 46px;
       color: #6f4561;
       margin: 0 0 10px;
     }
-
     .packages-subtitle {
       color: #6a4a5d;
       font-size: 17px;
       margin-bottom: 45px;
     }
-
     .packages-grid {
       max-width: 1200px;
       margin: 0 auto;
@@ -210,7 +185,6 @@
       grid-template-columns: repeat(3, 1fr);
       gap: 28px;
     }
-
     .package-card {
       background: rgba(255,255,255,0.95);
       border-radius: 26px;
@@ -220,21 +194,17 @@
       transition: transform 0.35s ease, box-shadow 0.35s ease;
       border: 1px solid #f0dce8;
     }
-
     .package-card:hover {
       transform: translateY(-10px) scale(1.02);
       box-shadow: 0 30px 70px rgba(91, 55, 76, 0.25);
     }
-
     .featured-package {
       border: 2px solid #c06c84;
       transform: scale(1.03);
     }
-
     .featured-package:hover {
       transform: translateY(-10px) scale(1.04);
     }
-
     .package-card img {
       width: 100%;
       height: 230px;
@@ -242,27 +212,23 @@
       border-radius: 20px;
       margin-bottom: 22px;
     }
-
     .package-card h3 {
       font-family: 'Playfair Display', serif;
       font-size: 28px;
       color: #4b2e39;
       margin: 0 0 8px;
     }
-
     .package-price {
       font-size: 24px;
       font-weight: 700;
       color: #c06c84;
       margin: 0 0 8px;
     }
-
     .package-note {
       color: #6a4a5d;
       font-size: 14px;
       margin-bottom: 16px;
     }
-
     .package-card ul {
       padding-left: 20px;
       margin-bottom: 18px;
@@ -270,7 +236,6 @@
       line-height: 1.7;
       font-size: 15px;
     }
-
     .package-warning {
       font-size: 12px;
       color: #a95770;
@@ -279,7 +244,6 @@
       border-radius: 12px;
       line-height: 1.5;
     }
-
     .package-btn {
       width: 100%;
       background: #c06c84;
@@ -293,9 +257,7 @@
       margin-top: 14px;
       font-size: 15px;
     }
-
     .package-btn:hover { background: #a95770; }
-
     .featured-label {
       display: inline-block;
       background: #c06c84;
@@ -306,7 +268,6 @@
       margin-bottom: 12px;
       font-weight: 600;
     }
-
     .modal {
       display: none;
       position: fixed;
@@ -317,7 +278,6 @@
       align-items: center;
       padding: 20px;
     }
-
     .modal-content {
       background: #fff;
       width: 100%;
@@ -329,30 +289,25 @@
       position: relative;
       box-shadow: 0 20px 50px rgba(0,0,0,0.18);
     }
-
     .gallery-modal-content {
       max-width: 1350px;
       padding: 28px;
     }
-
     .modal-content h2 {
       font-family: 'Playfair Display', serif;
       font-size: 34px;
       margin-top: 0;
       color: #3a2430;
     }
-
     .modal-content h3 {
       color: #4b2e39;
       font-family: 'Playfair Display', serif;
       font-size: 26px;
     }
-
     .modal-content p {
       line-height: 1.7;
       margin-top: 0;
     }
-
     .close {
       position: absolute;
       right: 18px;
@@ -362,14 +317,79 @@
       color: #666;
       z-index: 5;
     }
-
+    .pricing-fullscreen {
+      align-items: flex-start;
+      padding: 0;
+    }
+    .pricing-content {
+      width: 100%;
+      max-width: none;
+      min-height: 100vh;
+      border-radius: 0;
+      padding: 36px 28px 90px;
+      overflow-y: auto;
+      background: linear-gradient(180deg, #fff8fc 0%, #ffffff 100%);
+    }
+    .pricing-header {
+      position: sticky;
+      top: 0;
+      background: rgba(255,255,255,0.92);
+      backdrop-filter: blur(12px);
+      padding: 10px 0 18px;
+      margin-bottom: 10px;
+      z-index: 10;
+    }
+    .back-btn {
+      background: none;
+      border: none;
+      font-size: 18px;
+      font-weight: 600;
+      color: #c06c84;
+      cursor: pointer;
+      padding: 8px 0;
+    }
+    .back-btn:hover {
+      color: #a95770;
+    }
+    .pricing-list {
+      max-width: 980px;
+      margin: 30px auto 0;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+    }
+    .pricing-item {
+      background: rgba(255,255,255,0.95);
+      border: 1px solid #f0dce8;
+      border-radius: 18px;
+      padding: 16px 18px;
+      box-shadow: 0 12px 30px rgba(91,55,76,0.08);
+      text-align: left;
+      transition: 0.3s ease;
+    }
+    .pricing-item:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 18px 40px rgba(91,55,76,0.12);
+    }
+    .pricing-item p {
+      margin: 0;
+      font-size: 15px;
+      line-height: 1.55;
+      color: #4e3a45;
+    }
+    .pricing-note {
+      max-width: 900px;
+      margin: 34px auto 0;
+      text-align: center;
+      color: #6a4a5d;
+      line-height: 1.7;
+    }
     .all-gallery {
       display: grid;
       grid-template-columns: repeat(5, 1fr);
       gap: 14px;
       margin-top: 32px;
     }
-
     .all-gallery img {
       width: 100%;
       height: 165px;
@@ -380,12 +400,10 @@
       cursor: zoom-in;
       transition: transform 0.4s ease, box-shadow 0.4s ease;
     }
-
     .all-gallery img:hover {
       transform: scale(1.05);
       box-shadow: 0 12px 30px rgba(0,0,0,0.15);
     }
-
     .lightbox {
       display: none;
       position: fixed;
@@ -397,9 +415,7 @@
       padding: 20px;
       cursor: zoom-out;
     }
-
     .lightbox.active { display: flex; }
-
     .lightbox img {
       max-width: 92%;
       max-height: 88vh;
@@ -407,7 +423,6 @@
       border-radius: 14px;
       box-shadow: 0 20px 60px rgba(0,0,0,0.45);
     }
-
     .lightbox-close {
       position: fixed;
       top: 24px;
@@ -417,7 +432,6 @@
       cursor: pointer;
       z-index: 100000;
     }
-
     .lightbox-arrow {
       position: fixed;
       top: 50%;
@@ -433,29 +447,23 @@
       z-index: 100000;
       backdrop-filter: blur(10px);
     }
-
     .lightbox-prev { left: 28px; }
     .lightbox-next { right: 28px; }
-
     .lightbox-arrow:hover {
       background: rgba(255,255,255,0.32);
     }
-
     .contact-link {
       color: #a95770;
       text-decoration: none;
       font-weight: 600;
     }
-
     .contact-link:hover { text-decoration: underline; }
-
     .booking-form {
       display: flex;
       flex-direction: column;
       gap: 14px;
       margin-top: 20px;
     }
-
     .booking-form input,
     .booking-form select,
     .booking-form textarea {
@@ -468,7 +476,6 @@
       background: #fff;
       color: #4b3140;
     }
-
     .booking-form input:focus,
     .booking-form select:focus,
     .booking-form textarea:focus {
@@ -476,9 +483,7 @@
       border-color: #c06c84;
       box-shadow: 0 0 0 3px rgba(192,108,132,0.12);
     }
-
     .booking-form textarea { resize: vertical; }
-
     .sticky-contact-bar {
       position: fixed;
       left: 50%;
@@ -494,7 +499,6 @@
       gap: 8px;
       box-shadow: 0 25px 60px rgba(91,55,76,0.25);
     }
-
     .sticky-contact-bar a {
       text-decoration: none;
       color: #6f4561;
@@ -504,81 +508,69 @@
       border-radius: 999px;
       transition: 0.3s ease;
     }
-
     .sticky-contact-bar a:hover {
       background: linear-gradient(135deg, #c06c84, #e8a0c0);
       color: white;
     }
-
     @media (max-width: 900px) {
       .topbar {
         flex-direction: column;
         gap: 12px;
         padding: 16px 20px;
       }
-
       .logo {
         font-size: 24px;
         text-align: center;
         white-space: normal;
       }
-
       .nav { gap: 14px; }
       .nav a { font-size: 14px; }
-
       .hero h1 { font-size: 38px; }
       .hero-description { font-size: 16px; }
-
       .packages-grid { grid-template-columns: 1fr; }
-
       .featured-package,
       .featured-package:hover {
         transform: none;
       }
-
       .modal-content { padding: 24px; }
-
+      .pricing-content {
+        padding: 28px 20px 90px;
+      }
+      .pricing-list {
+        grid-template-columns: 1fr;
+      }
       .all-gallery {
         grid-template-columns: repeat(3, 1fr);
       }
-
       .all-gallery img { height: 160px; }
     }
-
     @media (max-width: 480px) {
       .all-gallery {
         grid-template-columns: repeat(2, 1fr);
       }
-
       .all-gallery img { height: 150px; }
-
       .lightbox img {
         max-width: 96%;
         max-height: 82vh;
       }
-
       .lightbox-close {
         top: 18px;
         right: 22px;
         font-size: 34px;
       }
-
       .lightbox-arrow {
         font-size: 30px;
         width: 44px;
         height: 44px;
       }
-
       .lightbox-prev { left: 12px; }
       .lightbox-next { right: 12px; }
-
       .sticky-contact-bar {
         width: calc(100% - 24px);
         justify-content: space-between;
         bottom: 12px;
         padding: 8px;
       }
-
       .sticky-contact-bar a {
         font-size: 13px;
         padding: 10px 12px;
@@ -586,9 +578,7 @@
     }
   </style>
 </head>
-
 <body>
-
   <header class="topbar">
     <div class="logo">Alina’s Arches & Balloons</div>
     <nav class="nav">
@@ -600,7 +590,6 @@
       <a href="#" onclick="openModal('contactModal'); return false;">Contact</a>
     </nav>
   </header>
-
   <section class="hero" id="home">
     <div class="hero-content">
       <p class="small-title">Montreal Balloon & Custom Event Decor</p>
@@ -609,9 +598,7 @@
         Luxury balloon arches, garlands, floral decor, customized cups, t-shirts, stickers, name details,
         and custom installations for birthdays, baby showers, weddings, corporate events, and special celebrations.
       </p>
-
       <a href="#" class="book-btn" onclick="openModal('bookingModal'); return false;">Book Your Decor</a>
-
       <div class="first-order-banner">
         <p class="first-order-text">
           ✨ First Order Discount — Enjoy 10% OFF your first booking from $450+
@@ -622,11 +609,9 @@
       </div>
     </div>
   </section>
-
   <section class="packages">
     <h2>Packages</h2>
     <p class="packages-subtitle">Choose a package based on your event style and budget.</p>
-
     <div class="packages-grid">
       <div class="package-card">
         <img src="images/picture17.jpg" alt="Starter balloon package">
@@ -642,7 +627,6 @@
         <p class="package-warning">Budget-friendly balloons may be used for this package, so the finish and durability may be less premium.</p>
         <button onclick="openModal('bookingModal')" class="package-btn">Book this package</button>
       </div>
-
       <div class="package-card featured-package">
         <span class="featured-label">Most Popular</span>
         <img src="images/picture20.jpg" alt="Signature balloon package">
@@ -658,7 +642,6 @@
         </ul>
         <button onclick="openModal('bookingModal')" class="package-btn">Book this package</button>
       </div>
-
       <div class="package-card">
         <img src="images/arch6.jpg" alt="Luxury balloon package">
         <h3>Luxury Package</h3>
@@ -675,7 +658,6 @@
       </div>
     </div>
   </section>
-
   <div id="aboutModal" class="modal">
     <div class="modal-content">
       <span class="close" onclick="closeModal('aboutModal')">&times;</span>
@@ -685,7 +667,6 @@
       <p>Every setup is designed with care, creativity, and attention to detail to bring each client’s vision to life.</p>
     </div>
   </div>
-
   <div id="servicesModal" class="modal">
     <div class="modal-content">
       <span class="close" onclick="closeModal('servicesModal')">&times;</span>
@@ -695,92 +676,41 @@
       <h3>Floral Decor</h3>
       <p>Elegant floral arches, entrance stands, ceremony decor, and photo-area styling.</p>
       <h3>Customized Details</h3>
-      <p>Custom cups, t-shirts, stickers, name tags, personalized gifts, party details, and event accessories.</p>
+      <p>Custom cups, t-shirts, stickers, keychains, name tags, personalized gifts, party details, and event accessories.</p>
       <h3>Custom Installations</h3>
       <p>Personalized decor created to match your theme, colors, and event style.</p>
     </div>
   </div>
-
- <div id="pricingModal" class="modal pricing-fullscreen">
-  <div class="modal-content pricing-content">
-
-    <div class="pricing-header">
-      <button class="back-btn" onclick="closeModal('pricingModal')">
-        &#8592; Back
-      </button>
+  <div id="pricingModal" class="modal pricing-fullscreen">
+    <div class="modal-content pricing-content">
+      <div class="pricing-header">
+        <button class="back-btn" onclick="closeModal('pricingModal')">&#8592; Back</button>
+      </div>
+      <h2>Pricing</h2>
+      <div class="pricing-list">
+        <div class="pricing-item"><p><strong>Grab & Go Garland:</strong><br>starting at $150 CAD + tax</p></div>
+        <div class="pricing-item"><p><strong>Deluxe Garland:</strong><br>$40 CAD/ft</p></div>
+        <div class="pricing-item"><p><strong>Balloon Arches:</strong><br>starting at $200 CAD</p></div>
+        <div class="pricing-item"><p><strong>Balloon Columns:</strong><br>starting at $150 CAD</p></div>
+        <div class="pricing-item"><p><strong>Balloon Walls:</strong><br>starting at $400 CAD</p></div>
+        <div class="pricing-item"><p><strong>Centerpieces:</strong><br>starting at $75 CAD per piece</p></div>
+        <div class="pricing-item"><p><strong>Floral Arches:</strong><br>starting at $400 CAD</p></div>
+        <div class="pricing-item"><p><strong>Entrance Stand Decor:</strong><br>starting at $150 CAD</p></div>
+        <div class="pricing-item"><p><strong>Customized T-Shirts:</strong><br>starting at $30 CAD each</p></div>
+        <div class="pricing-item"><p><strong>Customized Cups:</strong><br>starting at $25 CAD each</p></div>
+        <div class="pricing-item"><p><strong>Customized Stickers:</strong><br>starting at $15 CAD per small set</p></div>
+        <div class="pricing-item"><p><strong>Customized Keychains:</strong><br>starting at $18 CAD each</p></div>
+        <div class="pricing-item"><p><strong>Personalized Party Details:</strong><br>contact for pricing</p></div>
+        <div class="pricing-item"><p><strong>Custom Installations:</strong><br>contact for quote</p></div>
+      </div>
+      <p class="pricing-note">
+        Final pricing may vary depending on size, design, quantity, materials, location, delivery, setup time, customization, and last-minute requests.
+      </p>
     </div>
-
-    <h2>Pricing</h2>
-
-    <div class="pricing-list">
-
-      <div class="pricing-item">
-        <img src="images/picture20.jpg" alt="Balloon garland">
-        <p><strong>Grab & Go Garland:</strong><br>starting at $150 CAD + tax</p>
-      </div>
-
-      <div class="pricing-item">
-        <img src="images/arch6.jpg" alt="Deluxe balloon garland">
-        <p><strong>Deluxe Garland:</strong><br>$40 CAD/ft</p>
-      </div>
-
-      <div class="pricing-item">
-        <img src="images/arch5.jpg" alt="Balloon arch">
-        <p><strong>Balloon Arches:</strong><br>starting at $200 CAD</p>
-      </div>
-
-      <div class="pricing-item">
-        <img src="images/picture17.jpg" alt="Balloon columns">
-        <p><strong>Balloon Columns:</strong><br>starting at $150 CAD</p>
-      </div>
-
-      <div class="pricing-item">
-        <img src="images/arch4.jpg" alt="Balloon wall">
-        <p><strong>Balloon Walls:</strong><br>starting at $400 CAD</p>
-      </div>
-
-      <div class="pricing-item">
-        <img src="images/picture19.jpg" alt="Centerpiece">
-        <p><strong>Centerpieces:</strong><br>starting at $75 CAD per piece</p>
-      </div>
-
-      <div class="pricing-item">
-        <img src="images/arch7.jpg" alt="Floral arch">
-        <p><strong>Floral Arches:</strong><br>starting at $400 CAD</p>
-      </div>
-
-      <div class="pricing-item">
-        <img src="images/picture8.jpg" alt="Custom t-shirt">
-        <p><strong>Customized T-Shirts:</strong><br>starting at $30 CAD each</p>
-      </div>
-
-      <div class="pricing-item">
-        <img src="images/picture23.jpg" alt="Custom cup">
-        <p><strong>Customized Cups:</strong><br>starting at $25 CAD each</p>
-      </div>
-
-      <div class="pricing-item">
-        <img src="images/picture24.jpg" alt="Custom stickers">
-        <p><strong>Customized Stickers:</strong><br>starting at $15 CAD per small set</p>
-      </div>
-
-      <div class="pricing-item">
-        <img src="images/picture22.jpg" alt="Custom keychains">
-        <p><strong>Customized Keychains:</strong><br>starting at $18 CAD each</p>
-      </div>
-
-    </div>
-
-    <p class="pricing-note">
-      Final pricing may vary depending on size, design, quantity, materials, location, delivery, setup time, customization, and last-minute requests.
-    </p>
-
   </div>
-</div>
   <div id="galleryModal" class="modal">
     <div class="modal-content gallery-modal-content">
       <span class="close" onclick="closeModal('galleryModal')">&times;</span>
-
       <div class="all-gallery">
         <img src="images/picture8.jpg" alt="">
         <img src="images/picture23.jpg" alt="">
@@ -813,17 +743,14 @@
       </div>
     </div>
   </div>
-
   <div id="bookingModal" class="modal">
     <div class="modal-content">
       <span class="close" onclick="closeModal('bookingModal')">&times;</span>
       <h2>Booking Form</h2>
-
       <form class="booking-form" action="https://formsubmit.co/alinasirobaba8@gmail.com" method="POST">
         <input type="text" name="name" placeholder="Your Name" required>
         <input type="tel" name="phone" placeholder="Phone Number" required>
         <input type="email" name="email" placeholder="Email Address" required>
-
         <select name="event_type" required>
           <option value="">Select Event Type</option>
           <option>Birthday</option>
@@ -838,136 +765,110 @@
           <option>Customized Cups</option>
           <option>Customized T-Shirts</option>
           <option>Stickers / Personalized Details</option>
+          <option>Customized Keychains</option>
           <option>Other</option>
         </select>
-
         <input type="date" name="event_date" required>
         <input type="text" name="location" placeholder="Event Location">
         <input type="text" name="colors_theme" placeholder="Colors / Theme">
-
         <textarea name="details" rows="5" placeholder="Tell me about your event, decor style, colors, and any customized details you would like." required></textarea>
-
         <input type="hidden" name="_subject" value="New Booking Request from Website">
         <input type="hidden" name="_captcha" value="false">
-
         <button type="submit" class="contact-button">Send Booking Request</button>
       </form>
     </div>
   </div>
-
   <div id="contactModal" class="modal">
     <div class="modal-content">
       <span class="close" onclick="closeModal('contactModal')">&times;</span>
       <h2>Contact</h2>
-
       <p><strong>Email:</strong>
         <a class="contact-link" href="mailto:alinasirobaba8@gmail.com">alinasirobaba8@gmail.com</a>
       </p>
-
       <p><strong>Phone / Text:</strong>
         <a class="contact-link" href="tel:+14389282152">+1 (438) 928-2152</a>
       </p>
-
       <p><strong>Instagram:</strong>
         <a class="contact-link" href="https://www.instagram.com/alinas_party_arches_balloons_/" target="_blank">
           @alinas_party_arches_balloons_
         </a>
       </p>
-
       <p><strong>Location:</strong>
         <a class="contact-link" href="https://maps.app.goo.gl/CghPowcKYj4NRH8b8" target="_blank">
           View on Google Maps
         </a>
       </p>
-
-      <p>Based in Montreal, available for birthdays, baby showers, weddings, corporate events, custom cups, t-shirts, stickers, and personalized event details.</p>
+      <p>Based in Montreal, available for birthdays, baby showers, weddings, corporate events, custom cups, t-shirts, stickers, keychains, and personalized event details.</p>
     </div>
   </div>
-
   <div id="lightbox" class="lightbox">
     <span class="lightbox-close">&times;</span>
     <button class="lightbox-arrow lightbox-prev">&#10094;</button>
     <img id="lightbox-img" src="" alt="">
     <button class="lightbox-arrow lightbox-next">&#10095;</button>
   </div>
-
   <div class="sticky-contact-bar">
     <a href="tel:+14389282152">Call</a>
     <a href="sms:+14389282152">Text</a>
     <a href="mailto:alinasirobaba8@gmail.com">Email</a>
     <a href="https://maps.app.goo.gl/CghPowcKYj4NRH8b8" target="_blank">Map</a>
   </div>
-
   <script>
     function openModal(id) {
       const modal = document.getElementById(id);
       if (modal) modal.style.display = "flex";
     }
-
     function closeModal(id) {
       const modal = document.getElementById(id);
       if (modal) modal.style.display = "none";
     }
-
     window.addEventListener("click", function(event) {
       if (event.target.classList.contains("modal")) {
         event.target.style.display = "none";
       }
     });
-
     const lightbox = document.getElementById("lightbox");
     const lightboxImg = document.getElementById("lightbox-img");
     const lightboxClose = document.querySelector(".lightbox-close");
     const prevBtn = document.querySelector(".lightbox-prev");
     const nextBtn = document.querySelector(".lightbox-next");
     const galleryImages = Array.from(document.querySelectorAll(".all-gallery img"));
-
     let currentIndex = 0;
-
     function showImage(index) {
       currentIndex = index;
       lightboxImg.src = galleryImages[currentIndex].src;
       lightbox.classList.add("active");
     }
-
     function closeLightbox() {
       lightbox.classList.remove("active");
       lightboxImg.src = "";
     }
-
     function showNextImage(event) {
       event.stopPropagation();
       currentIndex = (currentIndex + 1) % galleryImages.length;
       lightboxImg.src = galleryImages[currentIndex].src;
     }
-
     function showPrevImage(event) {
       event.stopPropagation();
       currentIndex = (currentIndex - 1 + galleryImages.length) % galleryImages.length;
       lightboxImg.src = galleryImages[currentIndex].src;
     }
-
     galleryImages.forEach(function(img, index) {
       img.addEventListener("click", function(event) {
         event.stopPropagation();
         showImage(index);
       });
     });
-
     nextBtn.addEventListener("click", showNextImage);
     prevBtn.addEventListener("click", showPrevImage);
-
     lightboxClose.addEventListener("click", function(event) {
       event.stopPropagation();
       closeLightbox();
     });
-
     lightboxImg.addEventListener("click", function(event) {
       event.stopPropagation();
     });
-
     lightbox.addEventListener("click", closeLightbox);
-
     document.addEventListener("keydown", function(event) {
       if (event.key === "Escape") {
         document.querySelectorAll(".modal").forEach(function(modal) {
@@ -975,18 +876,15 @@
         });
         closeLightbox();
       }
-
       if (lightbox.classList.contains("active") && event.key === "ArrowRight") {
         currentIndex = (currentIndex + 1) % galleryImages.length;
         lightboxImg.src = galleryImages[currentIndex].src;
       }
-
       if (lightbox.classList.contains("active") && event.key === "ArrowLeft") {
         currentIndex = (currentIndex - 1 + galleryImages.length) % galleryImages.length;
         lightboxImg.src = galleryImages[currentIndex].src;
       }
     });
   </script>
-
 </body>
 </html>
